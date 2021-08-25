@@ -1,5 +1,5 @@
-# PAV_G4
-Programación de aplicaciones visuales 1 - UTN-FRC - 2021
+# PAV_G4_2021
+Programación de aplicaciones visuales 1 - Curso 3K5 - UTN-FRC - 2021
 
 Trabajo Practico Integrador:
 
