@@ -1,7 +1,7 @@
 ﻿
 namespace Modulo4_G4
 {
-    partial class Form1
+    partial class frmPrincipal
     {
         /// <summary>
         ///  Required designer variable.
