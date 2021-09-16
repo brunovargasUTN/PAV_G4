@@ -9,7 +9,7 @@ GO
 CREATE TABLE [Barrios](
 		[id_barrio] [int] IDENTITY(1,1) NOT NULL,
 		[nombre] [varchar] (50) NOT NULL,
-		[borrado] [bit] NOT NULL,
+		[borrado] [bit],
 
 	CONSTRAINT [PK_Barrios] PRIMARY KEY (id_barrio))
 
@@ -21,7 +21,7 @@ CREATE TABLE [Contactos](
 		[apellido] [varchar] (50),
 		[email] [varchar] (100),
 		[telefono] [int],
-		[borrado] [bit] NOT NULL,
+		[borrado] [bit],
 
 	CONSTRAINT [PK_Contactos] PRIMARY KEY (id_contacto))
 
@@ -34,7 +34,7 @@ CREATE TABLE [Usuarios](
 		[password] [varchar] (50),
 		[email] [varchar] (100),
 		[estado] [varchar] (100),
-		[borrado] [bit] NOT NULL,
+		[borrado] [bit],
 
 	CONSTRAINT [PK_Usuarios] PRIMARY KEY (id_usuario))
 
@@ -49,7 +49,7 @@ CREATE TABLE [Clientes](
 		[fecha_alta] [date],
 		[id_barrio] [int],
 		[id_contacto] [int],
-		[borrado] [bit] NOT NULL,
+		[borrado] [bit],
 
 	CONSTRAINT [PK_Clientes] PRIMARY KEY (id_cliente),
 	CONSTRAINT [FK_Clientes_Barrio] FOREIGN KEY (id_barrio) REFERENCES Barrios (id_barrio),
@@ -60,7 +60,7 @@ GO
 CREATE TABLE [Productos](
 		[id_producto] [int] IDENTITY(1,1) NOT NULL,
 		[nombre] [varchar] (50) NOT NULL,
-		[borrado] [bit] NOT NULL
+		[borrado] [bit]
 		
 	CONSTRAINT [PK_Productos] PRIMARY KEY (id_producto))
 
@@ -73,7 +73,7 @@ CREATE TABLE [Proyectos](
 		[version] [varchar] (100),
 		[alcance] [varchar] (100),
 		[id_responsable] [int] NOT NULL,
-		[borrado] [bit] NOT NULL,
+		[borrado] [bit],
 
 	CONSTRAINT [PK_Proyectos] PRIMARY KEY (id_proyecto),
 	CONSTRAINT [FK_Proyectos_Producto] FOREIGN KEY (id_producto) REFERENCES Productos (id_producto),
@@ -87,7 +87,7 @@ CREATE TABLE [Facturas](
 		[id_cliente] [int] NOT NULL,
 		[fecha] [date] NOT NULL,
 		[id_usuario_creador] [int] NOT NULL,
-		[borrado] [bit] NOT NULL,
+		[borrado] [bit],
 
 	CONSTRAINT [PK_Facturas] PRIMARY KEY (id_factura),
 	CONSTRAINT [FK_Facturas_Cliente] FOREIGN KEY (id_cliente) REFERENCES Clientes (id_cliente),
@@ -103,7 +103,7 @@ CREATE TABLE [FacturasDetalle](
 		[id_producto] [int],
 		[id_proyecto] [int],
 		[precio] [DECIMAL] (11,2),
-		[borrado] [bit] NOT NULL,
+		[borrado] [bit],
 
 	CONSTRAINT [PK_FacturasDetalle] PRIMARY KEY (id_detalle_factura),
 	CONSTRAINT [FK_FacturaDetalle_Factura] FOREIGN KEY (id_factura) REFERENCES Facturas (id_factura),
