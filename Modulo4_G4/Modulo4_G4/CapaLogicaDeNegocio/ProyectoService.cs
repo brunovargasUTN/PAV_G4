@@ -9,7 +9,7 @@ namespace Modulo4_G4.CapaLogicaDeNegocio
     class ProyectoService
     {
         private ProyectoDao proyectoDao;
-        
+
         public ProyectoService()
         {
             proyectoDao = new ProyectoDao();
