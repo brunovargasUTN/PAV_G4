@@ -28,8 +28,8 @@ namespace Modulo4_G4.CapaAccesoDatos
                                           "       password,",
                                           "       email, ",
                                           "       estado",
-                                          "FROM Usuarios",
-                                          "WHERE borrado = 0");
+                                          " FROM Usuarios",
+                                          " WHERE borrado = 0");
 
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
 

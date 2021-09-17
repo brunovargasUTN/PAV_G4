@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modulo4_G4.CapaPresentacion.Proyectos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +18,10 @@ namespace Modulo4_G4
             InitializeComponent();
         }
 
+        private void proyectosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProyectos frm = new frmProyectos();
+            frm.ShowDialog();
+        }
     }
 }
