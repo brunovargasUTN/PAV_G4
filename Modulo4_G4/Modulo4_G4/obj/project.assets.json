@@ -454,11 +454,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\Casa\\.nuget\\packages\\": {}
+>>>>>>> 4dff583b30820e0d0804fdded0bb58ee7efad987
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Usuario\\UTN\\PROGRAMACION DE APLICACIONES VISUALES 1\\TPI\\PAV1_G4_2021\\Modulo4_G4\\Modulo4_G4\\Modulo4_G4.csproj",
       "projectName": "Modulo4_G4",
       "projectPath": "C:\\Users\\Usuario\\UTN\\PROGRAMACION DE APLICACIONES VISUALES 1\\TPI\\PAV1_G4_2021\\Modulo4_G4\\Modulo4_G4\\Modulo4_G4.csproj",
@@ -467,6 +472,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Modulo4_G4\\Modulo4_G4\\Modulo4_G4.csproj",
+      "projectName": "Modulo4_G4",
+      "projectPath": "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Modulo4_G4\\Modulo4_G4\\Modulo4_G4.csproj",
+      "packagesPath": "C:\\Users\\Casa\\.nuget\\packages\\",
+      "outputPath": "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Modulo4_G4\\Modulo4_G4\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Casa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 4dff583b30820e0d0804fdded0bb58ee7efad987
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
