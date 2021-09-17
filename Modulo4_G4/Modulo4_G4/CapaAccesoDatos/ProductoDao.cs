@@ -10,7 +10,7 @@ namespace Modulo4_G4.CapaAccesoDatos
     {
         public IList<Producto> GetAll()
         {
-            List<Producto> listadoBugs = new List<Producto>();
+            List<Producto> listadoProducto = new List<Producto>();
 
             var strSql = "SELECT id_producto, nombre from Productos";
 
@@ -18,10 +18,17 @@ namespace Modulo4_G4.CapaAccesoDatos
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {
-                listadoBugs.Add(ObjectMapping(row));
+                listadoProducto.Add(ObjectMapping(row));
             }
 
-            return listadoBugs;
+            return listadoProducto;
+        }
+
+        public Producto GetById(int idProducto)
+        {
+            var strSql = String.Concat(" SELECT p.id_producto, p.nombre",
+                                        "  FROM Productos p WHERE p.id_producto = " + idProducto.ToString());
+            return ObjectMapping(DataManager.GetInstance().ConsultaSQL(strSql).Rows[0]);
         }
 
         private Producto ObjectMapping(DataRow row)

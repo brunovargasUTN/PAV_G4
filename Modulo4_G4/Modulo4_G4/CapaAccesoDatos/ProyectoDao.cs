@@ -10,19 +10,19 @@ namespace Modulo4_G4.CapaAccesoDatos
     {
         public IList<Proyecto> GetAll()
         {
-            List<Proyecto> listadoBugs = new List<Proyecto>();
+            List<Proyecto> listadoProyecto = new List<Proyecto>();
 
-            var strSql = "SELECT p.id_proyecto, p.id_producto, p.descripcion, p.version, p.alcance, p.id_responsable from Proyectos p JOIN Usuarios u ON "+
+            var strSql = "SELECT p.id_proyecto, p.id_producto, p.descripcion, p.version, p.alcance, p.id_responsable from Proyectos p JOIN Usuarios u ON " +
                            " p.id_usuario = u.id_usuario";
 
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {
-                listadoBugs.Add(ObjectMapping(row));
+                listadoProyecto.Add(ObjectMapping(row));
             }
 
-            return listadoBugs;
+            return listadoProyecto;
         }
 
         private Proyecto ObjectMapping(DataRow row)
@@ -39,4 +39,3 @@ namespace Modulo4_G4.CapaAccesoDatos
         }
     }
 }
-
