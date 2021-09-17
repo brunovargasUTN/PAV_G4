@@ -12,7 +12,7 @@ namespace Modulo4_G4.Entidades
         public string Calle { get; set; }
         public int NroCalle { get; set; }
         public DateTime FechaAlta { get; set; }
-        public int IdBarrio { get; set; }
-        public int IdContacto { get; set; }
+        public Barrio Barrio { get; set; }
+        public Contacto Contacto { get; set; }
     }
 }
