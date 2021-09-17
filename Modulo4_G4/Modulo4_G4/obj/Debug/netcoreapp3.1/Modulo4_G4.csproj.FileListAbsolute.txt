@@ -14,3 +14,35 @@ C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Mo
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.AssemblyInfoInputs.cache
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.AssemblyInfo.cs
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.CoreCompileInputs.cache
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.exe
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.deps.json
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.runtimeconfig.json
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.runtimeconfig.dev.json
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.pdb
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.AssemblyReference.cache
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Barrios.frmABMBarrio.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Barrios.frmBarrios.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Clientes.frmABMCliente.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Clientes.frmClientes.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Contactos.frmABMContacto.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Contactos.frmContactos.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.frmPrincipal.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Login.frmLogin.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Proyectos.frmABMProyecto.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Proyectos.frmProyectos.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.GenerateResource.cache
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.GeneratedMSBuildEditorConfig.editorconfig
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.AssemblyInfoInputs.cache
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.AssemblyInfo.cs
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.CoreCompileInputs.cache
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.CopyComplete
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.pdb
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.genruntimeconfig.cache
