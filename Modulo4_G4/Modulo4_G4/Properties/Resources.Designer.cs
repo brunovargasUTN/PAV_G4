@@ -63,9 +63,29 @@ namespace Modulo4_G4.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap aceptar_icon {
+            get {
+                object obj = ResourceManager.GetObject("aceptar-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_icon_icons_com_74429 {
             get {
                 object obj = ResourceManager.GetObject("add_icon-icons.com_74429", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cancelar_icon {
+            get {
+                object obj = ResourceManager.GetObject("cancelar-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

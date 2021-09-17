@@ -45,6 +45,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             // Cree un DataGridView no vinculado declarando un recuento de columnas.
             dgvProyectos.ColumnCount = 5;
             dgvProyectos.ColumnHeadersVisible = true;
+            dgvProyectos.ReadOnly = true;
 
             // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
             dgvProyectos.AutoGenerateColumns = false;
