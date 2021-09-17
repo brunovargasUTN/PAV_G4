@@ -20,6 +20,9 @@ namespace Modulo4_G4.CapaLogicaDeNegocio
             return proyectoDao.GetAll();
         }
 
-
+        public IList<Proyecto> ObtenerPorFiltro(Dictionary<string, object> parametros)
+        {
+            return proyectoDao.GetByFilters(parametros);
+        }
     }
 }

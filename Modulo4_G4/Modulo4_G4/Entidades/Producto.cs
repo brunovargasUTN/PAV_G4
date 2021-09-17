@@ -8,5 +8,12 @@ namespace Modulo4_G4.Entidades
     {
         public int IdProducto { get; set; }
         public string NombreProducto { get; set; }
+
+        public override string ToString()
+        {
+            return NombreProducto;
+        }
     }
+
+    
 }

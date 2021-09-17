@@ -46,3 +46,4 @@ F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\net
 F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.dll
 F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.pdb
 F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.genruntimeconfig.cache
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.Properties.Resources.resources

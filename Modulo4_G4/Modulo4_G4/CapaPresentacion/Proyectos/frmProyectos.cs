@@ -36,6 +36,8 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             LlenarCombo(cboResponsable, usuarioService.ObtenerTodos(), "NombreUsuario", "IdUsuario");
             LlenarCombo(cboProducto, productoService.ObtenerTodos(), "NombreProducto", "IdProducto");
             InitializeDataGridView();
+            btnEditar.Enabled = false;
+            btnQuitar.Enabled = false;
         }
 
         private void InitializeDataGridView()
@@ -85,6 +87,64 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             {
                 dgvProyectos.DataSource = proyectoService.ObtenerTodos();
                 return;
+            }
+
+            if (String.IsNullOrEmpty(txtNombre.Text) && String.IsNullOrEmpty(cboResponsable.Text) && String.IsNullOrEmpty(cboProducto.Text)) {
+                MessageBox.Show("Debe ingresar al menos un parametro de filtro");
+                return;
+            }
+
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+
+            if (!String.IsNullOrEmpty(txtNombre.Text))
+            {
+                parametros.Add("Descripcion", txtNombre.Text);
+            }
+            
+            if (!String.IsNullOrEmpty(cboProducto.Text))
+            {
+                parametros.Add("IdProducto", cboProducto.SelectedValue);
+            }
+            
+
+            if (!String.IsNullOrEmpty(cboResponsable.Text))
+            {
+                parametros.Add("IdResponsable", cboResponsable.SelectedValue);
+            }
+
+            dgvProyectos.DataSource = proyectoService.ObtenerPorFiltro(parametros);
+
+        }
+
+        private void chkTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkTodos.Checked)
+            {
+                cboProducto.Enabled = false;
+                cboResponsable.Enabled = false;
+                txtNombre.Enabled = false;
+            }
+            else
+            {
+                cboProducto.Enabled = true;
+                cboResponsable.Enabled = true;
+                txtNombre.Enabled = true;
+            }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dgvProyectos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {   
+            // Solo se debe habilitar los controles de edicion y borrado si se selecciona un objeto valido del dgv
+
+            if (dgvProyectos.CurrentRow.DataBoundItem != null)
+            {
+                btnEditar.Enabled = true;
+                btnQuitar.Enabled = true;
             }
         }
     }
