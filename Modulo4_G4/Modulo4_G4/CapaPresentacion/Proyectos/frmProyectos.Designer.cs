@@ -67,9 +67,13 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             // 
             // dgvProyectos
             // 
+            this.dgvProyectos.AllowUserToAddRows = false;
+            this.dgvProyectos.AllowUserToResizeColumns = false;
+            this.dgvProyectos.AllowUserToResizeRows = false;
             this.dgvProyectos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProyectos.Location = new System.Drawing.Point(3, 122);
             this.dgvProyectos.Name = "dgvProyectos";
+            this.dgvProyectos.ReadOnly = true;
             this.dgvProyectos.RowHeadersWidth = 51;
             this.dgvProyectos.RowTemplate.Height = 29;
             this.dgvProyectos.Size = new System.Drawing.Size(680, 279);

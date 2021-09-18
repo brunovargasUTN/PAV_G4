@@ -25,7 +25,6 @@ F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\net
 F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.AssemblyReference.cache
 F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Barrios.frmABMBarrio.resources
 F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Barrios.frmBarrios.resources
 F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Clientes.frmABMCliente.resources

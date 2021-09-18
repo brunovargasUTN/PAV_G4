@@ -83,26 +83,26 @@ namespace Modulo4_G4
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // barriosToolStripMenuItem
             // 
             this.barriosToolStripMenuItem.Name = "barriosToolStripMenuItem";
-            this.barriosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.barriosToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.barriosToolStripMenuItem.Text = "Barrios";
             // 
             // contactosToolStripMenuItem
             // 
             this.contactosToolStripMenuItem.Name = "contactosToolStripMenuItem";
-            this.contactosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.contactosToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.contactosToolStripMenuItem.Text = "Contactos";
             // 
             // proyectosToolStripMenuItem
             // 
             this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
-            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.proyectosToolStripMenuItem.Text = "Proyectos";
             this.proyectosToolStripMenuItem.Click += new System.EventHandler(this.proyectosToolStripMenuItem_Click);
             // 
@@ -117,7 +117,7 @@ namespace Modulo4_G4
             // registrarFacturaToolStripMenuItem
             // 
             this.registrarFacturaToolStripMenuItem.Name = "registrarFacturaToolStripMenuItem";
-            this.registrarFacturaToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
+            this.registrarFacturaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.registrarFacturaToolStripMenuItem.Text = "Registrar Factura";
             // 
             // frmPrincipal
@@ -128,7 +128,8 @@ namespace Modulo4_G4
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";
-            this.Text = "Form1";
+            this.Text = "Modulo 4 - Facturacion - Grupo 4";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -156,6 +156,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             frmABMProyecto frmABM = new frmABMProyecto();
             frmABM.inicializarFormulario(frmABMProyecto.FormMode.modificar, (Proyecto) dgvProyectos.CurrentRow.DataBoundItem);
             frmABM.ShowDialog();
+            dgvProyectos.DataSource = null;
             btnConsultar_Click(null,null);
 
         }
