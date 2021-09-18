@@ -1,4 +1,5 @@
 ﻿using Modulo4_G4.CapaLogicaDeNegocio;
+using Modulo4_G4.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
         public frmProyectos()
         {
             InitializeComponent();
+            InitializeDataGridView();
             usuarioService = new UsuarioService();
             proyectoService = new ProyectoService();
             productoService = new ProductoService();
@@ -35,7 +37,6 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
         {
             LlenarCombo(cboResponsable, usuarioService.ObtenerTodos(), "NombreUsuario", "IdUsuario");
             LlenarCombo(cboProducto, productoService.ObtenerTodos(), "NombreProducto", "IdProducto");
-            InitializeDataGridView();
             btnEditar.Enabled = false;
             btnQuitar.Enabled = false;
         }
@@ -45,7 +46,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             // Cree un DataGridView no vinculado declarando un recuento de columnas.
             dgvProyectos.ColumnCount = 5;
             dgvProyectos.ColumnHeadersVisible = true;
-            dgvProyectos.ReadOnly = true;
+            //dgvProyectos.ReadOnly = true;
 
             // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
             dgvProyectos.AutoGenerateColumns = false;
@@ -85,8 +86,9 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             if (chkTodos.Checked)
-            {
-                dgvProyectos.DataSource = proyectoService.ObtenerTodos();
+            {   
+                IList<Proyecto> lista = proyectoService.ObtenerTodos();
+                dgvProyectos.DataSource = lista;
                 return;
             }
 
@@ -147,6 +149,15 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
                 btnEditar.Enabled = true;
                 btnQuitar.Enabled = true;
             }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            frmABMProyecto frmABM = new frmABMProyecto();
+            frmABM.inicializarFormulario(frmABMProyecto.FormMode.modificar, (Proyecto) dgvProyectos.CurrentRow.DataBoundItem);
+            frmABM.ShowDialog();
+            btnConsultar_Click(null,null);
+
         }
     }
 }

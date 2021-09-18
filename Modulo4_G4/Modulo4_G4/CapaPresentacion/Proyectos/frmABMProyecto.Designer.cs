@@ -38,7 +38,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.txtAlcance = new System.Windows.Forms.TextBox();
             this.txtVersion = new System.Windows.Forms.TextBox();
             this.cboProducto = new System.Windows.Forms.ComboBox();
-            this.txtResponsable = new System.Windows.Forms.ComboBox();
+            this.cboResponsable = new System.Windows.Forms.ComboBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -119,13 +119,13 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.cboProducto.Size = new System.Drawing.Size(249, 28);
             this.cboProducto.TabIndex = 8;
             // 
-            // txtResponsable
+            // cboResponsable
             // 
-            this.txtResponsable.FormattingEnabled = true;
-            this.txtResponsable.Location = new System.Drawing.Point(158, 220);
-            this.txtResponsable.Name = "txtResponsable";
-            this.txtResponsable.Size = new System.Drawing.Size(249, 28);
-            this.txtResponsable.TabIndex = 9;
+            this.cboResponsable.FormattingEnabled = true;
+            this.cboResponsable.Location = new System.Drawing.Point(158, 220);
+            this.cboResponsable.Name = "cboResponsable";
+            this.cboResponsable.Size = new System.Drawing.Size(249, 28);
+            this.cboResponsable.TabIndex = 9;
             // 
             // btnAceptar
             // 
@@ -135,6 +135,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.btnAceptar.Size = new System.Drawing.Size(54, 58);
             this.btnAceptar.TabIndex = 10;
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -172,7 +173,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.txtResponsable);
+            this.Controls.Add(this.cboResponsable);
             this.Controls.Add(this.cboProducto);
             this.Controls.Add(this.txtVersion);
             this.Controls.Add(this.txtAlcance);
@@ -204,7 +205,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
         private System.Windows.Forms.TextBox txtAlcance;
         private System.Windows.Forms.TextBox txtVersion;
         private System.Windows.Forms.ComboBox cboProducto;
-        private System.Windows.Forms.ComboBox txtResponsable;
+        private System.Windows.Forms.ComboBox cboResponsable;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label6;

@@ -24,5 +24,10 @@ namespace Modulo4_G4.CapaLogicaDeNegocio
         {
             return proyectoDao.GetByFilters(parametros);
         }
+
+        public bool ActualizarProyecto(Proyecto proyecto)
+        {
+            return proyectoDao.Update(proyecto);
+        }
     }
 }
