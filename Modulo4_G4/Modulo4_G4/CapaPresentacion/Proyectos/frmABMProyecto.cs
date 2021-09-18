@@ -37,7 +37,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
         private void frmABMProyecto_Load(object sender, EventArgs e)
         {
             LlenarCombo(cboProducto, productoService.ObtenerTodos(), "NombreProducto", "IdProducto");
-            LlenarCombo(cboProducto, usuarioService.ObtenerTodos(), "NombreUsuario", "Idusuario");
+            LlenarCombo(cboResponsable, usuarioService.ObtenerTodos(), "NombreUsuario", "IdUsuario");
 
             switch (formMode)
             {
@@ -48,6 +48,8 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
                     }
                 case FormMode.modificar:
                     {
+                        this.Text = "Actualizar Proyecto";
+                        MostrarDatos();
                         break;
                     }
             }
@@ -66,6 +68,52 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             cbo.DisplayMember = display;
             cbo.ValueMember = value;
             cbo.SelectedIndex = -1;
+        }
+
+        private void MostrarDatos()
+        {
+            if(proyectoSeleccionado != null)
+            {
+                txtDescripcion.Text = proyectoSeleccionado.Descripcion;
+                cboProducto.Text = proyectoSeleccionado.Producto.NombreProducto;
+                txtAlcance.Text = proyectoSeleccionado.Alcance;
+                txtVersion.Text = proyectoSeleccionado.Version;
+                cboResponsable.Text = proyectoSeleccionado.Responsable.NombreUsuario;
+            }
+        }
+
+        private void ValidarCampos()
+        {
+
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            switch (formMode)
+            {
+                case FormMode.modificar:
+                    {
+                        ValidarCampos();
+                        proyectoSeleccionado.Descripcion = txtDescripcion.Text.ToString();
+                        Producto producto = new Producto();
+                        producto.IdProducto = (int) cboProducto.SelectedValue;
+                        proyectoSeleccionado.Producto = producto;
+                        proyectoSeleccionado.Version = txtVersion.Text;
+                        proyectoSeleccionado.Alcance = txtAlcance.Text;
+                        Usuario usuario = new Usuario();
+                        usuario.IdUsuario = (int) cboResponsable.SelectedValue;
+
+                        if (proyectoService.ActualizarProyecto(proyectoSeleccionado)){
+                            MessageBox.Show("Proyecto actualizado !!!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Dispose();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al actualizar Proyecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        break;
+                    }
+            }
         }
     }
 }

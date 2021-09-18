@@ -183,6 +183,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.btnEditar.Size = new System.Drawing.Size(53, 57);
             this.btnEditar.TabIndex = 3;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 

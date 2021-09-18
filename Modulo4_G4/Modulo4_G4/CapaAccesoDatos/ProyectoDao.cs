@@ -82,6 +82,22 @@ namespace Modulo4_G4.CapaAccesoDatos
             return null;
         }
 
+        internal bool Update(Proyecto proyecto)
+        {
+            var strSql = String.Concat(" UPDATE Proyectos SET descripcion = @Descripcion, id_producto = @IdProducto, version = @Version, ",
+                                        " alcance = @Alcance, id_responsable = @IdResponsable WHERE id_proyecto = @IdProyecto ");
+            var parametros = new Dictionary<string, object>();
+
+            parametros.Add("IdProyecto", proyecto.IdProyecto);
+            parametros.Add("Descripcion", proyecto.Descripcion);
+            parametros.Add("IdProducto", proyecto.Producto.IdProducto);
+            parametros.Add("Version", proyecto.Version);
+            parametros.Add("Alcance", proyecto.Alcance);
+            parametros.Add("IdResponsable", proyecto.Responsable.IdUsuario);
+
+            return (DataManager.GetInstance().EjecutarSQL(strSql,parametros) == 1);
+        }
+
         private Proyecto ObjectMapping(DataRow row)
         {
             Proyecto oProyecto = new Proyecto
@@ -98,7 +114,13 @@ namespace Modulo4_G4.CapaAccesoDatos
                 ProductoDao productoDao = new ProductoDao();
                 oProyecto.Producto = productoDao.GetById(idProducto);
             }
-            
+
+            if(row["id_responsable"] != null)
+            {
+                int idResponsable = Convert.ToInt32(row["id_responsable"].ToString());
+                UsuarioDao usuarioDao = new UsuarioDao();
+                oProyecto.Responsable = usuarioDao.GetById(idResponsable);
+            }
             return oProyecto;
         }
     }
