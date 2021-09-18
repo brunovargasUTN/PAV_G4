@@ -23,5 +23,11 @@ namespace Modulo4_G4.CapaLogicaDeNegocio
         {
             return oBarrioDao.GetBarrioById(id);
         }
+
+        public Barrio ConsultarBarrioPorNombre(string nombre)
+        {
+            return oBarrioDao.GetBarrioByNombre(nombre);
+        }
+
     }
 }

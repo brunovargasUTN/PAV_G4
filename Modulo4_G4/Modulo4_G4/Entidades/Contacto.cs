@@ -11,5 +11,11 @@ namespace Modulo4_G4.Entidades
         public string Apellido { get; set; }
         public string EmailContacto { get; set; }
         public int Telefono { get; set; }
+
+        public override string ToString()
+        {
+            string str = NombreContacto.ToString() + " " + Apellido.ToString();
+            return str;
+        }
     }
 }

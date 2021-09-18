@@ -1,4 +1,3 @@
-C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.AssemblyReference.cache
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Barrios.frmABMBarrio.resources
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Barrios.frmBarrios.resources
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Clientes.frmABMCliente.resources
@@ -64,3 +63,4 @@ C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Mo
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.dll
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.pdb
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.genruntimeconfig.cache
+C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.AssemblyReference.cache

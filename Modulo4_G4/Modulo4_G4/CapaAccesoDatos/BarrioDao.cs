@@ -23,11 +23,20 @@ namespace Modulo4_G4.CapaAccesoDatos
         public Barrio GetBarrioById(int idBarrio)
         {
             var strSql = String.Concat("SELECT b.id_barrio, ",
-                           "       b.nombre,",
-                           "FROM Barrios b,",
-                           "WHERE b.id_barrio = " + idBarrio.ToString());
+                                       "       b.nombre,",
+                                       "FROM Barrios b,",
+                                       "WHERE b.id_barrio = " + idBarrio.ToString());
             return ObjectMapping(DataManager.GetInstance().ConsultaSQL(strSql).Rows[0]);
 
+        }
+
+        public Barrio GetBarrioByNombre(string Nombre)
+        {
+            var strSql = String.Concat("SELECT b.id_barrio, ",
+                                       "       b.nombre,",
+                                       "FROM Barrios b,",
+                                       "WHERE b.nombre LIKE '%' + @Nombre + '%' " );
+            return ObjectMapping(DataManager.GetInstance().ConsultaSQL(strSql).Rows[0]);
         }
 
         private Barrio ObjectMapping(DataRow row)

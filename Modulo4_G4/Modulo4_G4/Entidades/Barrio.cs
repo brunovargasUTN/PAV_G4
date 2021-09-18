@@ -8,5 +8,10 @@ namespace Modulo4_G4.Entidades
     {
         public int IdBarrio { get; set; }
         public string NombreBarrio { get; set; }
+
+        public override string ToString()
+        {
+            return NombreBarrio;
+        }
     }
 }

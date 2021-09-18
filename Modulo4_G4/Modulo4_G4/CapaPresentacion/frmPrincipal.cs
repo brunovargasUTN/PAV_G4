@@ -1,4 +1,5 @@
-﻿using Modulo4_G4.CapaPresentacion.Proyectos;
+﻿using Modulo4_G4.CapaPresentacion.Clientes;
+using Modulo4_G4.CapaPresentacion.Proyectos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,12 @@ namespace Modulo4_G4
         private void proyectosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmProyectos frm = new frmProyectos();
+            frm.ShowDialog();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmClientes frm = new frmClientes();
             frm.ShowDialog();
         }
     }
