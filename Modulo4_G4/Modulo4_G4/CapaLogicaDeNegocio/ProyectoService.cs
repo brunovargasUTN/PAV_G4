@@ -29,5 +29,10 @@ namespace Modulo4_G4.CapaLogicaDeNegocio
         {
             return proyectoDao.Update(proyecto);
         }
+
+        public bool EliminarProyecto(Proyecto proyecto)
+        {
+            return proyectoDao.Delete(proyecto);
+        }
     }
 }

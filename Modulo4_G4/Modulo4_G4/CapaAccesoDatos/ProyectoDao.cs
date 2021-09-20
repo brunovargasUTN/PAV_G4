@@ -98,6 +98,14 @@ namespace Modulo4_G4.CapaAccesoDatos
             return (DataManager.GetInstance().EjecutarSQL(strSql,parametros) == 1);
         }
 
+        internal bool Delete(Proyecto proyecto)
+        {
+            var strSql = String.Concat("UPDATE Proyectos SET borrado = 1",
+                                        " WHERE id_proyecto = " + proyecto.IdProyecto.ToString());
+
+            return (DataManager.GetInstance().EjecutarSQL(strSql) == 1);
+        }
+
         private Proyecto ObjectMapping(DataRow row)
         {
             Proyecto oProyecto = new Proyecto

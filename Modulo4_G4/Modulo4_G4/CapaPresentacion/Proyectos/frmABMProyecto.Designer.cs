@@ -41,8 +41,8 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.cboResponsable = new System.Windows.Forms.ComboBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblAceptar = new System.Windows.Forms.Label();
+            this.lblCancelar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -145,32 +145,33 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.btnCancelar.Size = new System.Drawing.Size(54, 58);
             this.btnCancelar.TabIndex = 11;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // label6
+            // lblAceptar
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(151, 353);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 20);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Aceptar";
+            this.lblAceptar.AutoSize = true;
+            this.lblAceptar.Location = new System.Drawing.Point(151, 353);
+            this.lblAceptar.Name = "lblAceptar";
+            this.lblAceptar.Size = new System.Drawing.Size(61, 20);
+            this.lblAceptar.TabIndex = 12;
+            this.lblAceptar.Text = "Aceptar";
             // 
-            // label7
+            // lblCancelar
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(300, 353);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 20);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Cancelar";
+            this.lblCancelar.AutoSize = true;
+            this.lblCancelar.Location = new System.Drawing.Point(300, 353);
+            this.lblCancelar.Name = "lblCancelar";
+            this.lblCancelar.Size = new System.Drawing.Size(66, 20);
+            this.lblCancelar.TabIndex = 13;
+            this.lblCancelar.Text = "Cancelar";
             // 
             // frmABMProyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 405);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblCancelar);
+            this.Controls.Add(this.lblAceptar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.cboResponsable);
@@ -208,7 +209,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
         private System.Windows.Forms.ComboBox cboResponsable;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblAceptar;
+        private System.Windows.Forms.Label lblCancelar;
     }
 }

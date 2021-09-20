@@ -33,7 +33,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.dgvProyectos = new System.Windows.Forms.DataGridView();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.chkTodos = new System.Windows.Forms.CheckBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.cboResponsable = new System.Windows.Forms.ComboBox();
             this.cboProducto = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.pnlFiltros.Controls.Add(this.dgvProyectos);
             this.pnlFiltros.Controls.Add(this.btnConsultar);
             this.pnlFiltros.Controls.Add(this.chkTodos);
-            this.pnlFiltros.Controls.Add(this.txtNombre);
+            this.pnlFiltros.Controls.Add(this.txtDescripcion);
             this.pnlFiltros.Controls.Add(this.cboResponsable);
             this.pnlFiltros.Controls.Add(this.cboProducto);
             this.pnlFiltros.Controls.Add(this.label6);
@@ -101,12 +101,12 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.chkTodos.UseVisualStyleBackColor = true;
             this.chkTodos.CheckedChanged += new System.EventHandler(this.chkTodos_CheckedChanged);
             // 
-            // txtNombre
+            // txtDescripcion
             // 
-            this.txtNombre.Location = new System.Drawing.Point(102, 32);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(175, 27);
-            this.txtNombre.TabIndex = 8;
+            this.txtDescripcion.Location = new System.Drawing.Point(102, 32);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(175, 27);
+            this.txtDescripcion.TabIndex = 8;
             // 
             // cboResponsable
             // 
@@ -147,9 +147,9 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 20);
+            this.label2.Size = new System.Drawing.Size(87, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre";
+            this.label2.Text = "Descripcion";
             // 
             // label1
             // 
@@ -178,6 +178,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.btnQuitar.Size = new System.Drawing.Size(55, 57);
             this.btnQuitar.TabIndex = 2;
             this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
             // btnEditar
             // 
@@ -227,7 +228,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
         private System.Windows.Forms.DataGridView dgvProyectos;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.CheckBox chkTodos;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.ComboBox cboResponsable;
         private System.Windows.Forms.ComboBox cboProducto;
         private System.Windows.Forms.Label label6;

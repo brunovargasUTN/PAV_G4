@@ -52,6 +52,15 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
                         MostrarDatos();
                         break;
                     }
+
+                case FormMode.eliminar:
+                    {
+                        this.Text = "Eliminar Proyecto";
+                        lblAceptar.Text = "Eliminar";
+                        MostrarDatos();
+                        DeshabilitarDatos();
+                        break;
+                    }
             }
 
         }
@@ -82,9 +91,44 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             }
         }
 
-        private void ValidarCampos()
+        private void DeshabilitarDatos()
         {
+            txtDescripcion.Enabled = false;
+            cboProducto.Enabled = false;
+            txtAlcance.Enabled = false;
+            txtVersion.Enabled = false;
+            cboResponsable.Enabled = false;
+        }
 
+        private void enviarAlerta(string msg)
+        {
+            MessageBox.Show(msg, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private bool ValidarCampos()
+        { 
+            if (String.IsNullOrEmpty(txtDescripcion.Text))
+            {
+                enviarAlerta("Debe introducir un valor de descripcion");
+                txtAlcance.Focus();
+                return false;
+            }
+
+            if (String.IsNullOrEmpty(txtAlcance.Text))
+            {
+                enviarAlerta("Debe introducir un valor de alcance");
+                txtAlcance.Focus();
+                return false;
+            }
+
+            if (String.IsNullOrEmpty(txtVersion.Text))
+            {
+                enviarAlerta("Debe introducir un valor de version");
+                txtAlcance.Focus();
+                return false;
+            }
+
+            return true;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -93,27 +137,56 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             {
                 case FormMode.modificar:
                     {
-                        ValidarCampos();
-                        proyectoSeleccionado.Descripcion = txtDescripcion.Text.ToString();
-                        Producto producto = new Producto();
-                        producto.IdProducto = (int) cboProducto.SelectedValue;
-                        proyectoSeleccionado.Producto = producto;
-                        proyectoSeleccionado.Version = txtVersion.Text;
-                        proyectoSeleccionado.Alcance = txtAlcance.Text;
-                        Usuario usuario = new Usuario();
-                        usuario.IdUsuario = (int) cboResponsable.SelectedValue;
-
-                        if (proyectoService.ActualizarProyecto(proyectoSeleccionado)){
-                            MessageBox.Show("Proyecto actualizado !!!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Dispose();
-                        }
-                        else
+                        if (ValidarCampos())
                         {
-                            MessageBox.Show("Error al actualizar Proyecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            proyectoSeleccionado.Descripcion = txtDescripcion.Text.ToString();
+                            Producto producto = new Producto();
+                            producto.IdProducto = (int)cboProducto.SelectedValue;
+                            proyectoSeleccionado.Producto = producto;
+                            proyectoSeleccionado.Version = txtVersion.Text;
+                            proyectoSeleccionado.Alcance = txtAlcance.Text;
+                            Usuario usuario = new Usuario();
+                            usuario.IdUsuario = (int)cboResponsable.SelectedValue;
+
+                            if (proyectoService.ActualizarProyecto(proyectoSeleccionado))
+                            {
+                                MessageBox.Show("Proyecto actualizado !!!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Dispose();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error al actualizar Proyecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        break;
+                    }
+                case FormMode.eliminar:
+                    {
+                        DialogResult dialogResult = MessageBox.Show("¿Esta seguro que desa eliminar el registro seleccionado?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if(dialogResult == DialogResult.Yes)
+                        {
+                            if (proyectoService.EliminarProyecto(proyectoSeleccionado))
+                            {
+                                MessageBox.Show("Proyecto eliminado !!!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Dispose();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error al intentar eliminar proyecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                         break;
                     }
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+           DialogResult dialog = MessageBox.Show("¿Esta seguro que desea abandonar los cambios?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(dialog == DialogResult.Yes)
+            {
+                this.Close();
+            }   
         }
     }
 }

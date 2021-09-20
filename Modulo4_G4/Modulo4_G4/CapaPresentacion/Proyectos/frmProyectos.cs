@@ -59,7 +59,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             dgvProyectos.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
 
             // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
-            dgvProyectos.Columns[0].Name = "Nombre";
+            dgvProyectos.Columns[0].Name = "Descripcion";
             dgvProyectos.Columns[0].DataPropertyName = "Descripcion";
             // Definimos el ancho de la columna.
 
@@ -92,16 +92,16 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
                 return;
             }
 
-            if (String.IsNullOrEmpty(txtNombre.Text) && String.IsNullOrEmpty(cboResponsable.Text) && String.IsNullOrEmpty(cboProducto.Text)) {
+            if (String.IsNullOrEmpty(txtDescripcion.Text) && String.IsNullOrEmpty(cboResponsable.Text) && String.IsNullOrEmpty(cboProducto.Text)) {
                 MessageBox.Show("Debe ingresar al menos un parametro de filtro");
                 return;
             }
 
             Dictionary<string, object> parametros = new Dictionary<string, object>();
 
-            if (!String.IsNullOrEmpty(txtNombre.Text))
+            if (!String.IsNullOrEmpty(txtDescripcion.Text))
             {
-                parametros.Add("Descripcion", txtNombre.Text);
+                parametros.Add("Descripcion", txtDescripcion.Text);
             }
             
             if (!String.IsNullOrEmpty(cboProducto.Text))
@@ -115,7 +115,17 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
                 parametros.Add("IdResponsable", cboResponsable.SelectedValue);
             }
 
-            dgvProyectos.DataSource = proyectoService.ObtenerPorFiltro(parametros);
+            IList<Proyecto> resultado = proyectoService.ObtenerPorFiltro(parametros);
+
+            if(resultado.Count > 0)
+            {
+                dgvProyectos.DataSource = resultado;
+            }
+            else
+            {
+                MessageBox.Show("No se encontraron elementos que coincidan con el parametro de busquueda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
 
         }
 
@@ -125,13 +135,13 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             {
                 cboProducto.Enabled = false;
                 cboResponsable.Enabled = false;
-                txtNombre.Enabled = false;
+                txtDescripcion.Enabled = false;
             }
             else
             {
                 cboProducto.Enabled = true;
                 cboResponsable.Enabled = true;
-                txtNombre.Enabled = true;
+                txtDescripcion.Enabled = true;
             }
         }
 
@@ -159,6 +169,15 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             dgvProyectos.DataSource = null;
             btnConsultar_Click(null,null);
 
+        }
+
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            frmABMProyecto frmABM = new frmABMProyecto();
+            frmABM.inicializarFormulario(frmABMProyecto.FormMode.eliminar, (Proyecto)dgvProyectos.CurrentRow.DataBoundItem);
+            frmABM.ShowDialog();
+            dgvProyectos.DataSource = null;
+            btnConsultar_Click(null, null);
         }
     }
 }
