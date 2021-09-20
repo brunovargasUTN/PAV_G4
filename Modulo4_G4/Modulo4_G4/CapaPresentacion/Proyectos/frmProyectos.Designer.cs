@@ -198,6 +198,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.btnNuevo.Size = new System.Drawing.Size(59, 56);
             this.btnNuevo.TabIndex = 4;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // frmProyectos
             // 

@@ -82,6 +82,22 @@ namespace Modulo4_G4.CapaAccesoDatos
             return null;
         }
 
+        internal bool Create(Proyecto proyecto)
+        {
+            string strSql = String.Concat(" INSERT INTO Proyectos (descripcion, id_producto, alcance, version, id_responsable, borrado) ", 
+                                            " VALUES (@Descripcion, @IdProducto, @Alcance, @Version, @IdUsuario, 0) ");
+
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+            parametros.Add("Descripcion", proyecto.Descripcion);
+            parametros.Add("IdProducto", proyecto.Producto.IdProducto);
+            parametros.Add("Alcance", proyecto.Alcance);
+            parametros.Add("Version", proyecto.Version);
+            parametros.Add("IdUsuario", proyecto.Responsable.IdUsuario);
+
+
+            return (DataManager.GetInstance().EjecutarSQL(strSql,parametros) == 1);
+        }
+
         internal bool Update(Proyecto proyecto)
         {
             var strSql = String.Concat(" UPDATE Proyectos SET descripcion = @Descripcion, id_producto = @IdProducto, version = @Version, ",

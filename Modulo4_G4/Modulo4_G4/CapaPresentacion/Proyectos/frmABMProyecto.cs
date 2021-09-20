@@ -44,11 +44,13 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
                 case FormMode.nuevo:
                     {
                         this.Text = "Nuevo Proyecto";
+                        lblAceptar.Text = "Agregar";
                         break;
                     }
                 case FormMode.modificar:
                     {
                         this.Text = "Actualizar Proyecto";
+                        lblAceptar.Text = "Actualizar";
                         MostrarDatos();
                         break;
                     }
@@ -135,6 +137,31 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
         {
             switch (formMode)
             {
+                case FormMode.nuevo:
+                    {
+                        if (ValidarCampos())
+                        {
+                            proyectoSeleccionado.Descripcion = txtDescripcion.Text.ToString();
+                            Producto producto = new Producto();
+                            producto.IdProducto = (int)cboProducto.SelectedValue;
+                            proyectoSeleccionado.Producto = producto;
+                            proyectoSeleccionado.Version = txtVersion.Text;
+                            proyectoSeleccionado.Alcance = txtAlcance.Text;
+                            Usuario usuario = new Usuario();
+                            usuario.IdUsuario = (int)cboResponsable.SelectedValue;
+                            proyectoSeleccionado.Responsable = usuario;
+                            if (proyectoService.NuevoProyecto(proyectoSeleccionado)) {
+                                MessageBox.Show("Proyecto agregado exitosamente !!!", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Se produjo un error al intentar agregar el proyecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        this.Close();
+                        break;
+                    }
                 case FormMode.modificar:
                     {
                         if (ValidarCampos())
@@ -147,6 +174,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
                             proyectoSeleccionado.Alcance = txtAlcance.Text;
                             Usuario usuario = new Usuario();
                             usuario.IdUsuario = (int)cboResponsable.SelectedValue;
+                            proyectoSeleccionado.Responsable = usuario;
 
                             if (proyectoService.ActualizarProyecto(proyectoSeleccionado))
                             {

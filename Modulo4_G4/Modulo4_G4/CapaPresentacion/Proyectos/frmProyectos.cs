@@ -179,5 +179,13 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             dgvProyectos.DataSource = null;
             btnConsultar_Click(null, null);
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmABMProyecto frmABM = new frmABMProyecto();
+            frmABM.inicializarFormulario(frmABMProyecto.FormMode.nuevo, new Proyecto());
+            frmABM.ShowDialog();
+            
+        }
     }
 }
