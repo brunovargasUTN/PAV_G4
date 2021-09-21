@@ -46,22 +46,22 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
 
             // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
             dgvClientes.Columns[0].Name = "ID Cliente";
-            dgvClientes.Columns[0].DataPropertyName = "id_cliente";
+            dgvClientes.Columns[0].DataPropertyName = "IdCliente";
 
             dgvClientes.Columns[1].Name = "CUIT";
-            dgvClientes.Columns[1].DataPropertyName = "cuit";
+            dgvClientes.Columns[1].DataPropertyName = "Cuit";
 
-            dgvClientes.Columns[2].Name = "razon_social";
+            dgvClientes.Columns[2].Name = "Razon Social";
             dgvClientes.Columns[2].DataPropertyName = "RazonSocial";
 
             dgvClientes.Columns[3].Name = "Calle";
-            dgvClientes.Columns[3].DataPropertyName = "calle";
+            dgvClientes.Columns[3].DataPropertyName = "Calle";
 
             dgvClientes.Columns[4].Name = "N° Domicilio";
-            dgvClientes.Columns[4].DataPropertyName = "numero";
+            dgvClientes.Columns[4].DataPropertyName = "NroCalle";
 
             dgvClientes.Columns[5].Name = "Fecha Alta";
-            dgvClientes.Columns[5].DataPropertyName = "fecha_alta";
+            dgvClientes.Columns[5].DataPropertyName = "fechaAlta";
 
             dgvClientes.Columns[6].Name = "Barrio";
             dgvClientes.Columns[6].DataPropertyName = "Barrio";

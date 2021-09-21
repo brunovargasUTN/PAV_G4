@@ -35,6 +35,44 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             oClienteSelected = clienteSelected;
         }
 
+        private void frmABMCliente_Load(System.Object sender, System.EventArgs e)
+        {
+            switch (formMode)
+            {
+                case FormMode.nuevo:
+                    {
+                        this.Text = "Nuevo Cliente";
+                        break;
+                    }
+                case FormMode.modificar:
+                    {
+                        this.Text = "Actualizar Cliente";
+                        // Recuperar usuario seleccionado en la grilla 
+                        MostrarDatos();
+                        txtNombre.Enabled = true;
+                        txtEmail.Enabled = true;
+                        txtEmail.Enabled = true;
+                        txtPassword.Enabled = true;
+                        txtConfirmarPass.Enabled = true;
+                        cboPerfil.Enabled = true;
+                        break;
+                    }
+
+                case FormMode.eliminar:
+                    {
+                        MostrarDatos();
+                        this.Text = "Eliminar Usuario";
+                        txtNombre.Enabled = false;
+                        txtEmail.Enabled = false;
+                        txtEmail.Enabled = false;
+                        txtPassword.Enabled = false;
+                        cboPerfil.Enabled = false;
+                        txtConfirmarPass.Enabled = false;
+                        break;
+                    }
+            }
+        }
+
 
         private void MostrarDatos()
         {
@@ -47,5 +85,6 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
                 cboPerfil.Text = oUsuarioSelected.Perfil.Nombre; */
             }
         }
+
     }
 }
