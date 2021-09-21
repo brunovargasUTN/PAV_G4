@@ -27,9 +27,9 @@ namespace Modulo4_G4.CapaAccesoDatos
                                           "       usuario,",
                                           "       password,",
                                           "       email, ",
-                                          "       estado",
-                                          " FROM Usuarios",
-                                          " WHERE borrado = 0");
+                                          "       estado ",
+                                          " FROM Usuarios ",
+                                          " WHERE borrado = 0 ");
 
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
 
@@ -48,9 +48,9 @@ namespace Modulo4_G4.CapaAccesoDatos
                                           "       usuario,",
                                           "       password,",
                                           "       email, ",
-                                          "       estado",
-                                          "FROM Usuarios",
-                                          "WHERE usuario = @usuario");
+                                          "       estado ",
+                                          " FROM Usuarios ",
+                                          " WHERE usuario = @usuario");
 
             var parametros = new Dictionary<string, object>();
             parametros.Add("usuario", nombreUsuario);
@@ -86,9 +86,9 @@ namespace Modulo4_G4.CapaAccesoDatos
                                           "       usuario,",
                                           "       password,",
                                           "       email, ",
-                                          "       estado",
-                                          "FROM Usuarios",
-                                          "WHERE borrado = 0");
+                                          "       estado ",
+                                          " FROM Usuarios",
+                                          " WHERE borrado = 0 ");
 
             if (parametros.ContainsKey("idUsuario"))
             {
