@@ -1,4 +1,5 @@
 ﻿using Modulo4_G4.CapaPresentacion.Clientes;
+using Modulo4_G4.CapaPresentacion.Login;
 using Modulo4_G4.CapaPresentacion.Proyectos;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,21 @@ namespace Modulo4_G4
         {
             frmClientes frm = new frmClientes();
             frm.ShowDialog();
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.ShowDialog();
+            lblUsuarioLogueado.Text = login.UsuarioLogueado;
+        }
+
+        private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult rpta;
+            rpta = MessageBox.Show("Seguro que desea salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rpta == DialogResult.No)
+                e.Cancel = true;
         }
     }
 }
