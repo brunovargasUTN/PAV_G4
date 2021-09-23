@@ -29,91 +29,257 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtRazon = new System.Windows.Forms.TextBox();
+            this.txtCalle = new System.Windows.Forms.TextBox();
+            this.txtNro = new System.Windows.Forms.TextBox();
+            this.lblCuit = new System.Windows.Forms.Label();
+            this.lblRazon = new System.Windows.Forms.Label();
+            this.lblCalle = new System.Windows.Forms.Label();
+            this.lblNro = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblBarrio = new System.Windows.Forms.Label();
+            this.lblContacto = new System.Windows.Forms.Label();
+            this.btnAgregarBarrio = new System.Windows.Forms.Button();
+            this.btnAgregarContacto = new System.Windows.Forms.Button();
+            this.cboBarrio = new System.Windows.Forms.ComboBox();
+            this.cboContacto = new System.Windows.Forms.ComboBox();
+            this.mtbFecha = new System.Windows.Forms.MaskedTextBox();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblAceptar = new System.Windows.Forms.Label();
+            this.lblCancelar = new System.Windows.Forms.Label();
+            this.mtbCuit = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtRazon
             // 
-            this.textBox1.Location = new System.Drawing.Point(122, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 0;
+            this.txtRazon.Location = new System.Drawing.Point(129, 71);
+            this.txtRazon.Name = "txtRazon";
+            this.txtRazon.Size = new System.Drawing.Size(249, 27);
+            this.txtRazon.TabIndex = 2;
             // 
-            // textBox2
+            // txtCalle
             // 
-            this.textBox2.Location = new System.Drawing.Point(122, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 27);
-            this.textBox2.TabIndex = 1;
+            this.txtCalle.Location = new System.Drawing.Point(129, 114);
+            this.txtCalle.Name = "txtCalle";
+            this.txtCalle.Size = new System.Drawing.Size(249, 27);
+            this.txtCalle.TabIndex = 3;
             // 
-            // textBox3
+            // txtNro
             // 
-            this.textBox3.Location = new System.Drawing.Point(122, 102);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 27);
-            this.textBox3.TabIndex = 2;
+            this.txtNro.Location = new System.Drawing.Point(129, 156);
+            this.txtNro.Name = "txtNro";
+            this.txtNro.Size = new System.Drawing.Size(249, 27);
+            this.txtNro.TabIndex = 4;
             // 
-            // textBox4
+            // lblCuit
             // 
-            this.textBox4.Location = new System.Drawing.Point(122, 135);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(125, 27);
-            this.textBox4.TabIndex = 3;
+            this.lblCuit.AutoSize = true;
+            this.lblCuit.Location = new System.Drawing.Point(22, 32);
+            this.lblCuit.Name = "lblCuit";
+            this.lblCuit.Size = new System.Drawing.Size(40, 20);
+            this.lblCuit.TabIndex = 8;
+            this.lblCuit.Text = "CUIT";
             // 
-            // textBox5
+            // lblRazon
             // 
-            this.textBox5.Location = new System.Drawing.Point(122, 168);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(125, 27);
-            this.textBox5.TabIndex = 4;
+            this.lblRazon.AutoSize = true;
+            this.lblRazon.Location = new System.Drawing.Point(22, 74);
+            this.lblRazon.Name = "lblRazon";
+            this.lblRazon.Size = new System.Drawing.Size(94, 20);
+            this.lblRazon.TabIndex = 9;
+            this.lblRazon.Text = "Razón Social";
             // 
-            // textBox6
+            // lblCalle
             // 
-            this.textBox6.Location = new System.Drawing.Point(122, 201);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(125, 27);
-            this.textBox6.TabIndex = 5;
+            this.lblCalle.AutoSize = true;
+            this.lblCalle.Location = new System.Drawing.Point(22, 117);
+            this.lblCalle.Name = "lblCalle";
+            this.lblCalle.Size = new System.Drawing.Size(42, 20);
+            this.lblCalle.TabIndex = 10;
+            this.lblCalle.Text = "Calle";
             // 
-            // textBox7
+            // lblNro
             // 
-            this.textBox7.Location = new System.Drawing.Point(122, 234);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(125, 27);
-            this.textBox7.TabIndex = 6;
+            this.lblNro.AutoSize = true;
+            this.lblNro.Location = new System.Drawing.Point(22, 159);
+            this.lblNro.Name = "lblNro";
+            this.lblNro.Size = new System.Drawing.Size(95, 20);
+            this.lblNro.TabIndex = 11;
+            this.lblNro.Text = "N° Domicilio";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(22, 202);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(78, 20);
+            this.lblFecha.TabIndex = 12;
+            this.lblFecha.Text = "Fecha Alta";
+            // 
+            // lblBarrio
+            // 
+            this.lblBarrio.AutoSize = true;
+            this.lblBarrio.Location = new System.Drawing.Point(22, 248);
+            this.lblBarrio.Name = "lblBarrio";
+            this.lblBarrio.Size = new System.Drawing.Size(49, 20);
+            this.lblBarrio.TabIndex = 13;
+            this.lblBarrio.Text = "Barrio";
+            // 
+            // lblContacto
+            // 
+            this.lblContacto.AutoSize = true;
+            this.lblContacto.Location = new System.Drawing.Point(22, 296);
+            this.lblContacto.Name = "lblContacto";
+            this.lblContacto.Size = new System.Drawing.Size(69, 20);
+            this.lblContacto.TabIndex = 14;
+            this.lblContacto.Text = "Contacto";
+            // 
+            // btnAgregarBarrio
+            // 
+            this.btnAgregarBarrio.Enabled = false;
+            this.btnAgregarBarrio.Location = new System.Drawing.Point(393, 244);
+            this.btnAgregarBarrio.Name = "btnAgregarBarrio";
+            this.btnAgregarBarrio.Size = new System.Drawing.Size(73, 28);
+            this.btnAgregarBarrio.TabIndex = 15;
+            this.btnAgregarBarrio.Text = "Agregar";
+            this.btnAgregarBarrio.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarContacto
+            // 
+            this.btnAgregarContacto.Enabled = false;
+            this.btnAgregarContacto.Location = new System.Drawing.Point(393, 293);
+            this.btnAgregarContacto.Name = "btnAgregarContacto";
+            this.btnAgregarContacto.Size = new System.Drawing.Size(73, 28);
+            this.btnAgregarContacto.TabIndex = 16;
+            this.btnAgregarContacto.Text = "Agregar";
+            this.btnAgregarContacto.UseVisualStyleBackColor = true;
+            // 
+            // cboBarrio
+            // 
+            this.cboBarrio.FormattingEnabled = true;
+            this.cboBarrio.Location = new System.Drawing.Point(129, 245);
+            this.cboBarrio.Name = "cboBarrio";
+            this.cboBarrio.Size = new System.Drawing.Size(249, 28);
+            this.cboBarrio.TabIndex = 17;
+            // 
+            // cboContacto
+            // 
+            this.cboContacto.FormattingEnabled = true;
+            this.cboContacto.Location = new System.Drawing.Point(129, 293);
+            this.cboContacto.Name = "cboContacto";
+            this.cboContacto.Size = new System.Drawing.Size(249, 28);
+            this.cboContacto.TabIndex = 18;
+            // 
+            // mtbFecha
+            // 
+            this.mtbFecha.Location = new System.Drawing.Point(129, 199);
+            this.mtbFecha.Mask = "00/00/0000";
+            this.mtbFecha.Name = "mtbFecha";
+            this.mtbFecha.Size = new System.Drawing.Size(249, 27);
+            this.mtbFecha.TabIndex = 19;
+            this.mtbFecha.ValidatingType = typeof(System.DateTime);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Image = global::Modulo4_G4.Properties.Resources.aceptar_icon;
+            this.btnAceptar.Location = new System.Drawing.Point(129, 351);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(54, 58);
+            this.btnAceptar.TabIndex = 20;
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = global::Modulo4_G4.Properties.Resources.cancelar_icon;
+            this.btnCancelar.Location = new System.Drawing.Point(300, 351);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(54, 58);
+            this.btnCancelar.TabIndex = 21;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // lblAceptar
+            // 
+            this.lblAceptar.AutoSize = true;
+            this.lblAceptar.Location = new System.Drawing.Point(122, 421);
+            this.lblAceptar.Name = "lblAceptar";
+            this.lblAceptar.Size = new System.Drawing.Size(61, 20);
+            this.lblAceptar.TabIndex = 22;
+            this.lblAceptar.Text = "Aceptar";
+            // 
+            // lblCancelar
+            // 
+            this.lblCancelar.AutoSize = true;
+            this.lblCancelar.Location = new System.Drawing.Point(300, 421);
+            this.lblCancelar.Name = "lblCancelar";
+            this.lblCancelar.Size = new System.Drawing.Size(66, 20);
+            this.lblCancelar.TabIndex = 23;
+            this.lblCancelar.Text = "Cancelar";
+            // 
+            // mtbCuit
+            // 
+            this.mtbCuit.Location = new System.Drawing.Point(129, 29);
+            this.mtbCuit.Mask = "00-00000000-0";
+            this.mtbCuit.Name = "mtbCuit";
+            this.mtbCuit.Size = new System.Drawing.Size(249, 27);
+            this.mtbCuit.TabIndex = 24;
+            this.mtbCuit.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // frmABMCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(483, 463);
+            this.Controls.Add(this.mtbCuit);
+            this.Controls.Add(this.lblCancelar);
+            this.Controls.Add(this.lblAceptar);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.mtbFecha);
+            this.Controls.Add(this.cboContacto);
+            this.Controls.Add(this.cboBarrio);
+            this.Controls.Add(this.btnAgregarContacto);
+            this.Controls.Add(this.btnAgregarBarrio);
+            this.Controls.Add(this.lblContacto);
+            this.Controls.Add(this.lblBarrio);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.lblNro);
+            this.Controls.Add(this.lblCalle);
+            this.Controls.Add(this.lblRazon);
+            this.Controls.Add(this.lblCuit);
+            this.Controls.Add(this.txtNro);
+            this.Controls.Add(this.txtCalle);
+            this.Controls.Add(this.txtRazon);
             this.Name = "frmABMCliente";
             this.Text = "frmABMCliente";
+            this.Load += new System.EventHandler(this.frmABMCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtRazon;
+        private System.Windows.Forms.TextBox txtCalle;
+        private System.Windows.Forms.TextBox txtNro;
+        private System.Windows.Forms.Label lblCuit;
+        private System.Windows.Forms.Label lblRazon;
+        private System.Windows.Forms.Label lblCalle;
+        private System.Windows.Forms.Label lblNro;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblBarrio;
+        private System.Windows.Forms.Label lblContacto;
+        private System.Windows.Forms.Button btnAgregarBarrio;
+        private System.Windows.Forms.Button btnAgregarContacto;
+        private System.Windows.Forms.ComboBox cboBarrio;
+        private System.Windows.Forms.ComboBox cboContacto;
+        private System.Windows.Forms.MaskedTextBox mtbFecha;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblAceptar;
+        private System.Windows.Forms.Label lblCancelar;
+        private System.Windows.Forms.MaskedTextBox mtbCuit;
     }
 }

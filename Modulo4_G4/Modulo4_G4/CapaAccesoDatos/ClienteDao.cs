@@ -11,8 +11,11 @@ namespace Modulo4_G4.CapaAccesoDatos
         public IList<Cliente> GetAll()
         {
             List<Cliente> list = new List<Cliente>();
-            var strSql = "SELECT c.id_cliente, c.cuit, c.razon_social, c.calle, c.numero, c.fecha_alta, c.id_barrio, c.id_contacto " +
-                         "FROM Clientes c JOIN Barrios b ON c.id_barrio = b.id_barrio JOIN Contactos cn ON c.id_contacto = cn.id_contacto";
+
+            var strSql = " SELECT c.id_cliente, c.cuit, c.razon_social, c.calle, c.numero, c.fecha_alta, c.id_barrio, c.id_contacto " +
+                         " FROM Clientes c JOIN Barrios b ON c.id_barrio = b.id_barrio JOIN Contactos cn ON c.id_contacto = cn.id_contacto " +
+                         " WHERE c.borrado = 0 ";
+            
             var resultConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
             foreach (DataRow row in resultConsulta.Rows)
             {
@@ -23,9 +26,9 @@ namespace Modulo4_G4.CapaAccesoDatos
 
         public Cliente GetClienteById(int idCliente)
         {
-            var strSql = String.Concat("SELECT c.id_cliente, c.cuit, c.razon_social, c.calle, c.numero, c.fecha_alta, c.id_barrio, c.id_contacto",
-                                       "FROM Clientes c",
-                                       "WHERE c.id_cliente = " + idCliente.ToString());
+            var strSql = String.Concat(" SELECT c.id_cliente, c.cuit, c.razon_social, c.calle, c.numero, c.fecha_alta, c.id_barrio, c.id_contacto ",
+                                       " FROM Clientes c",
+                                       " WHERE c.borrado = 0 AND c.id_cliente = " + idCliente.ToString());
             return ObjectMapping(DataManager.GetInstance().ConsultaSQL(strSql).Rows[0]);
         }
 
@@ -34,7 +37,7 @@ namespace Modulo4_G4.CapaAccesoDatos
             Cliente oCliente = new Cliente
             {
                 IdCliente = Convert.ToInt32(row["id_cliente"].ToString()),
-                Cuit = Convert.ToInt32(row["cuit"].ToString()),
+                Cuit = row["cuit"].ToString(),
                 RazonSocial = row["razon_social"].ToString(),
                 Calle = row["calle"].ToString(),
                 NroCalle = Convert.ToInt32(row["numero"].ToString()),
@@ -43,7 +46,7 @@ namespace Modulo4_G4.CapaAccesoDatos
             BarrioDao barrio = new BarrioDao();
             oCliente.Barrio = barrio.GetBarrioById(Convert.ToInt32(row["id_barrio"].ToString()));
             ContactoDao contacto = new ContactoDao();
-            oCliente.Contacto = contacto.GetContactoById(Convert.ToInt32(row["id_barrio"].ToString()));
+            oCliente.Contacto = contacto.GetContactoById(Convert.ToInt32(row["id_contacto"].ToString()));
 
             return oCliente;
         }
@@ -51,7 +54,7 @@ namespace Modulo4_G4.CapaAccesoDatos
         public IList<Cliente> GetClienteByFilters(Dictionary<string, object> parametros)
         {
             List<Cliente> list = new List<Cliente>();
-            var strSql = String.Concat("SELECT c.id_cliente, ",
+            var strSql = String.Concat(" SELECT c.id_cliente, ",
                                        "       c.cuit,",
                                        "       c.razon_social,",
                                        "       c.calle,",
@@ -60,11 +63,11 @@ namespace Modulo4_G4.CapaAccesoDatos
                                        "       c.id_barrio",
                                        "       b.nombre as barrio",
                                        "       c.id_contacto",
-                                       "       cn.nombre as contacto",
-                                       "FROM Clientes c",
-                                       "LEFT JOIN Barrios b ON c.id_barrio = b.id_barrio",
-                                       "LEFT JOIN Contactos cn ON c.id_contacto = cn.id_contacto",
-                                       "WHERE 1=1 ");
+                                       "       cn.nombre as contacto ",
+                                       " FROM Clientes c ",
+                                       " LEFT JOIN Barrios b ON c.id_barrio = b.id_barrio ",
+                                       " LEFT JOIN Contactos cn ON c.id_contacto = cn.id_contacto ",
+                                       " WHERE c.borrado = 0 ");
             if (parametros.ContainsKey("IdCliente"))
                 strSql += " AND (c.id_cliente=@IdCliente) ";
             if (parametros.ContainsKey("Cuit"))
@@ -91,6 +94,54 @@ namespace Modulo4_G4.CapaAccesoDatos
             return list;
         }
 
+        internal bool Create(Cliente cliente)
+        {
+            string strSql = String.Concat(" INSERT INTO Clientes (cuit, razon_social, calle, numero, fecha_alta, id_barrio, id_contacto, borrado)",
+                                          " VALUES (@Cuit, @RazonSocial, @Calle, @NroCalle, @FechaAlta, @IdBarrio, @IdContacto, 0)");
+
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+
+            parametros.Add("Cuit", cliente.Cuit);
+            parametros.Add("RazonSocial", cliente.RazonSocial);
+            parametros.Add("Calle", cliente.Calle);
+            parametros.Add("NroCalle", cliente.NroCalle);
+            parametros.Add("FechaAlta", cliente.FechaAlta);
+            parametros.Add("IdBarrio", cliente.Barrio.IdBarrio);
+            parametros.Add("IdContacto", cliente.Contacto.IdContacto);
+
+            // Si una fila es afectada por la inserción retorna TRUE. Caso contrario FALSE
+            return (DataManager.GetInstance().EjecutarSQL(strSql, parametros) == 1);
+        }
+
+        internal bool Update(Cliente cliente)
+        {
+            var strSql = String.Concat(" UPDATE Clientes SET cuit = @Cuit, razon_social = @RazonSocial, calle = @Calle, numero = @NroCalle, ",
+                                       " fecha_alta = @FechaAlta, id_barrio = @IdBarrio, id_contacto = @IdContacto ",
+                                       " WHERE borrado = 0 AND id_cliente = @IdCliente ");
+            
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+
+            parametros.Add("IdCliente", cliente.IdCliente);
+            parametros.Add("Cuit", cliente.Cuit);
+            parametros.Add("RazonSocial", cliente.RazonSocial);
+            parametros.Add("Calle", cliente.Calle);
+            parametros.Add("NroCalle", cliente.NroCalle);
+            parametros.Add("FechaAlta", cliente.FechaAlta);
+            parametros.Add("IdBarrio", cliente.Barrio.IdBarrio);
+            parametros.Add("IdContacto", cliente.Contacto.IdContacto);
+
+            // Si una fila es afectada por la inserción retorna TRUE. Caso contrario FALSE
+            return (DataManager.GetInstance().EjecutarSQL(strSql, parametros) == 1);
+        }
+
+        internal bool Delete(Cliente cliente)
+        {
+            var strSql = String.Concat(" UPDATE Clientes SET borrado = 1 ",
+                                        " WHERE id_cliente = " + cliente.IdCliente.ToString(),
+                                        " AND borrado = 0");
+
+            return (DataManager.GetInstance().EjecutarSQL(strSql) == 1);
+        }
 
     }
 }

@@ -46,22 +46,22 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
 
             // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
             dgvClientes.Columns[0].Name = "ID Cliente";
-            dgvClientes.Columns[0].DataPropertyName = "id_cliente";
+            dgvClientes.Columns[0].DataPropertyName = "IdCliente";
 
             dgvClientes.Columns[1].Name = "CUIT";
-            dgvClientes.Columns[1].DataPropertyName = "cuit";
+            dgvClientes.Columns[1].DataPropertyName = "Cuit";
 
-            dgvClientes.Columns[2].Name = "razon_social";
+            dgvClientes.Columns[2].Name = "Razon Social";
             dgvClientes.Columns[2].DataPropertyName = "RazonSocial";
 
             dgvClientes.Columns[3].Name = "Calle";
-            dgvClientes.Columns[3].DataPropertyName = "calle";
+            dgvClientes.Columns[3].DataPropertyName = "Calle";
 
             dgvClientes.Columns[4].Name = "N° Domicilio";
-            dgvClientes.Columns[4].DataPropertyName = "numero";
+            dgvClientes.Columns[4].DataPropertyName = "NroCalle";
 
             dgvClientes.Columns[5].Name = "Fecha Alta";
-            dgvClientes.Columns[5].DataPropertyName = "fecha_alta";
+            dgvClientes.Columns[5].DataPropertyName = "fechaAlta";
 
             dgvClientes.Columns[6].Name = "Barrio";
             dgvClientes.Columns[6].DataPropertyName = "Barrio";
@@ -80,8 +80,10 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
         {
             if (chkMostrarTodos.Checked)
             {
-                dgvClientes.DataSource = oClienteService.ObtenerTodos();
+                IList<Cliente> list = oClienteService.ObtenerTodos();
+                dgvClientes.DataSource = list;
                 return;
+
             }
 
             if (String.IsNullOrEmpty(txtID.Text) && String.IsNullOrEmpty(txtCuit.Text) && String.IsNullOrEmpty(mtbFechaAlta.Text))
@@ -123,10 +125,11 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             frmABMCliente frm = new frmABMCliente();
+            frm.InicializarFormulario(frmABMCliente.FormMode.nuevo, new Cliente());
             frm.ShowDialog();
 
             //Forzamos el evento Click para actualizar la grilla.
-            btnConsultar_Click(sender, e);
+            //btnConsultar_Click(sender, e);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -136,7 +139,9 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             frm.InicializarFormulario(frmABMCliente.FormMode.modificar, cliente);
             frm.ShowDialog();
 
-            btnConsultar_Click(sender, e);
+            //Forzamos el evento Click para actualizar la grilla.
+            dgvClientes.DataSource = null;
+            btnConsultar_Click(null, null);
         }
 
 
@@ -147,7 +152,9 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             frm.InicializarFormulario(frmABMCliente.FormMode.eliminar, cliente);
             frm.ShowDialog();
 
-            btnConsultar_Click(sender, e);
+            //Forzamos el evento Click para actualizar la grilla.
+            dgvClientes.DataSource = null;
+            btnConsultar_Click(null, null);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

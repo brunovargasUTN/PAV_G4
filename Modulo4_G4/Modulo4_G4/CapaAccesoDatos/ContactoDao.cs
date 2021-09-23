@@ -37,10 +37,11 @@ namespace Modulo4_G4.CapaAccesoDatos
         }
         public Contacto GetContactoById(int idContacto)
         {
-            var strSql = String.Concat("SELECT id_contacto, nombre, apellido, email, telefono",
-                                       "FROM Contactos",
-                                       "WHERE c.id_cliente = " + idContacto.ToString());
+            var strSql = String.Concat(" SELECT id_contacto, nombre, apellido, email, telefono ",
+                                       " FROM Contactos ",
+                                       " WHERE id_contacto = " + idContacto.ToString());
 
+            //System.IndexOutOfRangeException: 'There is no row at position 0.'
             return ObjectMapping(DataManager.GetInstance().ConsultaSQL(strSql).Rows[0]);
         }
 
@@ -51,7 +52,9 @@ namespace Modulo4_G4.CapaAccesoDatos
                 IdContacto = Convert.ToInt32(row["id_contacto"].ToString()),
                 NombreContacto = row["nombre"].ToString(),
                 Apellido = row["apellido"].ToString(),
-                EmailContacto = row["email"].ToString()
+                EmailContacto = row["email"].ToString(),
+                Telefono = (int)long.Parse(row["telefono"].ToString())
+
             };
 
             return oContacto;

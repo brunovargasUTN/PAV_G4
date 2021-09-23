@@ -206,6 +206,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             this.Controls.Add(this.pnlFiltros);
             this.Name = "frmClientes";
             this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.frmClientes_Load);
             this.pnlFiltros.ResumeLayout(false);
             this.pnlFiltros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();

@@ -15,11 +15,16 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
 
         private FormMode formMode = FormMode.nuevo;
         private ClienteService oClienteService;
+        private BarrioService oBarrioService;
+        private ContactoService oContactoService;
         private Cliente oClienteSelected;
+
         public frmABMCliente()
         {
             InitializeComponent();
             oClienteService = new ClienteService();
+            oBarrioService = new BarrioService();
+            oContactoService = new ContactoService();
         }
 
         public enum FormMode
@@ -35,17 +40,201 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             oClienteSelected = clienteSelected;
         }
 
+        private void LlenarCombo(ComboBox cbo, Object source, String display, String value)
+        {
+            cbo.DataSource = source;
+            cbo.DisplayMember = display;
+            cbo.ValueMember = value;
+            cbo.SelectedIndex = -1;
+        }
+        private void frmABMCliente_Load(System.Object sender, System.EventArgs e)
+        {
+            LlenarCombo(cboBarrio, oBarrioService.ObtenerTodos(), "NombreBarrio", "IdBarrio");
+            LlenarCombo(cboContacto, oContactoService.ObtenerTodos(), "NombreContacto", "IdContacto");
 
+            switch (formMode)
+            {
+                case FormMode.nuevo:
+                    {
+                        this.Text = "Nuevo Cliente";
+                        lblAceptar.Text = "Agregar";
+                        btnAgregarBarrio.Enabled = true;
+                        btnAgregarContacto.Enabled = true;
+                        break;
+                    }
+                case FormMode.modificar:
+                    {
+                        this.Text = "Actualizar Cliente";
+                        lblAceptar.Text = "Actualizar";
+                        btnAgregarBarrio.Enabled = true;
+                        btnAgregarContacto.Enabled = true;
+                        // Recuperar usuario seleccionado en la grilla
+                        MostrarDatos();
+                        mtbCuit.Enabled = true;
+                        txtRazon.Enabled = true;
+                        txtCalle.Enabled = true;
+                        txtNro.Enabled = true;
+                        mtbFecha.Enabled = true;
+                        cboBarrio.Enabled = true;
+                        cboContacto.Enabled = true;
+                        break;
+                    }
+
+                case FormMode.eliminar:
+                    {
+                        this.Text = "Eliminar Usuario";
+                        lblAceptar.Text = "Eliminar";
+                        MostrarDatos();
+                        mtbCuit.Enabled = false;
+                        txtRazon.Enabled = false;
+                        txtCalle.Enabled = false;
+                        txtNro.Enabled = false;
+                        mtbFecha.Enabled = false;
+                        cboBarrio.Enabled = false;
+                        cboContacto.Enabled = false;
+                        break;
+                    }
+            }
+
+        }
         private void MostrarDatos()
         {
             if (oClienteSelected != null)
             {
-               /* txtNombre.Text = oUsuarioSelected.NombreUsuario;
-                txtEmail.Text = oUsuarioSelected.Email;
-                txtPassword.Text = oUsuarioSelected.Password;
-                txtConfirmarPass.Text = txtPassword.Text;
-                cboPerfil.Text = oUsuarioSelected.Perfil.Nombre; */
+                mtbCuit.Text = oClienteSelected.Cuit.ToString();
+                txtRazon.Text = oClienteSelected.RazonSocial;
+                txtCalle.Text = oClienteSelected.Calle;
+                txtNro.Text = oClienteSelected.NroCalle.ToString();
+                mtbFecha.Text = oClienteSelected.FechaAlta.ToString();
+                cboBarrio.Text = oClienteSelected.Barrio.NombreBarrio;
+                cboContacto.Text = oClienteSelected.Contacto.NombreContacto;
+            }
+        }
+
+        private bool ValidarCampos()
+        {
+            if (String.IsNullOrEmpty(mtbCuit.Text))
+            {
+                MessageBox.Show("Debe introducir un CUIT", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mtbCuit.BackColor = Color.Red;
+                mtbCuit.Focus();
+                return false;
+            }
+
+            else
+                mtbCuit.BackColor = Color.White;
+
+            if (String.IsNullOrEmpty(mtbFecha.Text))
+            {
+                MessageBox.Show("Debe introducir una fecha de alta", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mtbFecha.BackColor = Color.Red;
+                mtbFecha.Focus();
+                return false;
+            }
+
+            else
+                mtbFecha.BackColor = Color.White;
+
+            return true;
+        }
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            switch (formMode)
+            {
+                case FormMode.nuevo:
+                    {
+                        if (ValidarCampos())
+                        {
+                            var oCliente = new Cliente();
+                            oCliente.Cuit = mtbCuit.Text;
+                            oCliente.RazonSocial = txtRazon.Text;
+                            oCliente.Calle = txtCalle.Text;
+                            oCliente.NroCalle = Int32.Parse(txtNro.Text);
+                            oCliente.FechaAlta = DateTime.Parse(mtbFecha.Text);
+                            Barrio barrio = new Barrio();
+                            barrio.IdBarrio = (int)cboBarrio.SelectedValue;
+                            oCliente.Barrio = barrio;
+                            Contacto contacto = new Contacto();
+                            contacto.IdContacto = (int)cboContacto.SelectedValue;
+                            oCliente.Contacto = contacto;
+
+                            if (oClienteService.NuevoCliente(oCliente))
+                            {
+                                MessageBox.Show("Cliente insertado exitosamente !!!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+
+                            else
+                            {
+                                MessageBox.Show("Se produjo un error al intentar insertar el Cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        this.Close();
+                        break;
+                    }
+
+                case FormMode.modificar:
+                    {
+                        if (ValidarCampos())
+                        {
+                            oClienteSelected.Cuit = mtbCuit.Text;
+                            oClienteSelected.RazonSocial = txtRazon.Text;
+                            oClienteSelected.Calle = txtCalle.Text;
+                            oClienteSelected.NroCalle = Int32.Parse(txtNro.Text);
+                            oClienteSelected.FechaAlta = DateTime.Parse(mtbFecha.Text);
+                            Barrio barrio = new Barrio();
+                            barrio.IdBarrio = (int)cboBarrio.SelectedValue;
+                            oClienteSelected.Barrio = barrio;
+                            Contacto contacto = new Contacto();
+                            contacto.IdContacto = (int)cboContacto.SelectedValue;
+                            oClienteSelected.Contacto = contacto;
+
+                            if (oClienteService.ActualizarCliente(oClienteSelected))
+                            {
+                                MessageBox.Show("Cliente actualizado !!!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Dispose();
+                            }
+                            else
+                                MessageBox.Show("Error al actualizar el Cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        break;
+                    }
+
+                case FormMode.eliminar:
+                    {
+                        DialogResult dialogResult = MessageBox.Show("¿Esta seguro que desa eliminar el registro seleccionado?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            if (oClienteService.EliminarCliente(oClienteSelected))
+                            {
+                                MessageBox.Show("Cliente eliminado !!!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Dispose();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error al intentar eliminar el Cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        break;
+                    }
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("¿Esta seguro que desea abandonar los cambios?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialog == DialogResult.Yes)
+            {
+                this.Close();
             }
         }
     }
 }
+
+
+
+
+
+
+
+
