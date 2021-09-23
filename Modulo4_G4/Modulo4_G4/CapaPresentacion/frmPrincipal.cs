@@ -45,6 +45,13 @@ namespace Modulo4_G4
             rpta = MessageBox.Show("Seguro que desea salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rpta == DialogResult.No)
                 e.Cancel = true;
+            else
+                Environment.Exit(0);
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipal_FormClosing(null, null);
         }
     }
 }

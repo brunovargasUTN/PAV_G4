@@ -13,7 +13,7 @@ namespace Modulo4_G4.CapaAccesoDatos
             List<Proyecto> listadoProyecto = new List<Proyecto>();
 
             var strSql = "SELECT p.id_proyecto, p.id_producto, p.descripcion, p.version, p.alcance, p.id_responsable FROM    Proyectos p JOIN Usuarios u ON " +
-                           " p.id_responsable = u.id_usuario WHERE p.borrado = 0";
+                           " p.id_responsable = u.id_usuario WHERE p.borrado = 0 ORDER BY p.descripcion ASC ";
 
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
 
@@ -59,6 +59,8 @@ namespace Modulo4_G4.CapaAccesoDatos
             {
                 strSql += " AND p.id_responsable = @IdResponsable ";
             }
+
+            strSql += " ORDER BY p.descripcion ASC ";
 
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql, parametros);
 

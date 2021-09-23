@@ -152,14 +152,14 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
                             proyectoSeleccionado.Responsable = usuario;
                             if (proyectoService.NuevoProyecto(proyectoSeleccionado)) {
                                 MessageBox.Show("Proyecto agregado exitosamente !!!", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                                this.Close();
                             }
                             else
                             {
                                 MessageBox.Show("Se produjo un error al intentar agregar el proyecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
-                        this.Close();
+                        //this.Close();
                         break;
                     }
                 case FormMode.modificar:
