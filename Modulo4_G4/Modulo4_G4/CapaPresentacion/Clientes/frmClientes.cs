@@ -80,8 +80,10 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
         {
             if (chkMostrarTodos.Checked)
             {
-                dgvClientes.DataSource = oClienteService.ObtenerTodos();
+                IList<Cliente> list = oClienteService.ObtenerTodos();
+                dgvClientes.DataSource = list;
                 return;
+
             }
 
             if (String.IsNullOrEmpty(txtID.Text) && String.IsNullOrEmpty(txtCuit.Text) && String.IsNullOrEmpty(mtbFechaAlta.Text))
@@ -123,10 +125,11 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             frmABMCliente frm = new frmABMCliente();
+            frm.InicializarFormulario(frmABMCliente.FormMode.nuevo, new Cliente());
             frm.ShowDialog();
 
             //Forzamos el evento Click para actualizar la grilla.
-            btnConsultar_Click(sender, e);
+            //btnConsultar_Click(sender, e);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -136,7 +139,9 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             frm.InicializarFormulario(frmABMCliente.FormMode.modificar, cliente);
             frm.ShowDialog();
 
-            btnConsultar_Click(sender, e);
+            //Forzamos el evento Click para actualizar la grilla.
+            dgvClientes.DataSource = null;
+            btnConsultar_Click(null, null);
         }
 
 
@@ -147,7 +152,9 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             frm.InicializarFormulario(frmABMCliente.FormMode.eliminar, cliente);
             frm.ShowDialog();
 
-            btnConsultar_Click(sender, e);
+            //Forzamos el evento Click para actualizar la grilla.
+            dgvClientes.DataSource = null;
+            btnConsultar_Click(null, null);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
