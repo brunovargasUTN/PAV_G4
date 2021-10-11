@@ -124,6 +124,32 @@ namespace Modulo4_G4.CapaAccesoDatos
             return (DataManager.GetInstance().EjecutarSQL(strSql) == 1);
         }
 
+        //Consultas para Reportes
+        public DataTable GetReporteProyectos()
+        {
+            var strSql = String.Concat(" SELECT Usuarios.usuario, Proyectos.descripcion, Proyectos.version, Proyectos.alcance, Productos.nombre ",
+                                            " FROM Usuarios INNER JOIN ",
+                                            " Proyectos ON Usuarios.id_usuario = Proyectos.id_responsable INNER JOIN ",
+                                            " Productos ON Proyectos.id_producto = Productos.id_producto ",
+                                            " WHERE(Proyectos.borrado = 0)");
+
+            return DataManager.GetInstance().ConsultaSQL(strSql);
+        }
+
+        public DataTable GetReporteProyectosXProductos()
+        {
+            var strSql = String.Concat(" SELECT TOP 10 p.nombre as producto, COUNT(p.id_producto) as cantidad ",
+                                             " FROM Proyectos pr JOIN Productos p ",
+                                             " ON pr.id_producto = p.id_producto ",
+                                             " WHERE pr.borrado = 0 ",
+                                             " GROUP BY p.nombre ",
+                                             " ORDER BY cantidad desc ");
+
+            return DataManager.GetInstance().ConsultaSQL(strSql);
+        }
+
+
+        //Mapper de Proyectos
         private Proyecto ObjectMapping(DataRow row)
         {
             Proyecto oProyecto = new Proyecto

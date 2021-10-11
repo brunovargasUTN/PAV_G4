@@ -2,6 +2,7 @@
 using Modulo4_G4.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 
 namespace Modulo4_G4.CapaLogicaDeNegocio
@@ -38,6 +39,16 @@ namespace Modulo4_G4.CapaLogicaDeNegocio
         public bool EliminarProyecto(Proyecto proyecto)
         {
             return proyectoDao.Delete(proyecto);
+        }
+
+        public DataTable MostrarReporteProyectos()
+        {
+            return proyectoDao.GetReporteProyectos();
+        }
+
+        public DataTable MostrarReporteProyectosXProductos()
+        {
+            return proyectoDao.GetReporteProyectosXProductos();
         }
     }
 }

@@ -39,8 +39,16 @@ namespace Modulo4_G4
             this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoDeProyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadisticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.top10DistribucionDeProyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblUsuarioLogueado = new System.Windows.Forms.ToolStripStatusLabel();
+            this.consultarHistoricoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +59,9 @@ namespace Modulo4_G4
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.soporteToolStripMenuItem,
-            this.facturaciónToolStripMenuItem});
+            this.facturaciónToolStripMenuItem,
+            this.reportesToolStripMenuItem,
+            this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -69,7 +79,7 @@ namespace Modulo4_G4
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(121, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -113,7 +123,8 @@ namespace Modulo4_G4
             // facturaciónToolStripMenuItem
             // 
             this.facturaciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarFacturaToolStripMenuItem});
+            this.registrarFacturaToolStripMenuItem,
+            this.consultarHistoricoToolStripMenuItem});
             this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
             this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
             this.facturaciónToolStripMenuItem.Text = "Facturación";
@@ -121,8 +132,62 @@ namespace Modulo4_G4
             // registrarFacturaToolStripMenuItem
             // 
             this.registrarFacturaToolStripMenuItem.Name = "registrarFacturaToolStripMenuItem";
-            this.registrarFacturaToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
+            this.registrarFacturaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.registrarFacturaToolStripMenuItem.Text = "Registrar Factura";
+            this.registrarFacturaToolStripMenuItem.Click += new System.EventHandler(this.registrarFacturaToolStripMenuItem_Click);
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listadosToolStripMenuItem,
+            this.estadisticosToolStripMenuItem});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // listadosToolStripMenuItem
+            // 
+            this.listadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listadoDeProyectosToolStripMenuItem});
+            this.listadosToolStripMenuItem.Name = "listadosToolStripMenuItem";
+            this.listadosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.listadosToolStripMenuItem.Text = "Listados";
+            // 
+            // listadoDeProyectosToolStripMenuItem
+            // 
+            this.listadoDeProyectosToolStripMenuItem.Name = "listadoDeProyectosToolStripMenuItem";
+            this.listadoDeProyectosToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
+            this.listadoDeProyectosToolStripMenuItem.Text = "Listado de Proyectos";
+            this.listadoDeProyectosToolStripMenuItem.Click += new System.EventHandler(this.listadoDeProyectosToolStripMenuItem_Click);
+            // 
+            // estadisticosToolStripMenuItem
+            // 
+            this.estadisticosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.top10DistribucionDeProyectosToolStripMenuItem});
+            this.estadisticosToolStripMenuItem.Name = "estadisticosToolStripMenuItem";
+            this.estadisticosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.estadisticosToolStripMenuItem.Text = "Estadisticos";
+            // 
+            // top10DistribucionDeProyectosToolStripMenuItem
+            // 
+            this.top10DistribucionDeProyectosToolStripMenuItem.Name = "top10DistribucionDeProyectosToolStripMenuItem";
+            this.top10DistribucionDeProyectosToolStripMenuItem.Size = new System.Drawing.Size(310, 26);
+            this.top10DistribucionDeProyectosToolStripMenuItem.Text = "Top 10 Distribucion de Proyectos";
+            this.top10DistribucionDeProyectosToolStripMenuItem.Click += new System.EventHandler(this.top10DistribucionDeProyectosToolStripMenuItem_Click);
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.acercaDeToolStripMenuItem});
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // acercaDeToolStripMenuItem
+            // 
+            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.acercaDeToolStripMenuItem.Text = "Acerca de";
             // 
             // statusStrip1
             // 
@@ -140,6 +205,12 @@ namespace Modulo4_G4
             this.lblUsuarioLogueado.Name = "lblUsuarioLogueado";
             this.lblUsuarioLogueado.Size = new System.Drawing.Size(151, 20);
             this.lblUsuarioLogueado.Text = "toolStripStatusLabel1";
+            // 
+            // consultarHistoricoToolStripMenuItem
+            // 
+            this.consultarHistoricoToolStripMenuItem.Name = "consultarHistoricoToolStripMenuItem";
+            this.consultarHistoricoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.consultarHistoricoToolStripMenuItem.Text = "Consultar Historico";
             // 
             // frmPrincipal
             // 
@@ -177,6 +248,14 @@ namespace Modulo4_G4
         private System.Windows.Forms.ToolStripMenuItem registrarFacturaToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblUsuarioLogueado;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadoDeProyectosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estadisticosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem top10DistribucionDeProyectosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarHistoricoToolStripMenuItem;
     }
 }
 

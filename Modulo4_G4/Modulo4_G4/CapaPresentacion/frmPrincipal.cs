@@ -1,6 +1,9 @@
-﻿using Modulo4_G4.CapaPresentacion.Clientes;
+﻿using Modulo4_G4.CapaLogicaDeNegocio;
+using Modulo4_G4.CapaPresentacion.Clientes;
+using Modulo4_G4.CapaPresentacion.Facturacion;
 using Modulo4_G4.CapaPresentacion.Login;
 using Modulo4_G4.CapaPresentacion.Proyectos;
+using Modulo4_G4.CapaPresentacion.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Modulo4_G4
 {
@@ -36,7 +40,7 @@ namespace Modulo4_G4
         {
             frmLogin login = new frmLogin();
             login.ShowDialog();
-            lblUsuarioLogueado.Text = login.UsuarioLogueado;
+            lblUsuarioLogueado.Text = "Usuario logueado: " + login.UsuarioLogueado;
         }
 
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
@@ -52,6 +56,27 @@ namespace Modulo4_G4
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPrincipal_FormClosing(null, null);
+        }
+
+        private void listadoDeProyectosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteProyectos frmReporte = new frmReporteProyectos();
+            frmReporte.inicializarReporte("tableProyectos", @".\CapaPresentacion\Reportes\rptProyectos.rdlc", new ProyectoService().MostrarReporteProyectos());
+            frmReporte.ShowDialog();
+        }
+
+        private void top10DistribucionDeProyectosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteProyectos frmReporte = new frmReporteProyectos();
+            frmReporte.inicializarReporte("DataSet1", @".\CapaPresentacion\Reportes\rptCantidadProyectos.rdlc", new ProyectoService().MostrarReporteProyectosXProductos());
+            frmReporte.ShowDialog();
+        }
+
+        private void registrarFacturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFactura factura = new frmFactura();
+            factura.inicializarFormulario(frmFactura.FormMode.nuevo);
+            factura.ShowDialog();
         }
     }
 }
