@@ -20,5 +20,23 @@ namespace Modulo4_G4.CapaLogicaDeNegocio
         {
             return oContactoDao.GetAll();
         }
+        public IList<Contacto> ObtenerPorFiltro(Dictionary<string, object> parametros)
+        {
+            return oContactoDao.GetByFilters(parametros);
+        }
+        public bool NuevoContacto(Contacto contacto)
+        {
+            return oContactoDao.Create(contacto);
+        }
+
+        public bool ActualizarContacto(Contacto oContactoSelected)
+        {
+            return oContactoDao.Update(oContactoSelected);
+        }
+
+        public bool EliminarContacto(Contacto oContactoSelected)
+        {
+            return oContactoDao.Delete(oContactoSelected);
+        }
     }
 }

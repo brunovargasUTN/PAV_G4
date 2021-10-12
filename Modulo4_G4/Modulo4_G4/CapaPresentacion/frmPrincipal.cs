@@ -4,6 +4,7 @@ using Modulo4_G4.CapaPresentacion.Facturacion;
 using Modulo4_G4.CapaPresentacion.Login;
 using Modulo4_G4.CapaPresentacion.Proyectos;
 using Modulo4_G4.CapaPresentacion.Reportes;
+using Modulo4_G4.CapaPresentacion.Contactos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -61,14 +62,14 @@ namespace Modulo4_G4
         private void listadoDeProyectosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporteProyectos frmReporte = new frmReporteProyectos();
-            frmReporte.inicializarReporte("tableProyectos", @".\CapaPresentacion\Reportes\rptProyectos.rdlc", new ProyectoService().MostrarReporteProyectos());
+            //frmReporte.inicializarReporte("tableProyectos", @".\CapaPresentacion\Reportes\rptProyectos.rdlc", new ProyectoService().MostrarReporteProyectos());
             frmReporte.ShowDialog();
         }
 
         private void top10DistribucionDeProyectosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporteProyectos frmReporte = new frmReporteProyectos();
-            frmReporte.inicializarReporte("DataSet1", @".\CapaPresentacion\Reportes\rptCantidadProyectos.rdlc", new ProyectoService().MostrarReporteProyectosXProductos());
+            //frmReporte.inicializarReporte("DataSet1", @".\CapaPresentacion\Reportes\rptCantidadProyectos.rdlc", new ProyectoService().MostrarReporteProyectosXProductos());
             frmReporte.ShowDialog();
         }
 
@@ -77,6 +78,12 @@ namespace Modulo4_G4
             frmFactura factura = new frmFactura();
             factura.inicializarFormulario(frmFactura.FormMode.nuevo);
             factura.ShowDialog();
+        }
+
+        private void contactosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmContactos frm = new frmContactos();
+            frm.ShowDialog();
         }
     }
 }

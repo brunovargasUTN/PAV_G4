@@ -23,7 +23,7 @@ namespace Modulo4_G4.CapaAccesoDatos
         {
             List<Contacto> listadoContactos = new List<Contacto>();
 
-            var strSql = "SELECT id_contacto, nombre, apellido, email, telefono FROM Contactos";
+            var strSql = "SELECT id_contacto, nombre, apellido, email, telefono FROM Contactos WHERE borrado = 0";
 
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
 
@@ -35,6 +35,85 @@ namespace Modulo4_G4.CapaAccesoDatos
             return listadoContactos;
 
         }
+
+        internal bool Create(Contacto oContacto)
+        {
+            var strSql = String.Concat("INSERT INTO Contactos (nombre, apellido, email, telefono, borrado)",
+                                       "VALUES (@Nombre, @Apellido, @Email, @Telefono, 0)");
+
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+            parametros.Add("Nombre", oContacto.NombreContacto);
+            parametros.Add("Apellido", oContacto.Apellido);
+            parametros.Add("Email", oContacto.EmailContacto);
+            parametros.Add("Telefono", oContacto.Telefono);
+
+            return DataManager.GetInstance().EjecutarSQL(strSql, parametros) == 1;
+        }
+
+        internal bool Update(Contacto oContacto)
+        {
+            var strSql = String.Concat("UPDATE Contactos ",
+                                       "SET nombre = @Nombre,",
+                                       "  apellido = @Apellido,",
+                                       "     email = @Email,",
+                                       "  telefono = @Telefono ",
+                                       "WHERE id_contacto = @IdContacto ");
+
+            var parametros = new Dictionary<string, object>();
+
+            parametros.Add("IdContacto", oContacto.IdContacto);
+            parametros.Add("Nombre", oContacto.NombreContacto);
+            parametros.Add("Apellido", oContacto.Apellido);
+            parametros.Add("Email", oContacto.EmailContacto);
+            parametros.Add("Telefono", oContacto.Telefono);
+
+            return DataManager.GetInstance().EjecutarSQL(strSql, parametros) == 1;
+
+        }
+
+        internal bool Delete(Contacto oContacto)
+        {
+            var strSql = String.Concat("UPDATE Contactos SET borrado = 1 ",
+                                       "WHERE id_contacto = " + oContacto.IdContacto.ToString());
+            return (DataManager.GetInstance().EjecutarSQL(strSql) == 1);
+        }
+
+        public IList<Contacto> GetByFilters(Dictionary<string, object> parametros)
+        {
+            List<Contacto> listadoContactos = new List<Contacto>();
+            var strSql = string.Concat("SELECT id_contacto, nombre, apellido, email, telefono ",
+                                       "FROM Contactos WHERE borrado = 0");
+            //if (parametros.ContainsKey("IdContacto"))
+            //{
+            //    strSql += " AND id_contacto = @IdContacto";
+            //}
+            if (parametros.ContainsKey("nombre"))
+            {
+                strSql += " AND (nombre = @nombre)";
+            }
+            if (parametros.ContainsKey("apellido"))
+            {
+                strSql += " AND (apellido = @apellido)";
+            }
+            //if (parametros.ContainsKey("Email"))
+            //{
+            //    strSql += " AND email = @Email";
+            //}
+            //if (parametros.ContainsKey("Telefono"))
+            //{
+            //    strSql += " AND telefono = @Telefono";
+            //}
+
+            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql, parametros);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                listadoContactos.Add(ObjectMapping(row));
+            }
+
+            return listadoContactos;
+        }
+
         public Contacto GetContactoById(int idContacto)
         {
             var strSql = String.Concat(" SELECT id_contacto, nombre, apellido, email, telefono ",
@@ -53,8 +132,7 @@ namespace Modulo4_G4.CapaAccesoDatos
                 NombreContacto = row["nombre"].ToString(),
                 Apellido = row["apellido"].ToString(),
                 EmailContacto = row["email"].ToString(),
-                Telefono = (int)long.Parse(row["telefono"].ToString())
-
+                Telefono = row["telefono"].ToString(),
             };
 
             return oContacto;
