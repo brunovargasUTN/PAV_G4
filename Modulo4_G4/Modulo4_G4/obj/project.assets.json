@@ -446,10 +446,232 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+<<<<<<< HEAD
+=======
+    },
+    "System.ServiceModel.Http/4.8.1": {
+      "sha512": "yrfGQJ5joGXnZx3G340KDfgpmOSYzRMHP3zJkcwiV3CP750AEsvesVIXc+PXYFzU7v3JKLEw6GLrH7kPiZJa/g==",
+      "type": "package",
+      "path": "system.servicemodel.http/4.8.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net46/System.ServiceModel.Http.dll",
+        "lib/net461/System.ServiceModel.Http.dll",
+        "lib/net461/System.ServiceModel.Http.pdb",
+        "lib/netcore50/System.ServiceModel.Http.dll",
+        "lib/netstandard1.3/System.ServiceModel.Http.dll",
+        "lib/netstandard2.0/System.ServiceModel.Http.dll",
+        "lib/netstandard2.0/System.ServiceModel.Http.pdb",
+        "lib/portable-net45+win8+wp8/_._",
+        "lib/win8/_._",
+        "lib/wp8/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net46/System.ServiceModel.Http.dll",
+        "ref/net461/System.ServiceModel.Http.dll",
+        "ref/netcore50/System.ServiceModel.Http.dll",
+        "ref/netstandard1.0/System.ServiceModel.Http.dll",
+        "ref/netstandard1.1/System.ServiceModel.Http.dll",
+        "ref/netstandard1.3/System.ServiceModel.Http.dll",
+        "ref/netstandard2.0/System.ServiceModel.Http.dll",
+        "ref/portable-net45+win8+wp8/_._",
+        "ref/win8/_._",
+        "ref/wp8/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.servicemodel.http.4.8.1.nupkg.sha512",
+        "system.servicemodel.http.nuspec"
+      ]
+    },
+    "System.ServiceModel.Primitives/4.8.1": {
+      "sha512": "XjzGCqvWZBHnw2ym8t9PVeTm5Tsp7lSDKEwhDZAU4Jnw+6+zEDu/2ZQYQbRqBR0t/KpfNA4Aya/5aONKJnuyEw==",
+      "type": "package",
+      "path": "system.servicemodel.primitives/4.8.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net46/System.ServiceModel.Primitives.dll",
+        "lib/net461/System.ServiceModel.Primitives.dll",
+        "lib/net461/System.ServiceModel.Primitives.pdb",
+        "lib/netcore50/System.ServiceModel.Primitives.dll",
+        "lib/netcoreapp2.1/System.ServiceModel.Primitives.dll",
+        "lib/netcoreapp2.1/System.ServiceModel.Primitives.pdb",
+        "lib/netcoreapp2.1/System.ServiceModel.dll",
+        "lib/netstandard1.3/System.ServiceModel.Primitives.dll",
+        "lib/netstandard2.0/System.ServiceModel.Primitives.dll",
+        "lib/netstandard2.0/System.ServiceModel.Primitives.pdb",
+        "lib/netstandard2.0/System.ServiceModel.dll",
+        "lib/portable-net45+win8+wp8/_._",
+        "lib/win8/_._",
+        "lib/wp8/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net46/System.ServiceModel.Primitives.dll",
+        "ref/net461/System.ServiceModel.Primitives.dll",
+        "ref/netcore50/System.ServiceModel.Primitives.dll",
+        "ref/netcoreapp2.1/System.ServiceModel.Primitives.dll",
+        "ref/netcoreapp2.1/System.ServiceModel.dll",
+        "ref/netstandard1.0/System.ServiceModel.Primitives.dll",
+        "ref/netstandard1.1/System.ServiceModel.Primitives.dll",
+        "ref/netstandard1.3/System.ServiceModel.Primitives.dll",
+        "ref/netstandard2.0/System.ServiceModel.Primitives.dll",
+        "ref/netstandard2.0/System.ServiceModel.dll",
+        "ref/portable-net45+win8+wp8/_._",
+        "ref/win8/_._",
+        "ref/wp8/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.servicemodel.primitives.4.8.1.nupkg.sha512",
+        "system.servicemodel.primitives.nuspec"
+      ]
+    },
+    "System.Text.Encoding.CodePages/4.5.1": {
+      "sha512": "4J2JQXbftjPMppIHJ7IC+VXQ9XfEagN92vZZNoG12i+zReYlim5dMoXFC1Zzg7tsnKDM7JPo5bYfFK4Jheq44w==",
+      "type": "package",
+      "path": "system.text.encoding.codepages/4.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Text.Encoding.CodePages.dll",
+        "lib/net461/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "system.text.encoding.codepages.4.5.1.nupkg.sha512",
+        "system.text.encoding.codepages.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Threading.Tasks.Extensions/4.5.3": {
+      "sha512": "+MvhNtcvIbqmhANyKu91jQnvIRVSTiaOiFNfKWwXGHG48YAb4I/TyH8spsySiPYla7gKal5ZnF3teJqZAximyQ==",
+      "type": "package",
+      "path": "system.threading.tasks.extensions/4.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.3.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Windows.Extensions/4.7.0": {
+      "sha512": "CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
+      "type": "package",
+      "path": "system.windows.extensions/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.0/System.Windows.Extensions.dll",
+        "lib/netcoreapp3.0/System.Windows.Extensions.xml",
+        "ref/netcoreapp3.0/System.Windows.Extensions.dll",
+        "ref/netcoreapp3.0/System.Windows.Extensions.xml",
+        "runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll",
+        "runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.xml",
+        "system.windows.extensions.4.7.0.nupkg.sha512",
+        "system.windows.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Microsoft.ReportViewer.Common/1.0.0": {
+      "type": "project",
+      "path": "../../Librerias/Microsoft.ReportViewer.Common/Microsoft.ReportViewer.Common.csproj",
+      "msbuildProject": "../../Librerias/Microsoft.ReportViewer.Common/Microsoft.ReportViewer.Common.csproj"
+    },
+    "Microsoft.ReportViewer.DataVisualization/1.0.0": {
+      "type": "project",
+      "path": "../../Librerias/Microsoft.ReportViewer.DataVisualization/Microsoft.ReportViewer.DataVisualization.csproj",
+      "msbuildProject": "../../Librerias/Microsoft.ReportViewer.DataVisualization/Microsoft.ReportViewer.DataVisualization.csproj"
+    },
+    "Microsoft.ReportViewer.ProcessingObjectModel/1.0.0": {
+      "type": "project",
+      "path": "../../Librerias/Microsoft.ReportViewer.ProcessingObjectModel/Microsoft.ReportViewer.ProcessingObjectModel.csproj",
+      "msbuildProject": "../../Librerias/Microsoft.ReportViewer.ProcessingObjectModel/Microsoft.ReportViewer.ProcessingObjectModel.csproj"
+    },
+    "ReportViewerCore.WinForms/15.1.14": {
+      "type": "project",
+      "path": "../../Librerias/Microsoft.ReportViewer.WinForms/Microsoft.ReportViewer.WinForms.csproj",
+      "msbuildProject": "../../Librerias/Microsoft.ReportViewer.WinForms/Microsoft.ReportViewer.WinForms.csproj"
+>>>>>>> aa9ba841b0f45468a2ab80ee1c4ae236d992726e
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+<<<<<<< HEAD
+=======
+      "Microsoft.ReportViewer.Common >= 1.0.0",
+      "ReportViewerCore.WinForms >= 15.1.14",
+>>>>>>> aa9ba841b0f45468a2ab80ee1c4ae236d992726e
       "System.Data.SqlClient >= 4.8.3"
     ]
   },
@@ -479,7 +701,18 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+<<<<<<< HEAD
           "projectReferences": {}
+=======
+          "projectReferences": {
+            "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Librerias\\Microsoft.ReportViewer.Common\\Microsoft.ReportViewer.Common.csproj": {
+              "projectPath": "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Librerias\\Microsoft.ReportViewer.Common\\Microsoft.ReportViewer.Common.csproj"
+            },
+            "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Librerias\\Microsoft.ReportViewer.WinForms\\Microsoft.ReportViewer.WinForms.csproj": {
+              "projectPath": "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Librerias\\Microsoft.ReportViewer.WinForms\\Microsoft.ReportViewer.WinForms.csproj"
+            }
+          }
+>>>>>>> aa9ba841b0f45468a2ab80ee1c4ae236d992726e
         }
       },
       "warningProperties": {

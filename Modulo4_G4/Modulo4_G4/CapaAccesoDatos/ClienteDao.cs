@@ -33,7 +33,7 @@ namespace Modulo4_G4.CapaAccesoDatos
         }
 
         private Cliente ObjectMapping(DataRow row)
-        {
+        {   
             Cliente oCliente = new Cliente
             {
                 IdCliente = Convert.ToInt32(row["id_cliente"].ToString()),
@@ -86,11 +86,13 @@ namespace Modulo4_G4.CapaAccesoDatos
                 strSql += " AND (c.id_contacto=@Contacto)";
             strSql += " ORDER BY c.fecha_alta DESC";
             var resultConsulta = (DataRowCollection)DataManager.GetInstance().ConsultaSQL(strSql, parametros).Rows;
-            foreach (DataRow row in resultConsulta)
+            if (resultConsulta.Count > 0)
             {
-                list.Add(ObjectMapping(row));
+                foreach (DataRow row in resultConsulta)
+                {
+                    list.Add(ObjectMapping(row));
+                }
             }
-
             return list;
         }
 

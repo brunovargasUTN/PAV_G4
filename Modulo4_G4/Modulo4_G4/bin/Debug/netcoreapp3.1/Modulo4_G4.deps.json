@@ -8,6 +8,11 @@
     ".NETCoreApp,Version=v3.1": {
       "Modulo4_G4/1.0.0": {
         "dependencies": {
+<<<<<<< HEAD
+=======
+          "Microsoft.ReportViewer.Common": "1.0.0",
+          "ReportViewerCore.WinForms": "15.1.14",
+>>>>>>> aa9ba841b0f45468a2ab80ee1c4ae236d992726e
           "System.Data.SqlClient": "4.8.3"
         },
         "runtime": {

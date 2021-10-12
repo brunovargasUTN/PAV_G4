@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "2N8zX21wLNyY/c32kbJ5mlxp+YpH6ejCK1kFQfKup34ZuxIEGkkDGyLTeBp/NPQxyBIIRBbjkzDn/BnqniOIrA==",
+=======
+  "dgSpecHash": "E+3DzPERikFR6BXmk+5kgnnoYyxm33H0tyNfPKyHval9nY6vj4u+5XzO3XtZbFQpxKMpBCuyDRXtvPmvQbML1Q==",
+>>>>>>> aa9ba841b0f45468a2ab80ee1c4ae236d992726e
   "success": true,
   "projectFilePath": "C:\\Users\\javie\\PAV1_2021\\PAV1_G4_2021\\Modulo4_G4\\Modulo4_G4\\Modulo4_G4.csproj",
   "expectedPackageFiles": [
