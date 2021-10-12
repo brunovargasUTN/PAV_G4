@@ -14,6 +14,8 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
     {
         private Factura facturaSeleccionada;
         private Cliente clienteSeleccionado;
+        private List<Proyecto> proyectosPorProductos;
+        private BindingList<DetalleFactura> detalleFactura;
 
         private ClienteService clienteService;
         private ProyectoService proyectoService;
@@ -26,6 +28,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             clienteService = new ClienteService();
             proyectoService = new ProyectoService();
             productoService = new ProductoService();
+            detalleFactura = new BindingList<DetalleFactura>();
         }
 
         public enum FormMode
@@ -43,6 +46,8 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         {
             lblFecha.Text = DateTime.Today.ToShortDateString();
             llenarCombos(cboProductos,productoService.ObtenerTodos(),"NombreProducto","IdProducto");
+            inicializarDgvProyectos();
+            inicializarDgvDetalleFactura();
             switch (formMode)
             {
                 case FormMode.nuevo:
@@ -67,12 +72,14 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             //Buscamos el cliente por numero de CUIT
                 Dictionary<string, object> parametros = new Dictionary<string, object>();
                 parametros.Add("Cuit", mtbCuit.Text);
-            clienteSeleccionado = clienteService.ConsultarClientesConFiltros(parametros)[0];
+            var resultado = clienteService.ConsultarClientesConFiltros(parametros);
 
-            if(clienteSeleccionado is null) {
+            if(resultado.Count == 0) {
                 MessageBox.Show("Cliente no encontrado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+
+            clienteSeleccionado = resultado[0];
 
             //Rellenamos los datos de los Textbox del Cliente
             txtRazonSocial.Text = clienteSeleccionado.RazonSocial;
@@ -96,6 +103,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             mtbCuit.Enabled = true;
             btnBuscarCliente.Enabled = true;
             limpiarCampos();
+            cboProductos.Enabled = true;
             mtbCuit.Focus();
 
 
@@ -121,8 +129,14 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         {
             if (rbProductoFinal.Checked)
             {
-
+                dgvProyectos.DataSource = null;
+                dgvProyectos.Enabled = false;
+                btnAgregar.Enabled = true;
+                return;
             }
+            dgvProyectos.DataSource = proyectosPorProductos;
+            btnAgregar.Enabled = false;
+            dgvProyectos.Enabled = true;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -130,17 +144,12 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.Close();
         }
 
-        private void cargarDgvProyectos()
-        {
-            
-        }
-
         private void inicializarDgvProyectos()
         {
             // Cree un DataGridView no vinculado declarando un recuento de columnas.
             dgvProyectos.ColumnCount = 4;
             dgvProyectos.ColumnHeadersVisible = true;
-            //dgvProyectos.ReadOnly = true;
+            dgvProyectos.ReadOnly = true;
 
             // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
             dgvProyectos.AutoGenerateColumns = false;
@@ -155,16 +164,17 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
             dgvProyectos.Columns[0].Name = "Descripcion";
             dgvProyectos.Columns[0].DataPropertyName = "Descripcion";
+            dgvProyectos.Columns[0].Width = 394;
             // Definimos el ancho de la columna.
 
-            dgvProyectos.Columns[2].Name = "Version";
-            dgvProyectos.Columns[2].DataPropertyName = "Version";
+            dgvProyectos.Columns[1].Name = "Version";
+            dgvProyectos.Columns[1].DataPropertyName = "Version";
 
-            dgvProyectos.Columns[3].Name = "Alcance";
-            dgvProyectos.Columns[3].DataPropertyName = "Alcance";
+            dgvProyectos.Columns[2].Name = "Alcance";
+            dgvProyectos.Columns[2].DataPropertyName = "Alcance";
 
-            dgvProyectos.Columns[4].Name = "Responsable";
-            dgvProyectos.Columns[4].DataPropertyName = "Responsable";
+            dgvProyectos.Columns[3].Name = "Responsable";
+            dgvProyectos.Columns[3].DataPropertyName = "Responsable";
 
             // Cambia el tamaño de la altura de los encabezados de columna.
             dgvProyectos.AutoResizeColumnHeadersHeight();
@@ -172,6 +182,147 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
             dgvProyectos.AutoResizeRows(
                 DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+
+            dgvProyectos.DataSource = null;
+        }
+
+        private void inicializarDgvDetalleFactura()
+        {
+            // Cree un DataGridView no vinculado declarando un recuento de columnas.
+            dgvDetalleFactura.ColumnCount = 3;
+            dgvDetalleFactura.ColumnHeadersVisible = true;
+            //dgvDetalleFactura.ReadOnly = true;
+
+            // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
+            dgvDetalleFactura.AutoGenerateColumns = false;
+
+            // Cambia el estilo de la cabecera de la grilla.
+            DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
+
+            columnHeaderStyle.BackColor = Color.Beige;
+            columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
+            dgvDetalleFactura.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
+
+            // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
+            dgvDetalleFactura.Columns[0].Name = "Producto";
+            dgvDetalleFactura.Columns[0].DataPropertyName = "Producto";
+            
+
+            dgvDetalleFactura.Columns[1].Name = "Proyecto";
+            dgvDetalleFactura.Columns[1].DataPropertyName = "Proyecto";
+            dgvDetalleFactura.Columns[1].Width = 494;
+
+            dgvDetalleFactura.Columns[2].Name = "Precio";
+            dgvDetalleFactura.Columns[2].DataPropertyName = "Precio";
+
+
+            // Cambia el tamaño de la altura de los encabezados de columna.
+            dgvDetalleFactura.AutoResizeColumnHeadersHeight();
+
+            // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
+            dgvDetalleFactura.AutoResizeRows(
+                DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+
+            dgvDetalleFactura.DataSource = detalleFactura;
+        }
+
+        private void cboProductos_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (cboProductos.SelectedIndex == -1)
+            {
+                return;
+            }
+
+            Dictionary<string, object> param = new Dictionary<string, object>();
+            param.Add("IdProducto", cboProductos.SelectedValue);
+
+            var proyectos = proyectoService.ObtenerPorFiltro(param);
+
+            if (proyectos.Count == 0)
+            {
+                dgvProyectos.DataSource = null;
+                rbProductoFinal.Checked = true;
+                rbProyecto.Enabled = false;
+            }
+            else
+            {
+                dgvProyectos.DataSource = null;
+                proyectosPorProductos = (List<Proyecto>)proyectos;
+                rbProductoFinal.Checked = true;
+                rbProyecto.Enabled = true;
+            }
+
+            btnAgregar.Enabled = true;
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            DetalleFactura item = new DetalleFactura();
+            item.Producto = (Producto)cboProductos.SelectedItem;
+            //Verifico proyecto
+            if (rbProyecto.Checked)
+            {
+                item.Proyecto = (Proyecto)dgvProyectos.CurrentRow.DataBoundItem;
+                
+            }
+            //Verifico el precio
+            decimal precio = 0;
+            if (!Decimal.TryParse(txtPrecio.Text, out precio))
+            {
+                MessageBox.Show("Debe ingresar un importe valido.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            item.Precio = precio;
+
+            detalleFactura.Add(item);
+            refrescarTotal();
+            
+
+            limpiarItems();
+            
+            
+        }
+
+        private void limpiarItems()
+        {
+            //Limpio los controles de Items
+            cboProductos.SelectedIndex = -1;
+            rbProductoFinal.Checked = true;
+            txtPrecio.Text = "";
+            btnAgregar.Enabled = false;
+            dgvProyectos.DataSource = null;
+            dgvProyectos.Enabled = false;
+            rbProyecto.Enabled = false;
+            cboProductos.Focus();
+
+        }
+        private void dgvProyectos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnAgregar.Enabled = true;
+        }
+
+        private void refrescarTotal()
+        {
+            decimal total = 0;
+
+            foreach(DetalleFactura det in detalleFactura)
+            {
+                total += det.Precio;
+            }
+
+            txtTotal.Text = total.ToString();
+        }
+
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            detalleFactura.Remove((DetalleFactura)dgvDetalleFactura.CurrentRow.DataBoundItem);
+            refrescarTotal();
+            btnQuitar.Enabled = false;
+        }
+
+        private void dgvDetalleFactura_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnQuitar.Enabled = true;
         }
     }
 }

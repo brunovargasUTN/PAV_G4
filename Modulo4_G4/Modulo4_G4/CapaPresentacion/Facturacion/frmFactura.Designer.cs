@@ -58,9 +58,17 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.cboProductos = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnQuitar = new System.Windows.Forms.Button();
+            this.dgvDetalleFactura = new System.Windows.Forms.DataGridView();
+            this.btnConfirmar = new System.Windows.Forms.Button();
             this.gbCliente.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProyectos)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleFactura)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -277,12 +285,14 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(856, 177);
+            this.btnAgregar.Enabled = false;
+            this.btnAgregar.Image = global::Modulo4_G4.Properties.Resources.add_icon_icons_com_74429;
+            this.btnAgregar.Location = new System.Drawing.Point(878, 147);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(94, 29);
+            this.btnAgregar.Size = new System.Drawing.Size(72, 57);
             this.btnAgregar.TabIndex = 5;
-            this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // dgvProyectos
             // 
@@ -294,6 +304,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.dgvProyectos.RowTemplate.Height = 29;
             this.dgvProyectos.Size = new System.Drawing.Size(822, 93);
             this.dgvProyectos.TabIndex = 4;
+            this.dgvProyectos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProyectos_CellContentClick);
             // 
             // rbProductoFinal
             // 
@@ -310,6 +321,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // rbProyecto
             // 
             this.rbProyecto.AutoSize = true;
+            this.rbProyecto.Enabled = false;
             this.rbProyecto.Location = new System.Drawing.Point(429, 30);
             this.rbProyecto.Name = "rbProyecto";
             this.rbProyecto.Size = new System.Drawing.Size(88, 24);
@@ -320,11 +332,13 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // 
             // cboProductos
             // 
+            this.cboProductos.Enabled = false;
             this.cboProductos.FormattingEnabled = true;
             this.cboProductos.Location = new System.Drawing.Point(81, 31);
             this.cboProductos.Name = "cboProductos";
             this.cboProductos.Size = new System.Drawing.Size(151, 28);
             this.cboProductos.TabIndex = 1;
+            this.cboProductos.SelectionChangeCommitted += new System.EventHandler(this.cboProductos_SelectionChangeCommitted);
             // 
             // label8
             // 
@@ -338,19 +352,86 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // btnSalir
             // 
             this.btnSalir.Image = global::Modulo4_G4.Properties.Resources.exit_icon;
-            this.btnSalir.Location = new System.Drawing.Point(910, 651);
+            this.btnSalir.Location = new System.Drawing.Point(910, 737);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(68, 59);
             this.btnSalir.TabIndex = 7;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtTotal);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.btnQuitar);
+            this.groupBox2.Controls.Add(this.dgvDetalleFactura);
+            this.groupBox2.Location = new System.Drawing.Point(12, 463);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(966, 250);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Detalle de Factura";
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.txtTotal.Location = new System.Drawing.Point(825, 202);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(125, 32);
+            this.txtTotal.TabIndex = 3;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label10.Location = new System.Drawing.Point(694, 205);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(125, 25);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Total      $";
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.Enabled = false;
+            this.btnQuitar.Image = ((System.Drawing.Image)(resources.GetObject("btnQuitar.Image")));
+            this.btnQuitar.Location = new System.Drawing.Point(878, 113);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(72, 57);
+            this.btnQuitar.TabIndex = 1;
+            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
+            // dgvDetalleFactura
+            // 
+            this.dgvDetalleFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetalleFactura.Location = new System.Drawing.Point(6, 26);
+            this.dgvDetalleFactura.Name = "dgvDetalleFactura";
+            this.dgvDetalleFactura.RowHeadersWidth = 51;
+            this.dgvDetalleFactura.RowTemplate.Height = 29;
+            this.dgvDetalleFactura.Size = new System.Drawing.Size(822, 144);
+            this.dgvDetalleFactura.TabIndex = 0;
+            this.dgvDetalleFactura.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleFactura_CellClick);
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirmar.Image")));
+            this.btnConfirmar.Location = new System.Drawing.Point(18, 737);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(94, 57);
+            this.btnConfirmar.TabIndex = 9;
+            this.btnConfirmar.UseVisualStyleBackColor = true;
+            // 
             // frmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 722);
+            this.ClientSize = new System.Drawing.Size(997, 806);
             this.ControlBox = false;
+            this.Controls.Add(this.btnConfirmar);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnNuevaFactura);
@@ -368,6 +449,9 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProyectos)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleFactura)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,5 +487,11 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnQuitar;
+        private System.Windows.Forms.DataGridView dgvDetalleFactura;
+        private System.Windows.Forms.Button btnConfirmar;
     }
 }

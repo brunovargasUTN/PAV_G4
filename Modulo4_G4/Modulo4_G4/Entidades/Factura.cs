@@ -11,5 +11,7 @@ namespace Modulo4_G4.Entidades
         public int IdCliente { get; set; }
         public DateTime Fecha { get; set; }
         public int IdUsuarioCreador { get; set; }
+
+        public List<DetalleFactura> DetalleFacturas { get; set; }
     }
 }
