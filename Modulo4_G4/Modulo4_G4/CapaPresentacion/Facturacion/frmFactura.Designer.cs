@@ -34,6 +34,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.txtFactura = new System.Windows.Forms.TextBox();
             this.lblFecha = new System.Windows.Forms.Label();
             this.gbCliente = new System.Windows.Forms.GroupBox();
+            this.txtContacto = new System.Windows.Forms.TextBox();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,33 +49,37 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.label2 = new System.Windows.Forms.Label();
             this.btnNuevaFactura = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.dgvProyectos = new System.Windows.Forms.DataGridView();
+            this.rbProductoFinal = new System.Windows.Forms.RadioButton();
+            this.rbProyecto = new System.Windows.Forms.RadioButton();
             this.cboProductos = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtContacto = new System.Windows.Forms.TextBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.gbCliente.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyectos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(703, 39);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Location = new System.Drawing.Point(747, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 20);
+            this.label1.Size = new System.Drawing.Size(41, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nro Factura";
             // 
             // txtFactura
             // 
             this.txtFactura.Enabled = false;
-            this.txtFactura.Location = new System.Drawing.Point(794, 36);
+            this.txtFactura.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtFactura.Location = new System.Drawing.Point(794, 54);
             this.txtFactura.Name = "txtFactura";
-            this.txtFactura.Size = new System.Drawing.Size(184, 27);
+            this.txtFactura.Size = new System.Drawing.Size(184, 32);
             this.txtFactura.TabIndex = 1;
             // 
             // lblFecha
@@ -103,18 +108,26 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.gbCliente.Controls.Add(this.label4);
             this.gbCliente.Controls.Add(this.label3);
             this.gbCliente.Controls.Add(this.label2);
-            this.gbCliente.Location = new System.Drawing.Point(12, 69);
+            this.gbCliente.Location = new System.Drawing.Point(12, 97);
             this.gbCliente.Name = "gbCliente";
             this.gbCliente.Size = new System.Drawing.Size(966, 132);
             this.gbCliente.TabIndex = 3;
             this.gbCliente.TabStop = false;
             this.gbCliente.Text = "Datos del Cliente";
             // 
+            // txtContacto
+            // 
+            this.txtContacto.Enabled = false;
+            this.txtContacto.Location = new System.Drawing.Point(94, 74);
+            this.txtContacto.Name = "txtContacto";
+            this.txtContacto.Size = new System.Drawing.Size(290, 27);
+            this.txtContacto.TabIndex = 14;
+            // 
             // btnBuscarCliente
             // 
             this.btnBuscarCliente.Enabled = false;
             this.btnBuscarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCliente.Image")));
-            this.btnBuscarCliente.Location = new System.Drawing.Point(201, 25);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(183, 25);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Size = new System.Drawing.Size(59, 38);
             this.btnBuscarCliente.TabIndex = 13;
@@ -175,7 +188,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // txtRazonSocial
             // 
             this.txtRazonSocial.Enabled = false;
-            this.txtRazonSocial.Location = new System.Drawing.Point(390, 31);
+            this.txtRazonSocial.Location = new System.Drawing.Point(377, 31);
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(211, 27);
             this.txtRazonSocial.TabIndex = 4;
@@ -201,7 +214,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(290, 34);
+            this.label3.Location = new System.Drawing.Point(277, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 20);
             this.label3.TabIndex = 1;
@@ -218,69 +231,92 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // 
             // btnNuevaFactura
             // 
+            this.btnNuevaFactura.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevaFactura.Image")));
+            this.btnNuevaFactura.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnNuevaFactura.Location = new System.Drawing.Point(12, 12);
             this.btnNuevaFactura.Name = "btnNuevaFactura";
-            this.btnNuevaFactura.Size = new System.Drawing.Size(126, 29);
+            this.btnNuevaFactura.Size = new System.Drawing.Size(147, 74);
             this.btnNuevaFactura.TabIndex = 4;
             this.btnNuevaFactura.Text = "Nueva Factura";
+            this.btnNuevaFactura.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNuevaFactura.UseVisualStyleBackColor = true;
             this.btnNuevaFactura.Click += new System.EventHandler(this.btnNuevaFactura_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtPrecio);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.btnAgregar);
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.dgvProyectos);
+            this.groupBox1.Controls.Add(this.rbProductoFinal);
+            this.groupBox1.Controls.Add(this.rbProyecto);
             this.groupBox1.Controls.Add(this.cboProductos);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Location = new System.Drawing.Point(12, 207);
+            this.groupBox1.Location = new System.Drawing.Point(12, 235);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(966, 182);
+            this.groupBox1.Size = new System.Drawing.Size(966, 222);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Item";
             // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(703, 177);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(125, 27);
+            this.txtPrecio.TabIndex = 7;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(647, 180);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 20);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Precio";
+            // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(856, 129);
+            this.btnAgregar.Location = new System.Drawing.Point(856, 177);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(94, 29);
             this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvProyectos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 65);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(822, 93);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvProyectos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProyectos.Enabled = false;
+            this.dgvProyectos.Location = new System.Drawing.Point(6, 65);
+            this.dgvProyectos.Name = "dgvProyectos";
+            this.dgvProyectos.RowHeadersWidth = 51;
+            this.dgvProyectos.RowTemplate.Height = 29;
+            this.dgvProyectos.Size = new System.Drawing.Size(822, 93);
+            this.dgvProyectos.TabIndex = 4;
             // 
-            // radioButton2
+            // rbProductoFinal
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(298, 30);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(125, 24);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Producto Final";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbProductoFinal.AutoSize = true;
+            this.rbProductoFinal.Checked = true;
+            this.rbProductoFinal.Location = new System.Drawing.Point(298, 30);
+            this.rbProductoFinal.Name = "rbProductoFinal";
+            this.rbProductoFinal.Size = new System.Drawing.Size(125, 24);
+            this.rbProductoFinal.TabIndex = 3;
+            this.rbProductoFinal.TabStop = true;
+            this.rbProductoFinal.Text = "Producto Final";
+            this.rbProductoFinal.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbProyecto
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(429, 30);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(88, 24);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Proyecto";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbProyecto.AutoSize = true;
+            this.rbProyecto.Location = new System.Drawing.Point(429, 30);
+            this.rbProyecto.Name = "rbProyecto";
+            this.rbProyecto.Size = new System.Drawing.Size(88, 24);
+            this.rbProyecto.TabIndex = 2;
+            this.rbProyecto.Text = "Proyecto";
+            this.rbProyecto.UseVisualStyleBackColor = true;
+            this.rbProyecto.CheckedChanged += new System.EventHandler(this.rbProyecto_CheckedChanged);
             // 
             // cboProductos
             // 
@@ -299,33 +335,39 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.label8.TabIndex = 0;
             this.label8.Text = "Producto";
             // 
-            // txtContacto
+            // btnSalir
             // 
-            this.txtContacto.Enabled = false;
-            this.txtContacto.Location = new System.Drawing.Point(94, 74);
-            this.txtContacto.Name = "txtContacto";
-            this.txtContacto.Size = new System.Drawing.Size(290, 27);
-            this.txtContacto.TabIndex = 14;
+            this.btnSalir.Image = global::Modulo4_G4.Properties.Resources.exit_icon;
+            this.btnSalir.Location = new System.Drawing.Point(910, 651);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(68, 59);
+            this.btnSalir.TabIndex = 7;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 540);
+            this.ClientSize = new System.Drawing.Size(998, 722);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnNuevaFactura);
             this.Controls.Add(this.gbCliente);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.txtFactura);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.Name = "frmFactura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Facturacion";
             this.Load += new System.EventHandler(this.frmFactura_Load);
             this.gbCliente.ResumeLayout(false);
             this.gbCliente.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyectos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,12 +393,15 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.DataGridView dgvProyectos;
+        private System.Windows.Forms.RadioButton rbProductoFinal;
+        private System.Windows.Forms.RadioButton rbProyecto;
         private System.Windows.Forms.ComboBox cboProductos;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnBuscarCliente;
         private System.Windows.Forms.TextBox txtContacto;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

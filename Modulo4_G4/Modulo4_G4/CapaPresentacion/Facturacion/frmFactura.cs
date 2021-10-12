@@ -17,6 +17,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
 
         private ClienteService clienteService;
         private ProyectoService proyectoService;
+        private ProductoService productoService;
 
         private FormMode formMode;
         public frmFactura()
@@ -24,7 +25,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             InitializeComponent();
             clienteService = new ClienteService();
             proyectoService = new ProyectoService();
-            
+            productoService = new ProductoService();
         }
 
         public enum FormMode
@@ -41,6 +42,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         private void frmFactura_Load(object sender, EventArgs e)
         {
             lblFecha.Text = DateTime.Today.ToShortDateString();
+            llenarCombos(cboProductos,productoService.ObtenerTodos(),"NombreProducto","IdProducto");
             switch (formMode)
             {
                 case FormMode.nuevo:
@@ -99,6 +101,13 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
 
         }
 
+        private void llenarCombos(ComboBox cbo, object source, string display, string value)
+        {
+            cbo.DataSource = source;
+            cbo.DisplayMember = display;
+            cbo.ValueMember = value;
+            cbo.SelectedIndex = -1;
+        }
         private void limpiarCampos()
         {
             txtRazonSocial.Text = "";
@@ -106,6 +115,63 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             txtContacto.Text = "";
             txtTelefono.Text = "";
             txtEmail.Text = "";
+        }
+
+        private void rbProyecto_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbProductoFinal.Checked)
+            {
+
+            }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cargarDgvProyectos()
+        {
+            
+        }
+
+        private void inicializarDgvProyectos()
+        {
+            // Cree un DataGridView no vinculado declarando un recuento de columnas.
+            dgvProyectos.ColumnCount = 4;
+            dgvProyectos.ColumnHeadersVisible = true;
+            //dgvProyectos.ReadOnly = true;
+
+            // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
+            dgvProyectos.AutoGenerateColumns = false;
+
+            // Cambia el estilo de la cabecera de la grilla.
+            DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
+
+            columnHeaderStyle.BackColor = Color.Beige;
+            columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
+            dgvProyectos.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
+
+            // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
+            dgvProyectos.Columns[0].Name = "Descripcion";
+            dgvProyectos.Columns[0].DataPropertyName = "Descripcion";
+            // Definimos el ancho de la columna.
+
+            dgvProyectos.Columns[2].Name = "Version";
+            dgvProyectos.Columns[2].DataPropertyName = "Version";
+
+            dgvProyectos.Columns[3].Name = "Alcance";
+            dgvProyectos.Columns[3].DataPropertyName = "Alcance";
+
+            dgvProyectos.Columns[4].Name = "Responsable";
+            dgvProyectos.Columns[4].DataPropertyName = "Responsable";
+
+            // Cambia el tamaño de la altura de los encabezados de columna.
+            dgvProyectos.AutoResizeColumnHeadersHeight();
+
+            // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
+            dgvProyectos.AutoResizeRows(
+                DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
         }
     }
 }

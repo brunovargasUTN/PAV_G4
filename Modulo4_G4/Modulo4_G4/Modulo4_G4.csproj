@@ -11,7 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\ReportViewer NET Core 3.1\reportviewercore\Microsoft.ReportViewer.WinForms\Microsoft.ReportViewer.WinForms.csproj" />
+    <ProjectReference Include="..\..\Librerias\Microsoft.ReportViewer.Common\Microsoft.ReportViewer.Common.csproj" />
+    <ProjectReference Include="..\..\Librerias\Microsoft.ReportViewer.WinForms\Microsoft.ReportViewer.WinForms.csproj" />
   </ItemGroup>
 
   <ItemGroup>

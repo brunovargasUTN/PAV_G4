@@ -29,10 +29,6 @@ namespace Modulo4_G4.CapaPresentacion.Reportes
 
         private void frmReporteProyectos_Load(object sender, EventArgs e)
         {
-            //reporte.LocalReport.DataSources.Clear();
-            //reporte.LocalReport.DataSources.Add(new ReportDataSource("tableProyectos", new ProyectoService().MostrarReporteProyectos()));
-            //reporte.LocalReport.ReportPath = @".\CapaPresentacion\Reportes\rptProyectos.rdlc";
-            //inicializarReporte();
 
             reporte.RefreshReport();
         

@@ -1790,27 +1790,28 @@
     },
     "Microsoft.ReportViewer.Common/1.0.0": {
       "type": "project",
-      "path": "../../../../../ReportViewer NET Core 3.1/reportviewercore/Microsoft.ReportViewer.Common/Microsoft.ReportViewer.Common.csproj",
-      "msbuildProject": "../../../../../ReportViewer NET Core 3.1/reportviewercore/Microsoft.ReportViewer.Common/Microsoft.ReportViewer.Common.csproj"
+      "path": "../../Librerias/Microsoft.ReportViewer.Common/Microsoft.ReportViewer.Common.csproj",
+      "msbuildProject": "../../Librerias/Microsoft.ReportViewer.Common/Microsoft.ReportViewer.Common.csproj"
     },
     "Microsoft.ReportViewer.DataVisualization/1.0.0": {
       "type": "project",
-      "path": "../../../../../ReportViewer NET Core 3.1/reportviewercore/Microsoft.ReportViewer.DataVisualization/Microsoft.ReportViewer.DataVisualization.csproj",
-      "msbuildProject": "../../../../../ReportViewer NET Core 3.1/reportviewercore/Microsoft.ReportViewer.DataVisualization/Microsoft.ReportViewer.DataVisualization.csproj"
+      "path": "../../Librerias/Microsoft.ReportViewer.DataVisualization/Microsoft.ReportViewer.DataVisualization.csproj",
+      "msbuildProject": "../../Librerias/Microsoft.ReportViewer.DataVisualization/Microsoft.ReportViewer.DataVisualization.csproj"
     },
     "Microsoft.ReportViewer.ProcessingObjectModel/1.0.0": {
       "type": "project",
-      "path": "../../../../../ReportViewer NET Core 3.1/reportviewercore/Microsoft.ReportViewer.ProcessingObjectModel/Microsoft.ReportViewer.ProcessingObjectModel.csproj",
-      "msbuildProject": "../../../../../ReportViewer NET Core 3.1/reportviewercore/Microsoft.ReportViewer.ProcessingObjectModel/Microsoft.ReportViewer.ProcessingObjectModel.csproj"
+      "path": "../../Librerias/Microsoft.ReportViewer.ProcessingObjectModel/Microsoft.ReportViewer.ProcessingObjectModel.csproj",
+      "msbuildProject": "../../Librerias/Microsoft.ReportViewer.ProcessingObjectModel/Microsoft.ReportViewer.ProcessingObjectModel.csproj"
     },
     "ReportViewerCore.WinForms/15.1.14": {
       "type": "project",
-      "path": "../../../../../ReportViewer NET Core 3.1/reportviewercore/Microsoft.ReportViewer.WinForms/Microsoft.ReportViewer.WinForms.csproj",
-      "msbuildProject": "../../../../../ReportViewer NET Core 3.1/reportviewercore/Microsoft.ReportViewer.WinForms/Microsoft.ReportViewer.WinForms.csproj"
+      "path": "../../Librerias/Microsoft.ReportViewer.WinForms/Microsoft.ReportViewer.WinForms.csproj",
+      "msbuildProject": "../../Librerias/Microsoft.ReportViewer.WinForms/Microsoft.ReportViewer.WinForms.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Microsoft.ReportViewer.Common >= 1.0.0",
       "ReportViewerCore.WinForms >= 15.1.14",
       "System.Data.SqlClient >= 4.8.3"
     ]
@@ -1842,8 +1843,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "F:\\Ivan\\PAV1\\ReportViewer NET Core 3.1\\reportviewercore\\Microsoft.ReportViewer.WinForms\\Microsoft.ReportViewer.WinForms.csproj": {
-              "projectPath": "F:\\Ivan\\PAV1\\ReportViewer NET Core 3.1\\reportviewercore\\Microsoft.ReportViewer.WinForms\\Microsoft.ReportViewer.WinForms.csproj"
+            "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Librerias\\Microsoft.ReportViewer.Common\\Microsoft.ReportViewer.Common.csproj": {
+              "projectPath": "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Librerias\\Microsoft.ReportViewer.Common\\Microsoft.ReportViewer.Common.csproj"
+            },
+            "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Librerias\\Microsoft.ReportViewer.WinForms\\Microsoft.ReportViewer.WinForms.csproj": {
+              "projectPath": "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Librerias\\Microsoft.ReportViewer.WinForms\\Microsoft.ReportViewer.WinForms.csproj"
             }
           }
         }
