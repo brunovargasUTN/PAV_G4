@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\ReportViewer NET Core 3.1\reportviewercore\Microsoft.ReportViewer.WinForms\Microsoft.ReportViewer.WinForms.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="CapaPresentacion\Reportes\DataSet1.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
