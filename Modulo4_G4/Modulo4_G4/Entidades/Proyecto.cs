@@ -12,5 +12,10 @@ namespace Modulo4_G4.Entidades
         public string Version { get; set; }
         public string Alcance { get; set; }
         public Usuario Responsable { get; set; }
+
+        public override string ToString()
+        {
+            return Descripcion + " - " + Version + " - " + Alcance;
+        }
     }
 }

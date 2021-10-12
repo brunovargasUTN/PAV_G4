@@ -11,6 +11,17 @@
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    <ProjectReference Include="..\..\Librerias\Microsoft.ReportViewer.Common\Microsoft.ReportViewer.Common.csproj" />
+    <ProjectReference Include="..\..\Librerias\Microsoft.ReportViewer.WinForms\Microsoft.ReportViewer.WinForms.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+>>>>>>> aa9ba841b0f45468a2ab80ee1c4ae236d992726e
+>>>>>>> 5fa4b85ec729c2ca48a313b9fa66412a2008efab
     <Compile Update="CapaPresentacion\Reportes\DataSet1.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
