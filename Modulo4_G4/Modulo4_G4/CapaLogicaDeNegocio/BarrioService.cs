@@ -19,15 +19,24 @@ namespace Modulo4_G4.CapaLogicaDeNegocio
             return oBarrioDao.GetAll();
         }
 
-        public Barrio ConsultarBarrioPorId(int id)
-        {
-            return oBarrioDao.GetBarrioById(id);
-        }
-
         public Barrio ConsultarBarrioPorNombre(string nombre)
         {
             return oBarrioDao.GetBarrioByNombre(nombre);
         }
 
+        public bool NuevoBarrio(Barrio barrio)
+        {
+            return oBarrioDao.Create(barrio);
+        }
+
+        public bool ActualizarBarrio(Barrio barrio)
+        {
+            return oBarrioDao.Update(barrio);
+        }
+
+        public bool EliminarBarrio(Barrio barrio)
+        {
+            return oBarrioDao.Delete(barrio);
+        }
     }
 }

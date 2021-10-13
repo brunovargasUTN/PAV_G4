@@ -1,4 +1,5 @@
 ﻿using Modulo4_G4.CapaLogicaDeNegocio;
+using Modulo4_G4.CapaPresentacion.Barrios;
 using Modulo4_G4.CapaPresentacion.Clientes;
 using Modulo4_G4.CapaPresentacion.Contactos;
 using Modulo4_G4.CapaPresentacion.Facturacion;
@@ -81,6 +82,12 @@ namespace Modulo4_G4
             frmFactura factura = new frmFactura(usuariologueado);
             factura.inicializarFormulario(frmFactura.FormMode.nuevo);
             factura.ShowDialog();
+        }
+
+        private void barriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBarrios frm = new frmBarrios();
+            frm.ShowDialog();
         }
 
         private void contactosToolStripMenuItem_Click(object sender, EventArgs e)

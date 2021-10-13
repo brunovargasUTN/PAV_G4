@@ -54,6 +54,7 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
 
             dgvContactos.Columns[2].Name = "Email";
             dgvContactos.Columns[2].DataPropertyName = "EmailContacto";
+            dgvContactos.Columns[2].Width = 150;
 
             dgvContactos.Columns[3].Name = "Telefono";
             dgvContactos.Columns[3].DataPropertyName = "Telefono";

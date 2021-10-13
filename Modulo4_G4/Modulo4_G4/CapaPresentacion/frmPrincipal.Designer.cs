@@ -106,6 +106,7 @@ namespace Modulo4_G4
             this.barriosToolStripMenuItem.Name = "barriosToolStripMenuItem";
             this.barriosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.barriosToolStripMenuItem.Text = "Barrios";
+            this.barriosToolStripMenuItem.Click += new System.EventHandler(this.barriosToolStripMenuItem_Click);
             // 
             // contactosToolStripMenuItem
             // 

@@ -15,7 +15,7 @@ namespace Modulo4_G4.CapaPresentacion.Reportes
 {
     public partial class frmReporteProyectos : Form
     {
-
+       
         private ReportViewer reporte;
         public frmReporteProyectos()
         {
@@ -31,10 +31,10 @@ namespace Modulo4_G4.CapaPresentacion.Reportes
         {
 
             reporte.RefreshReport();
-
+        
         }
 
-        public void inicializarReporte(string dataSourceName, string pathReporte, DataTable table)
+        public void inicializarReporte(string dataSourceName, string pathReporte,DataTable table)
         {
             //Configuracion de origen de datos
             reporte.LocalReport.DataSources.Clear();
@@ -44,7 +44,7 @@ namespace Modulo4_G4.CapaPresentacion.Reportes
             reporte.SetDisplayMode(DisplayMode.PrintLayout); //Muestra el informe en Modo impresion
             reporte.ZoomMode = ZoomMode.Percent; //Al modo impresion lo seteamos en ZoomMode con un porcentaje de zoom
             reporte.ZoomPercent = 100; //Seteamos la vista de impresion al 100% del tamaño del informe
-
+           
 
         }
     }
