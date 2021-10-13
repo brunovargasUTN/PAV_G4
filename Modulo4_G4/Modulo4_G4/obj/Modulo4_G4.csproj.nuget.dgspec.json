@@ -1,24 +1,9 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\javie\\PAV1_2021\\PAV1_G4_2021\\Modulo4_G4\\Modulo4_G4\\Modulo4_G4.csproj": {}
+    "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Modulo4_G4\\Modulo4_G4\\Modulo4_G4.csproj": {}
   },
   "projects": {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 5fa4b85ec729c2ca48a313b9fa66412a2008efab
-    "C:\\Users\\javie\\PAV1_2021\\PAV1_G4_2021\\Modulo4_G4\\Modulo4_G4\\Modulo4_G4.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\javie\\PAV1_2021\\PAV1_G4_2021\\Modulo4_G4\\Modulo4_G4\\Modulo4_G4.csproj",
-        "projectName": "Modulo4_G4",
-        "projectPath": "C:\\Users\\javie\\PAV1_2021\\PAV1_G4_2021\\Modulo4_G4\\Modulo4_G4\\Modulo4_G4.csproj",
-        "packagesPath": "C:\\Users\\javie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\javie\\PAV1_2021\\PAV1_G4_2021\\Modulo4_G4\\Modulo4_G4\\obj\\",
-<<<<<<< HEAD
-=======
-=======
     "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Librerias\\Microsoft.ReportViewer.Common\\Microsoft.ReportViewer.Common.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,11 +12,9 @@
         "projectPath": "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Librerias\\Microsoft.ReportViewer.Common\\Microsoft.ReportViewer.Common.csproj",
         "packagesPath": "C:\\Users\\Casa\\.nuget\\packages\\",
         "outputPath": "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Librerias\\Microsoft.ReportViewer.Common\\obj\\",
->>>>>>> aa9ba841b0f45468a2ab80ee1c4ae236d992726e
->>>>>>> 5fa4b85ec729c2ca48a313b9fa66412a2008efab
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\javie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Casa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,12 +27,6 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-<<<<<<< HEAD
-            "projectReferences": {}
-=======
-<<<<<<< HEAD
-            "projectReferences": {}
-=======
             "projectReferences": {
               "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Librerias\\Microsoft.ReportViewer.DataVisualization\\Microsoft.ReportViewer.DataVisualization.csproj": {
                 "projectPath": "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Librerias\\Microsoft.ReportViewer.DataVisualization\\Microsoft.ReportViewer.DataVisualization.csproj"
@@ -58,8 +35,6 @@
                 "projectPath": "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Librerias\\Microsoft.ReportViewer.ProcessingObjectModel\\Microsoft.ReportViewer.ProcessingObjectModel.csproj"
               }
             }
->>>>>>> aa9ba841b0f45468a2ab80ee1c4ae236d992726e
->>>>>>> 5fa4b85ec729c2ca48a313b9fa66412a2008efab
           }
         },
         "warningProperties": {
@@ -100,12 +75,6 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
-=======
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
-=======
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
@@ -366,8 +335,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
->>>>>>> aa9ba841b0f45468a2ab80ee1c4ae236d992726e
->>>>>>> 5fa4b85ec729c2ca48a313b9fa66412a2008efab
         }
       }
     }

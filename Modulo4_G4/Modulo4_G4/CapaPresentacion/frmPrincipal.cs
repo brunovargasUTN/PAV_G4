@@ -1,5 +1,6 @@
 ﻿using Modulo4_G4.CapaLogicaDeNegocio;
 using Modulo4_G4.CapaPresentacion.Clientes;
+using Modulo4_G4.CapaPresentacion.Contactos;
 using Modulo4_G4.CapaPresentacion.Facturacion;
 using Modulo4_G4.CapaPresentacion.Login;
 using Modulo4_G4.CapaPresentacion.Proyectos;
@@ -64,14 +65,14 @@ namespace Modulo4_G4
         private void listadoDeProyectosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporteProyectos frmReporte = new frmReporteProyectos();
-            //frmReporte.inicializarReporte("tableProyectos", @".\CapaPresentacion\Reportes\rptProyectos.rdlc", new ProyectoService().MostrarReporteProyectos());
+            frmReporte.inicializarReporte("tableProyectos", @".\CapaPresentacion\Reportes\rptProyectos.rdlc", new ProyectoService().MostrarReporteProyectos());
             frmReporte.ShowDialog();
         }
 
         private void top10DistribucionDeProyectosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporteProyectos frmReporte = new frmReporteProyectos();
-            //frmReporte.inicializarReporte("DataSet1", @".\CapaPresentacion\Reportes\rptCantidadProyectos.rdlc", new ProyectoService().MostrarReporteProyectosXProductos());
+            frmReporte.inicializarReporte("DataSet1", @".\CapaPresentacion\Reportes\rptCantidadProyectos.rdlc", new ProyectoService().MostrarReporteProyectosXProductos());
             frmReporte.ShowDialog();
         }
 
