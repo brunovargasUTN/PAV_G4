@@ -1,5 +1,6 @@
 ﻿
 using Modulo4_G4.CapaLogicaDeNegocio;
+using Modulo4_G4.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace Modulo4_G4.CapaPresentacion.Login
     {
         private readonly UsuarioService usuarioService;
 
-        public string UsuarioLogueado { get; internal set; }
+        public Usuario UsuarioLogueado { get; internal set; }
 
         public frmLogin()
         {
@@ -54,7 +55,7 @@ namespace Modulo4_G4.CapaPresentacion.Login
             if (usr != null)
             {
                 // Login OK
-                UsuarioLogueado = usr.NombreUsuario;
+                UsuarioLogueado = usr;
                 this.Close();
             }
             else

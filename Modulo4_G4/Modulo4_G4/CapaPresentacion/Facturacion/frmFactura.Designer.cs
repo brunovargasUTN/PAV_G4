@@ -49,6 +49,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.label2 = new System.Windows.Forms.Label();
             this.btnNuevaFactura = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnLimpiarItems = new System.Windows.Forms.Button();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -252,6 +253,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnLimpiarItems);
             this.groupBox1.Controls.Add(this.txtPrecio);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.btnAgregar);
@@ -266,6 +268,16 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Item";
+            // 
+            // btnLimpiarItems
+            // 
+            this.btnLimpiarItems.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiarItems.Image")));
+            this.btnLimpiarItems.Location = new System.Drawing.Point(878, 65);
+            this.btnLimpiarItems.Name = "btnLimpiarItems";
+            this.btnLimpiarItems.Size = new System.Drawing.Size(72, 59);
+            this.btnLimpiarItems.TabIndex = 8;
+            this.btnLimpiarItems.UseVisualStyleBackColor = true;
+            this.btnLimpiarItems.Click += new System.EventHandler(this.btnLimpiarItems_Click);
             // 
             // txtPrecio
             // 
@@ -417,12 +429,14 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // 
             // btnConfirmar
             // 
+            this.btnConfirmar.Enabled = false;
             this.btnConfirmar.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirmar.Image")));
             this.btnConfirmar.Location = new System.Drawing.Point(18, 737);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(94, 57);
             this.btnConfirmar.TabIndex = 9;
             this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // frmFactura
             // 
@@ -493,5 +507,6 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         private System.Windows.Forms.Button btnQuitar;
         private System.Windows.Forms.DataGridView dgvDetalleFactura;
         private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Button btnLimpiarItems;
     }
 }

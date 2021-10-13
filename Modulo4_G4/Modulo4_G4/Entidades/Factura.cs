@@ -8,10 +8,10 @@ namespace Modulo4_G4.Entidades
     {
         public int IdFactura { get; set; }
         public int NroFactura { get; set; }
-        public int IdCliente { get; set; }
+        public Cliente Cliente { get; set; }
         public DateTime Fecha { get; set; }
-        public int IdUsuarioCreador { get; set; }
+        public Usuario UsuarioCreador { get; set; }
 
-        public List<DetalleFactura> DetalleFacturas { get; set; }
+        public IList<DetalleFactura> DetalleFacturas { get; set; }
     }
 }

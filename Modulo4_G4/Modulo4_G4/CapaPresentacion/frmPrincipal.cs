@@ -4,6 +4,7 @@ using Modulo4_G4.CapaPresentacion.Facturacion;
 using Modulo4_G4.CapaPresentacion.Login;
 using Modulo4_G4.CapaPresentacion.Proyectos;
 using Modulo4_G4.CapaPresentacion.Reportes;
+using Modulo4_G4.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace Modulo4_G4
 {
     public partial class frmPrincipal : Form
     {
+        private Usuario usuariologueado;
         public frmPrincipal()
         {
             InitializeComponent();
@@ -40,7 +42,8 @@ namespace Modulo4_G4
         {
             frmLogin login = new frmLogin();
             login.ShowDialog();
-            lblUsuarioLogueado.Text = "Usuario logueado: " + login.UsuarioLogueado;
+            usuariologueado = login.UsuarioLogueado;
+            lblUsuarioLogueado.Text = "Usuario logueado: " + usuariologueado;
         }
 
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
@@ -74,7 +77,7 @@ namespace Modulo4_G4
 
         private void registrarFacturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFactura factura = new frmFactura();
+            frmFactura factura = new frmFactura(usuariologueado);
             factura.inicializarFormulario(frmFactura.FormMode.nuevo);
             factura.ShowDialog();
         }

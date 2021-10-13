@@ -1,4 +1,5 @@
 ﻿using Modulo4_G4.CapaLogicaDeNegocio;
+using Modulo4_G4.CapaPresentacion.Login;
 using Modulo4_G4.Entidades;
 using System;
 using System.Collections.Generic;
@@ -16,19 +17,23 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         private Cliente clienteSeleccionado;
         private List<Proyecto> proyectosPorProductos;
         private BindingList<DetalleFactura> detalleFactura;
+        private Usuario usuarioResponsable;
 
         private ClienteService clienteService;
         private ProyectoService proyectoService;
         private ProductoService productoService;
+        private FacturaService facturaService;
 
         private FormMode formMode;
-        public frmFactura()
+        public frmFactura(Usuario usuario = null)
         {
             InitializeComponent();
             clienteService = new ClienteService();
             proyectoService = new ProyectoService();
             productoService = new ProductoService();
+            facturaService = new FacturaService();
             detalleFactura = new BindingList<DetalleFactura>();
+            usuarioResponsable = usuario;
         }
 
         public enum FormMode
@@ -101,6 +106,8 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         private void btnNuevaFactura_Click(object sender, EventArgs e)
         {   
             mtbCuit.Enabled = true;
+            //txtFactura.Enabled = true;
+            btnConfirmar.Enabled = true;
             btnBuscarCliente.Enabled = true;
             limpiarCampos();
             cboProductos.Enabled = true;
@@ -323,6 +330,51 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         private void dgvDetalleFactura_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btnQuitar.Enabled = true;
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            if (!ValidarFactura()) { return; }
+
+            facturaSeleccionada.Fecha = DateTime.Parse(lblFecha.Text.ToString());
+            facturaSeleccionada.Cliente = clienteSeleccionado;
+            facturaSeleccionada.UsuarioCreador = usuarioResponsable;
+            facturaSeleccionada.DetalleFacturas = detalleFactura;
+            //try
+            //{
+            //    facturaService.CrearFactura(facturaSeleccionada);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+
+
+        }
+
+        private bool ValidarFactura()
+        {
+            if(clienteSeleccionado.Cuit == null) {
+                MessageBox.Show("Debe seleccionar al menos un cliente", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false; }
+            if(detalleFactura.Count == 0) 
+            {
+                MessageBox.Show("Debe seleccionar al menos un producto", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false; }
+            if(cboProductos.SelectedIndex > -1)
+            {
+                MessageBox.Show("Aun tiene Items sin confirmar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                cboProductos.Focus();
+                return false;
+            }
+        
+
+            return true;
+        }
+
+        private void btnLimpiarItems_Click(object sender, EventArgs e)
+        {
+            limpiarItems();
         }
     }
 }
