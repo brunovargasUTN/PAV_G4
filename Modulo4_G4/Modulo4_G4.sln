@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31605.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modulo4_G4", "Modulo4_G4\Modulo4_G4.csproj", "{A1AA9ACF-24B8-4461-8482-8C25A36FBA51}"
 EndProject
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.ReportViewer.Common", "..\Librerias\Microsoft.ReportViewer.Common\Microsoft.ReportViewer.Common.csproj", "{56160738-41CF-4B66-9E80-61F297432580}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.ReportViewer.WinForms", "..\Librerias\Microsoft.ReportViewer.WinForms\Microsoft.ReportViewer.WinForms.csproj", "{9A35317A-3881-4B9E-8C65-3D741F2D846B}"
@@ -13,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.ReportViewer.Data
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.ReportViewer.ProcessingObjectModel", "..\Librerias\Microsoft.ReportViewer.ProcessingObjectModel\Microsoft.ReportViewer.ProcessingObjectModel.csproj", "{9129441D-EA98-4D16-B4D6-F0423FF6A764}"
 EndProject
+>>>>>>> aa9ba841b0f45468a2ab80ee1c4ae236d992726e
+>>>>>>> 5fa4b85ec729c2ca48a313b9fa66412a2008efab
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +29,10 @@ Global
 		{A1AA9ACF-24B8-4461-8482-8C25A36FBA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1AA9ACF-24B8-4461-8482-8C25A36FBA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1AA9ACF-24B8-4461-8482-8C25A36FBA51}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 		{56160738-41CF-4B66-9E80-61F297432580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{56160738-41CF-4B66-9E80-61F297432580}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56160738-41CF-4B66-9E80-61F297432580}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +49,8 @@ Global
 		{9129441D-EA98-4D16-B4D6-F0423FF6A764}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9129441D-EA98-4D16-B4D6-F0423FF6A764}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9129441D-EA98-4D16-B4D6-F0423FF6A764}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> aa9ba841b0f45468a2ab80ee1c4ae236d992726e
+>>>>>>> 5fa4b85ec729c2ca48a313b9fa66412a2008efab
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -64,14 +64,14 @@ namespace Modulo4_G4
         private void listadoDeProyectosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporteProyectos frmReporte = new frmReporteProyectos();
-            frmReporte.inicializarReporte("tableProyectos", @".\CapaPresentacion\Reportes\rptProyectos.rdlc", new ProyectoService().MostrarReporteProyectos());
+            //frmReporte.inicializarReporte("tableProyectos", @".\CapaPresentacion\Reportes\rptProyectos.rdlc", new ProyectoService().MostrarReporteProyectos());
             frmReporte.ShowDialog();
         }
 
         private void top10DistribucionDeProyectosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporteProyectos frmReporte = new frmReporteProyectos();
-            frmReporte.inicializarReporte("DataSet1", @".\CapaPresentacion\Reportes\rptCantidadProyectos.rdlc", new ProyectoService().MostrarReporteProyectosXProductos());
+            //frmReporte.inicializarReporte("DataSet1", @".\CapaPresentacion\Reportes\rptCantidadProyectos.rdlc", new ProyectoService().MostrarReporteProyectosXProductos());
             frmReporte.ShowDialog();
         }
 
@@ -80,6 +80,12 @@ namespace Modulo4_G4
             frmFactura factura = new frmFactura(usuariologueado);
             factura.inicializarFormulario(frmFactura.FormMode.nuevo);
             factura.ShowDialog();
+        }
+
+        private void contactosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmContactos frm = new frmContactos();
+            frm.ShowDialog();
         }
     }
 }

@@ -97,6 +97,49 @@ F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\net
 F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Contactos.frmABMContacto.resources
 F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Contactos.frmContactos.resources
 F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Facturacion.frmFactura.resources
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 5fa4b85ec729c2ca48a313b9fa66412a2008efab
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.AssemblyReference.cache
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Barrios.frmABMBarrio.resources
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Barrios.frmBarrios.resources
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Clientes.frmABMCliente.resources
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Clientes.frmClientes.resources
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Contactos.frmABMContacto.resources
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Contactos.frmContactos.resources
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Facturacion.frmFactura.resources
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.frmPrincipal.resources
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Login.frmLogin.resources
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Proyectos.frmABMProyecto.resources
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Proyectos.frmProyectos.resources
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Reportes.frmReporteProyectos.resources
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.Properties.Resources.resources
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.GenerateResource.cache
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.AssemblyInfoInputs.cache
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.AssemblyInfo.cs
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.CoreCompileInputs.cache
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.exe
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\CapaPresentacion\Reportes\rptCantidadProyectos.rdlc
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\CapaPresentacion\Reportes\rptProyectos.rdlc
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.deps.json
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.runtimeconfig.json
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.runtimeconfig.dev.json
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.dll
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.pdb
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.CopyComplete
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.dll
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.pdb
+C:\Users\javie\PAV1_2021\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.genruntimeconfig.cache
+<<<<<<< HEAD
+=======
+=======
 F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.frmPrincipal.resources
 F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Login.frmLogin.resources
 F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Proyectos.frmABMProyecto.resources
@@ -112,3 +155,5 @@ F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\net
 F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.dll
 F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.pdb
 F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.genruntimeconfig.cache
+>>>>>>> aa9ba841b0f45468a2ab80ee1c4ae236d992726e
+>>>>>>> 5fa4b85ec729c2ca48a313b9fa66412a2008efab
