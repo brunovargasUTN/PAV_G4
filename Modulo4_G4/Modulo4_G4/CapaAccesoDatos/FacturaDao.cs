@@ -34,7 +34,7 @@ namespace Modulo4_G4.CapaAccesoDatos
                                                                   " FROM Facturas f   ",
                                                                   " ORDER BY f.nro_factura DESC   ");
 
-                factura.NroFactura = Convert.ToInt32(selectUltimoNroFactura.ExecuteScalar())+1;
+                factura.NroFactura = Int32.Parse(selectUltimoNroFactura.ExecuteScalar().ToString())+1;
 
 
 
@@ -105,6 +105,10 @@ namespace Modulo4_G4.CapaAccesoDatos
             {
                 dbTransaction.Rollback();
                 throw ex;
+            }
+            finally
+            {
+                dbConnection.Close();
             }
             
         }

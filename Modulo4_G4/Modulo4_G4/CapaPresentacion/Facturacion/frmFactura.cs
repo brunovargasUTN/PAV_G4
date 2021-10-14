@@ -57,8 +57,6 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             {
                 case FormMode.nuevo:
                     {
-                        facturaSeleccionada = new Factura();
-                        clienteSeleccionado = new Cliente();
                         break;
                     }
 
@@ -340,7 +338,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             if (!ValidarFactura()) { return; }
-
+            facturaSeleccionada = new Factura();
             facturaSeleccionada.Fecha = DateTime.Parse(lblFecha.Text.ToString());
             facturaSeleccionada.Cliente = clienteSeleccionado;
             facturaSeleccionada.UsuarioCreador = usuarioResponsable;
