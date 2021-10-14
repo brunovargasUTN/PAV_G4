@@ -24,16 +24,17 @@ namespace Modulo4_G4.CapaAccesoDatos
                 dbTransaction = dbConnection.BeginTransaction();
 
 
-                //SELECT Ultimo ID Factura
+                //SELECT Ultimo NRO-Factura Factura
 
-                //SqlCommand selectUltimoIdFactura = new SqlCommand();
-                //selectUltimoIdFactura.Connection = dbConnection;
-                //selectUltimoIdFactura.CommandType = CommandType.Text;
-                //selectUltimoIdFactura.Transaction = dbTransaction;
-                //selectUltimoIdFactura.CommandText = string.Concat(" SELECT TOP 1 f.nro_factura   ",
-                //                                                  " FROM Facturas f   ",
-                //                                                  " ORDER BY f.nro_factura DESC   ");
-                //var nroFactura = selectUltimoIdFactura.ExecuteScalar();
+                SqlCommand selectUltimoNroFactura = new SqlCommand();
+                selectUltimoNroFactura.Connection = dbConnection;
+                selectUltimoNroFactura.CommandType = CommandType.Text;
+                selectUltimoNroFactura.Transaction = dbTransaction;
+                selectUltimoNroFactura.CommandText = string.Concat(" SELECT TOP 1 f.nro_factura   ",
+                                                                  " FROM Facturas f   ",
+                                                                  " ORDER BY f.nro_factura DESC   ");
+
+                factura.NroFactura = Convert.ToInt32(selectUltimoNroFactura.ExecuteScalar())+1;
 
 
 
@@ -41,6 +42,7 @@ namespace Modulo4_G4.CapaAccesoDatos
                 SqlCommand insertFactura = new SqlCommand();
                 insertFactura.Connection = dbConnection;
                 insertFactura.CommandType = CommandType.Text;
+                insertFactura.Transaction = dbTransaction;
                 //Establece la instruccion a ejecutar
 
                 insertFactura.CommandText = String.Concat(" INSERT INTO Facturas    ",
@@ -48,7 +50,7 @@ namespace Modulo4_G4.CapaAccesoDatos
                                                             "   VALUES (@nro_factura, @id_cliente, @fecha, @id_usuario, @borrado ) ",
                                                             "   ");
                 //Agregamos los parametros
-                insertFactura.Parameters.AddWithValue("nro_factura",factura.NroFactura);
+                insertFactura.Parameters.AddWithValue("nro_factura", factura.NroFactura);
                 insertFactura.Parameters.AddWithValue("id_cliente", factura.Cliente.IdCliente);
                 insertFactura.Parameters.AddWithValue("fecha", factura.Fecha);
                 insertFactura.Parameters.AddWithValue("id_usuario", factura.UsuarioCreador.IdUsuario);
@@ -74,7 +76,7 @@ namespace Modulo4_G4.CapaAccesoDatos
                     SqlCommand insertDetalle = new SqlCommand();
                     insertDetalle.Connection = dbConnection;
                     insertDetalle.CommandType = CommandType.Text;
-
+                    insertDetalle.Transaction = dbTransaction;
                     insertDetalle.CommandText = String.Concat("     INSERT INTO FacturasDetalle ",
                                                                 "  ( id_factura, nro_orden, id_producto, id_proyecto, precio, borrado ) ",
                                                                 "   VALUES ( @id_factura, @nro_orden, @id_producto, @id_proyecto, @precio, @borrado) ");
@@ -84,6 +86,10 @@ namespace Modulo4_G4.CapaAccesoDatos
                     if(itemFactura.Proyecto != null)
                     {
                         insertDetalle.Parameters.AddWithValue("id_proyecto", itemFactura.Proyecto.IdProyecto);
+                    }
+                    else
+                    {
+                        insertDetalle.Parameters.AddWithValue("id_proyecto", DBNull.Value);
                     }
                     insertDetalle.Parameters.AddWithValue("precio", itemFactura.Precio);
                     insertDetalle.Parameters.AddWithValue("borrado", 0);

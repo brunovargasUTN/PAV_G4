@@ -65,6 +65,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.btnQuitar = new System.Windows.Forms.Button();
             this.dgvDetalleFactura = new System.Windows.Forms.DataGridView();
             this.btnConfirmar = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.gbCliente.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProyectos)).BeginInit();
@@ -210,6 +211,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.mtbCuit.Name = "mtbCuit";
             this.mtbCuit.Size = new System.Drawing.Size(112, 27);
             this.mtbCuit.TabIndex = 3;
+            this.mtbCuit.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label4
             // 
@@ -438,12 +440,23 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.btnConfirmar.UseVisualStyleBackColor = true;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Enabled = false;
+            this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
+            this.btnImprimir.Location = new System.Drawing.Point(150, 737);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(94, 57);
+            this.btnImprimir.TabIndex = 10;
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            // 
             // frmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 806);
             this.ControlBox = false;
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnSalir);
@@ -508,5 +521,6 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         private System.Windows.Forms.DataGridView dgvDetalleFactura;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Button btnLimpiarItems;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

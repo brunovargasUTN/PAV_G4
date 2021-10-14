@@ -106,7 +106,6 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         private void btnNuevaFactura_Click(object sender, EventArgs e)
         {   
             mtbCuit.Enabled = true;
-            //txtFactura.Enabled = true;
             btnConfirmar.Enabled = true;
             btnBuscarCliente.Enabled = true;
             limpiarCampos();
@@ -340,14 +339,18 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             facturaSeleccionada.Cliente = clienteSeleccionado;
             facturaSeleccionada.UsuarioCreador = usuarioResponsable;
             facturaSeleccionada.DetalleFacturas = detalleFactura;
-            //try
-            //{
-            //    facturaService.CrearFactura(facturaSeleccionada);
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+            try
+            {
+                facturaService.CrearFactura(facturaSeleccionada);
+                txtFactura.Text = facturaSeleccionada.NroFactura.ToString();
+                MessageBox.Show("Transaccion exitosa", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                btnImprimir.Enabled = true;
+                btnConfirmar.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
 
         }
@@ -375,6 +378,15 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         private void btnLimpiarItems_Click(object sender, EventArgs e)
         {
             limpiarItems();
+        }
+
+        private void deshabilitarControles()
+        {
+            mtbCuit.Enabled = false;
+            cboProductos.Enabled = false;
+            txtPrecio.Enabled = false;
+            btnLimpiarItems.Enabled = false;
+            dgvDetalleFactura.Enabled = false;
         }
     }
 }
