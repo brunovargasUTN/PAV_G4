@@ -1,304 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Prueba\\202110122145\\Modulo4_G4\\Modulo4_G4\\Modulo4_G4.csproj": {}
+    "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Modulo4_G4\\Modulo4_G4\\Modulo4_G4.csproj": {}
   },
   "projects": {
-    "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.Common\\Microsoft.ReportViewer.Common.csproj": {
+    "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Modulo4_G4\\Modulo4_G4\\Modulo4_G4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.Common\\Microsoft.ReportViewer.Common.csproj",
-        "projectName": "Microsoft.ReportViewer.Common",
-        "projectPath": "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.Common\\Microsoft.ReportViewer.Common.csproj",
-        "packagesPath": "C:\\Users\\Casa\\.nuget\\packages\\",
-        "outputPath": "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.Common\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Casa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
-            "projectReferences": {
-              "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.DataVisualization\\Microsoft.ReportViewer.DataVisualization.csproj": {
-                "projectPath": "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.DataVisualization\\Microsoft.ReportViewer.DataVisualization.csproj"
-              },
-              "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.ProcessingObjectModel\\Microsoft.ReportViewer.ProcessingObjectModel.csproj": {
-                "projectPath": "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.ProcessingObjectModel\\Microsoft.ReportViewer.ProcessingObjectModel.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
-          "dependencies": {
-            "Microsoft.CodeAnalysis.VisualBasic": {
-              "target": "Package",
-              "version": "[3.6.0, )"
-            },
-            "System.CodeDom": {
-              "target": "Package",
-              "version": "[4.7.0, )"
-            },
-            "System.IO.Packaging": {
-              "target": "Package",
-              "version": "[4.7.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.DataVisualization\\Microsoft.ReportViewer.DataVisualization.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.DataVisualization\\Microsoft.ReportViewer.DataVisualization.csproj",
-        "projectName": "Microsoft.ReportViewer.DataVisualization",
-        "projectPath": "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.DataVisualization\\Microsoft.ReportViewer.DataVisualization.csproj",
-        "packagesPath": "C:\\Users\\Casa\\.nuget\\packages\\",
-        "outputPath": "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.DataVisualization\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Casa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
-          "dependencies": {
-            "System.Drawing.Common": {
-              "target": "Package",
-              "version": "[4.7.0, )"
-            },
-            "System.Resources.Extensions": {
-              "target": "Package",
-              "version": "[4.7.1, )"
-            },
-            "System.Windows.Extensions": {
-              "target": "Package",
-              "version": "[4.7.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.ProcessingObjectModel\\Microsoft.ReportViewer.ProcessingObjectModel.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.ProcessingObjectModel\\Microsoft.ReportViewer.ProcessingObjectModel.csproj",
-        "projectName": "Microsoft.ReportViewer.ProcessingObjectModel",
-        "projectPath": "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.ProcessingObjectModel\\Microsoft.ReportViewer.ProcessingObjectModel.csproj",
-        "packagesPath": "C:\\Users\\Casa\\.nuget\\packages\\",
-        "outputPath": "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.ProcessingObjectModel\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Casa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.WinForms\\Microsoft.ReportViewer.WinForms.csproj": {
-      "version": "15.1.14",
-      "restore": {
-        "projectUniqueName": "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.WinForms\\Microsoft.ReportViewer.WinForms.csproj",
-        "projectName": "ReportViewerCore.WinForms",
-        "projectPath": "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.WinForms\\Microsoft.ReportViewer.WinForms.csproj",
-        "packagesPath": "C:\\Users\\Casa\\.nuget\\packages\\",
-        "outputPath": "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.WinForms\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Casa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
-            "projectReferences": {
-              "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.Common\\Microsoft.ReportViewer.Common.csproj": {
-                "projectPath": "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.Common\\Microsoft.ReportViewer.Common.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
-          "dependencies": {
-            "System.ServiceModel.Http": {
-              "target": "Package",
-              "version": "[4.8.1, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WindowsForms": {
-              "privateAssets": "none"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\Prueba\\202110122145\\Modulo4_G4\\Modulo4_G4\\Modulo4_G4.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Prueba\\202110122145\\Modulo4_G4\\Modulo4_G4\\Modulo4_G4.csproj",
+        "projectUniqueName": "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Modulo4_G4\\Modulo4_G4\\Modulo4_G4.csproj",
         "projectName": "Modulo4_G4",
-        "projectPath": "D:\\Prueba\\202110122145\\Modulo4_G4\\Modulo4_G4\\Modulo4_G4.csproj",
+        "projectPath": "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Modulo4_G4\\Modulo4_G4\\Modulo4_G4.csproj",
         "packagesPath": "C:\\Users\\Casa\\.nuget\\packages\\",
-        "outputPath": "D:\\Prueba\\202110122145\\Modulo4_G4\\Modulo4_G4\\obj\\",
+        "outputPath": "F:\\Ivan\\PAV1\\repoGit\\TPI PAV G4\\PAV1_G4_2021\\Modulo4_G4\\Modulo4_G4\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Casa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
-            "projectReferences": {
-              "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.Common\\Microsoft.ReportViewer.Common.csproj": {
-                "projectPath": "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.Common\\Microsoft.ReportViewer.Common.csproj"
-              },
-              "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.WinForms\\Microsoft.ReportViewer.WinForms.csproj": {
-                "projectPath": "D:\\Prueba\\202110122145\\Modulo4_G4\\Librerias\\Microsoft.ReportViewer.WinForms\\Microsoft.ReportViewer.WinForms.csproj"
-              }
-            }
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -308,9 +37,13 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
           "dependencies": {
+            "ReportViewerCore.WinForms": {
+              "target": "Package",
+              "version": "[15.1.14, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.3, )"

@@ -24,6 +24,19 @@ namespace Modulo4_G4.CapaAccesoDatos
                 dbTransaction = dbConnection.BeginTransaction();
 
 
+                //SELECT Ultimo ID Factura
+
+                //SqlCommand selectUltimoIdFactura = new SqlCommand();
+                //selectUltimoIdFactura.Connection = dbConnection;
+                //selectUltimoIdFactura.CommandType = CommandType.Text;
+                //selectUltimoIdFactura.Transaction = dbTransaction;
+                //selectUltimoIdFactura.CommandText = string.Concat(" SELECT TOP 1 f.nro_factura   ",
+                //                                                  " FROM Facturas f   ",
+                //                                                  " ORDER BY f.nro_factura DESC   ");
+                //var nroFactura = selectUltimoIdFactura.ExecuteScalar();
+
+
+
                 //INSERT Factura
                 SqlCommand insertFactura = new SqlCommand();
                 insertFactura.Connection = dbConnection;
@@ -89,5 +102,7 @@ namespace Modulo4_G4.CapaAccesoDatos
             }
             
         }
+
+        
     }
 }

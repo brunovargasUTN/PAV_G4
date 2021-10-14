@@ -2,17 +2,13 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.14" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Librerias\Microsoft.ReportViewer.Common\Microsoft.ReportViewer.Common.csproj" />
-    <ProjectReference Include="..\Librerias\Microsoft.ReportViewer.WinForms\Microsoft.ReportViewer.WinForms.csproj" />
   </ItemGroup>
 
   <ItemGroup>
