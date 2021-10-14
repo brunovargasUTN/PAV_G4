@@ -108,11 +108,13 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             mtbCuit.Enabled = true;
             btnConfirmar.Enabled = true;
             btnBuscarCliente.Enabled = true;
+            btnLimpiarItems.Enabled = true;
+            txtPrecio.Enabled = true;
+            btnImprimir.Enabled = false;
             limpiarCampos();
             cboProductos.Enabled = true;
             mtbCuit.Focus();
-
-
+            dgvDetalleFactura.Enabled = true;
         }
 
         private void llenarCombos(ComboBox cbo, object source, string display, string value)
@@ -124,11 +126,15 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         }
         private void limpiarCampos()
         {
-            txtRazonSocial.Text = "";
-            txtDireccion.Text = "";
-            txtContacto.Text = "";
-            txtTelefono.Text = "";
-            txtEmail.Text = "";
+            mtbCuit.Clear();
+            txtRazonSocial.Clear();
+            txtDireccion.Clear();
+            txtContacto.Clear();
+            txtTelefono.Clear();
+            txtEmail.Clear();
+            txtFactura.Clear();
+            txtTotal.Clear();
+            detalleFactura.Clear();
         }
 
         private void rbProyecto_CheckedChanged(object sender, EventArgs e)
@@ -345,7 +351,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
                 txtFactura.Text = facturaSeleccionada.NroFactura.ToString();
                 MessageBox.Show("Transaccion exitosa", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 btnImprimir.Enabled = true;
-                btnConfirmar.Enabled = false;
+                deshabilitarControles();
             }
             catch (Exception ex)
             {
@@ -387,6 +393,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             txtPrecio.Enabled = false;
             btnLimpiarItems.Enabled = false;
             dgvDetalleFactura.Enabled = false;
+            btnConfirmar.Enabled = false;
         }
     }
 }
