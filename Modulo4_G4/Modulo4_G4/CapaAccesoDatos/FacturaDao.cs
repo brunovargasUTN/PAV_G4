@@ -113,6 +113,36 @@ namespace Modulo4_G4.CapaAccesoDatos
             
         }
 
+
+        public IList<Factura> GetAll() {
+            var strSql = string.Concat("    SELECT id_factura, nro_factura, id_cliente, fecha, id_usuario_creador   ",
+                                        "   FROM Facturas");
+            List<Factura> facturas = new List<Factura>();
+
+            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
+
+            if (resultadoConsulta.Rows.Count > 0)
+            {
+                foreach (DataRow row in resultadoConsulta.Rows)
+                {
+                    facturas.Add(ObjectMapping(row));
+                }
+            }
+            return facturas;
+        }
+
+
+        private Factura ObjectMapping(DataRow row)
+        {
+            Factura factura = new Factura();
+            factura.IdFactura = Int32.Parse(row["id_factura"].ToString());
+            factura.NroFactura = Int32.Parse(row["nro_factura"].ToString());
+            factura.Cliente = new ClienteDao().GetClienteById(Int32.Parse(row["id_cliente"].ToString()));
+            factura.Fecha = DateTime.Parse(row["fecha"].ToString());
+            factura.UsuarioCreador = new UsuarioDao().GetById(Int32.Parse(row["id_usuario_creador"].ToString()));
+            factura.DetalleFacturas = new DetalleFacturaDao().GetByIdFactura(factura.IdFactura);
+            return factura; ;
+        }
         
     }
 }

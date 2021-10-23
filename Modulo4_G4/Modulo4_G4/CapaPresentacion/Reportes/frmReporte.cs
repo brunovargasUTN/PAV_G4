@@ -13,11 +13,11 @@ using Microsoft.Reporting.WinForms;
 
 namespace Modulo4_G4.CapaPresentacion.Reportes
 {
-    public partial class frmReporteProyectos : Form
+    public partial class frmReporte : Form
     {
        
         private ReportViewer reporte;
-        public frmReporteProyectos()
+        public frmReporte()
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
@@ -46,6 +46,14 @@ namespace Modulo4_G4.CapaPresentacion.Reportes
             reporte.ZoomPercent = 100; //Seteamos la vista de impresion al 100% del tamaño del informe
            
 
+        }
+
+        public void CargarParametros(Dictionary<string, object> parametros)
+        {
+            foreach(var param in parametros)
+            {
+                reporte.LocalReport.SetParameters(new ReportParameter(param.Key.ToString(), param.Value.ToString()));
+            }
         }
     }
 }

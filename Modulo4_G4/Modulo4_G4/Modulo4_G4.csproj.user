@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ShowAllFiles>false</ShowAllFiles>
+    <ShowAllFiles>true</ShowAllFiles>
   </PropertyGroup>
   <ItemGroup>
     <Compile Update="CapaPresentacion\Barrios\frmABMBarrio.cs">
@@ -22,6 +22,9 @@
     <Compile Update="CapaPresentacion\Contactos\frmContactos.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CapaPresentacion\Facturacion\frmConsultaFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="CapaPresentacion\Facturacion\frmFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -37,7 +40,7 @@
     <Compile Update="CapaPresentacion\Proyectos\frmProyectos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CapaPresentacion\Reportes\frmReporteProyectos.cs">
+    <Compile Update="CapaPresentacion\Reportes\frmReporte.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

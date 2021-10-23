@@ -65,14 +65,14 @@ namespace Modulo4_G4
 
         private void listadoDeProyectosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmReporteProyectos frmReporte = new frmReporteProyectos();
+            frmReporte frmReporte = new frmReporte();
             frmReporte.inicializarReporte("tableProyectos", @".\CapaPresentacion\Reportes\rptProyectos.rdlc", new ProyectoService().MostrarReporteProyectos());
             frmReporte.ShowDialog();
         }
 
         private void top10DistribucionDeProyectosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmReporteProyectos frmReporte = new frmReporteProyectos();
+            frmReporte frmReporte = new frmReporte();
             frmReporte.inicializarReporte("DataSet1", @".\CapaPresentacion\Reportes\rptCantidadProyectos.rdlc", new ProyectoService().MostrarReporteProyectosXProductos());
             frmReporte.ShowDialog();
         }
@@ -94,6 +94,12 @@ namespace Modulo4_G4
         {
             frmContactos frm = new frmContactos();
             frm.ShowDialog();
+        }
+
+        private void consultarHistoricoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaFacturas frmConsulta = new frmConsultaFacturas();
+            frmConsulta.ShowDialog();
         }
     }
 }

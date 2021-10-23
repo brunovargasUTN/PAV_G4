@@ -1,7 +1,7 @@
 ﻿
 namespace Modulo4_G4.CapaPresentacion.Reportes
 {
-    partial class frmReporteProyectos
+    partial class frmReporte
     {
         /// <summary>
         /// Required designer variable.

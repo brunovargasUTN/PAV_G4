@@ -13,5 +13,18 @@ namespace Modulo4_G4.Entidades
         public Usuario UsuarioCreador { get; set; }
 
         public IList<DetalleFactura> DetalleFacturas { get; set; }
+
+        public decimal TotalFactura
+        {
+            get
+            {
+                decimal total = 0;
+                foreach (var detalle in DetalleFacturas)
+                {
+                    total += detalle.Precio;
+                }
+                return total;
+            }
+        }
     }
 }

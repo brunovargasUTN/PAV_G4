@@ -1,5 +1,6 @@
 ﻿using Modulo4_G4.CapaLogicaDeNegocio;
 using Modulo4_G4.CapaPresentacion.Login;
+using Modulo4_G4.CapaPresentacion.Reportes;
 using Modulo4_G4.Entidades;
 using System;
 using System.Collections.Generic;
@@ -44,19 +45,42 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
 
         public void inicializarFormulario(FormMode op, Factura factura = null)
         {
-            facturaSeleccionada = factura;
+            if (factura != null && op == FormMode.consulta)
+            {
+                facturaSeleccionada = factura;
+                clienteSeleccionado = factura.Cliente;
+                detalleFactura = new BindingList<DetalleFactura>(factura.DetalleFacturas);
+            }
             formMode = op;
         }
         private void frmFactura_Load(object sender, EventArgs e)
         {
-            lblFecha.Text = DateTime.Today.ToShortDateString();
-            llenarCombos(cboProductos,productoService.ObtenerTodos(),"NombreProducto","IdProducto");
             inicializarDgvProyectos();
             inicializarDgvDetalleFactura();
+
             switch (formMode)
             {
                 case FormMode.nuevo:
                     {
+                        lblFecha.Text = DateTime.Today.ToShortDateString();
+                        llenarCombos(cboProductos, productoService.ObtenerTodos(), "NombreProducto", "IdProducto");
+                        txtFactura.Visible = false;
+                        lblFactura.Visible = false;
+                        break;
+                    }
+
+                case FormMode.consulta:
+                    {
+                        btnNuevaFactura.Enabled = false;
+                        btnNuevaFactura.Visible = false;
+                        deshabilitarControles();
+                        lblFecha.Text = facturaSeleccionada.Fecha.ToShortDateString();
+                        txtFactura.Text = facturaSeleccionada.NroFactura.ToString();
+                        mtbCuit.Text = clienteSeleccionado.Cuit;
+                        RellenarDatosCliente();
+                        dgvDetalleFactura.DataSource = facturaSeleccionada.DetalleFacturas;
+                        refrescarTotal();
+                        btnImprimir.Enabled = true;
                         break;
                     }
 
@@ -85,20 +109,18 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             clienteSeleccionado = resultado[0];
 
             //Rellenamos los datos de los Textbox del Cliente
-            txtRazonSocial.Text = clienteSeleccionado.RazonSocial;
-            txtDireccion.Text = String.Concat(clienteSeleccionado.Calle," - ",clienteSeleccionado.NroCalle," - ",clienteSeleccionado.Barrio);
-            txtContacto.Text = String.Concat(clienteSeleccionado.Contacto.NombreContacto,", ",clienteSeleccionado.Contacto.Apellido);
-            txtTelefono.Text = clienteSeleccionado.Contacto.Telefono.ToString();
-            txtEmail.Text = clienteSeleccionado.Contacto.EmailContacto;
+            RellenarDatosCliente();
 
             
         }
 
-
-
-        private void mtbCuit_ModifiedChanged(object sender, EventArgs e)
+        private void RellenarDatosCliente()
         {
-
+            txtRazonSocial.Text = clienteSeleccionado.RazonSocial;
+            txtDireccion.Text = String.Concat(clienteSeleccionado.Calle, " - ", clienteSeleccionado.NroCalle, " - ", clienteSeleccionado.Barrio);
+            txtContacto.Text = String.Concat(clienteSeleccionado.Contacto.NombreContacto, ", ", clienteSeleccionado.Contacto.Apellido);
+            txtTelefono.Text = clienteSeleccionado.Contacto.Telefono.ToString();
+            txtEmail.Text = clienteSeleccionado.Contacto.EmailContacto;
         }
 
         private void btnNuevaFactura_Click(object sender, EventArgs e)
@@ -193,6 +215,10 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             dgvProyectos.AutoResizeRows(
                 DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
 
+            //Eliminamos la fila en blanco por defecto que permite al usuario ingresar los datos en una grilla vacia. En este caso no lo necesitamos
+            //y por el contrario nos perjudica al dejar una fila en blanco al final siempre.
+            dgvProyectos.AllowUserToAddRows = false;
+
             dgvProyectos.DataSource = null;
         }
 
@@ -201,7 +227,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // Cree un DataGridView no vinculado declarando un recuento de columnas.
             dgvDetalleFactura.ColumnCount = 3;
             dgvDetalleFactura.ColumnHeadersVisible = true;
-            //dgvDetalleFactura.ReadOnly = true;
+            dgvDetalleFactura.ReadOnly = true;
 
             // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
             dgvDetalleFactura.AutoGenerateColumns = false;
@@ -232,6 +258,10 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
             dgvDetalleFactura.AutoResizeRows(
                 DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+
+            //Eliminamos la fila en blanco por defecto que permite al usuario ingresar los datos en una grilla vacia. En este caso no lo necesitamos
+            //y por el contrario nos perjudica al dejar una fila en blanco al final siempre.
+            dgvDetalleFactura.AllowUserToAddRows = false;
 
             dgvDetalleFactura.DataSource = detalleFactura;
         }
@@ -346,10 +376,12 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             try
             {
                 facturaService.CrearFactura(facturaSeleccionada);
-                txtFactura.Text = facturaSeleccionada.NroFactura.ToString();
                 MessageBox.Show("Transaccion exitosa", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                btnImprimir.Enabled = true;
                 deshabilitarControles();
+                txtFactura.Visible = true;
+                lblFactura.Visible = true;
+                txtFactura.Text = facturaSeleccionada.NroFactura.ToString();
+                btnImprimir.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -392,6 +424,48 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             btnLimpiarItems.Enabled = false;
             dgvDetalleFactura.Enabled = false;
             btnConfirmar.Enabled = false;
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+
+            parametros.Add("nombreCliente", string.Concat(clienteSeleccionado.Contacto.Apellido, ", ", clienteSeleccionado.Contacto.NombreContacto));
+            parametros.Add("emailCliente", clienteSeleccionado.Contacto.EmailContacto.ToString());
+            parametros.Add("direccionCliente", string.Concat(clienteSeleccionado.Calle," ",clienteSeleccionado.NroCalle," - ",clienteSeleccionado.Barrio.NombreBarrio));
+            parametros.Add("telefonoCliente", clienteSeleccionado.Contacto.Telefono.ToString());
+            parametros.Add("cuitCliente", clienteSeleccionado.Cuit.ToString());
+            parametros.Add("razonSocialCliente", clienteSeleccionado.RazonSocial.ToString());
+            parametros.Add("nroFactura", facturaSeleccionada.NroFactura.ToString());
+            parametros.Add("tipoFactura", "A");
+            parametros.Add("fecha", facturaSeleccionada.Fecha.ToShortDateString());
+            parametros.Add("emailEmpresa", "info@bugtracker.com.ar");
+            parametros.Add("telefonoEmpresa", "(+54) 0351 - 4444444");
+            parametros.Add("direccionEmpresa", "Av. Direccion 123 - Centro");
+            parametros.Add("razonSocialEmpresa", "Bug Tracker S.R.L.");
+            parametros.Add("sitioWebEmpresa", "www.bugtracker.com.ar");
+
+            DataTable table = new DataTable();
+
+            //1. Generamos los nombres de columnas en el datatable
+            foreach (DataGridViewColumn column in dgvDetalleFactura.Columns)
+                table.Columns.Add(column.Name, typeof(string));
+
+            //2. looping through selected rows of dgv, and add them to datatable:
+            for (int i = 0; i < dgvDetalleFactura.Rows.Count; i++)
+            {
+                table.Rows.Add();
+                for (int j = 0; j < dgvDetalleFactura.Columns.Count; j++)
+                {
+                    table.Rows[i][j] = dgvDetalleFactura[j, i].Value;
+                }
+            }
+
+            frmReporte frmReporte = new frmReporte();
+            frmReporte.inicializarReporte("DataSet1", @".\CapaPresentacion\Reportes\rptFactura.rdlc", table);
+            frmReporte.CargarParametros(parametros);
+            frmReporte.ShowDialog();
+
         }
     }
 }

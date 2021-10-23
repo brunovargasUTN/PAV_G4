@@ -97,28 +97,28 @@ namespace Modulo4_G4
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // barriosToolStripMenuItem
             // 
             this.barriosToolStripMenuItem.Name = "barriosToolStripMenuItem";
-            this.barriosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.barriosToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.barriosToolStripMenuItem.Text = "Barrios";
             this.barriosToolStripMenuItem.Click += new System.EventHandler(this.barriosToolStripMenuItem_Click);
             // 
             // contactosToolStripMenuItem
             // 
             this.contactosToolStripMenuItem.Name = "contactosToolStripMenuItem";
-            this.contactosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.contactosToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.contactosToolStripMenuItem.Text = "Contactos";
             this.contactosToolStripMenuItem.Click += new System.EventHandler(this.contactosToolStripMenuItem_Click);
             // 
             // proyectosToolStripMenuItem
             // 
             this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
-            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.proyectosToolStripMenuItem.Text = "Proyectos";
             this.proyectosToolStripMenuItem.Click += new System.EventHandler(this.proyectosToolStripMenuItem_Click);
             // 
@@ -134,15 +134,16 @@ namespace Modulo4_G4
             // registrarFacturaToolStripMenuItem
             // 
             this.registrarFacturaToolStripMenuItem.Name = "registrarFacturaToolStripMenuItem";
-            this.registrarFacturaToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.registrarFacturaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.registrarFacturaToolStripMenuItem.Text = "Registrar Factura";
             this.registrarFacturaToolStripMenuItem.Click += new System.EventHandler(this.registrarFacturaToolStripMenuItem_Click);
             // 
             // consultarHistoricoToolStripMenuItem
             // 
             this.consultarHistoricoToolStripMenuItem.Name = "consultarHistoricoToolStripMenuItem";
-            this.consultarHistoricoToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.consultarHistoricoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.consultarHistoricoToolStripMenuItem.Text = "Consultar Historico";
+            this.consultarHistoricoToolStripMenuItem.Click += new System.EventHandler(this.consultarHistoricoToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 

@@ -30,7 +30,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFactura));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblFactura = new System.Windows.Forms.Label();
             this.txtFactura = new System.Windows.Forms.TextBox();
             this.lblFecha = new System.Windows.Forms.Label();
             this.gbCliente = new System.Windows.Forms.GroupBox();
@@ -73,15 +73,14 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleFactura)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblFactura
             // 
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(747, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 32);
-            this.label1.TabIndex = 0;
+            this.lblFactura.ForeColor = System.Drawing.Color.Black;
+            this.lblFactura.Image = global::Modulo4_G4.Properties.Resources.numero_factura;
+            this.lblFactura.Location = new System.Drawing.Point(732, 47);
+            this.lblFactura.Name = "lblFactura";
+            this.lblFactura.Size = new System.Drawing.Size(56, 47);
+            this.lblFactura.TabIndex = 0;
             // 
             // txtFactura
             // 
@@ -95,11 +94,11 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblFecha.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblFecha.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblFecha.Location = new System.Drawing.Point(851, 12);
+            this.lblFecha.Location = new System.Drawing.Point(828, 12);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(127, 20);
+            this.lblFecha.Size = new System.Drawing.Size(150, 25);
             this.lblFecha.TabIndex = 2;
             this.lblFecha.Text = "DD/MM/AAAA";
             // 
@@ -449,6 +448,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.btnImprimir.Size = new System.Drawing.Size(94, 57);
             this.btnImprimir.TabIndex = 10;
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // frmFactura
             // 
@@ -465,7 +465,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.Controls.Add(this.gbCliente);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.txtFactura);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblFactura);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.Name = "frmFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -486,7 +486,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblFactura;
         private System.Windows.Forms.TextBox txtFactura;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.GroupBox gbCliente;

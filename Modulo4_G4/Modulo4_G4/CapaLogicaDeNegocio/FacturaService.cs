@@ -19,5 +19,10 @@ namespace Modulo4_G4.CapaLogicaDeNegocio
         {
             return facturaDao.Create(factura);
         }
+
+        public IList<Factura> ObtenerTodos()
+        {
+            return facturaDao.GetAll();
+        }
     }
 }

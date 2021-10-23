@@ -36,6 +36,9 @@
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
     </None>
+    <None Update="CapaPresentacion\Reportes\rptFactura.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="CapaPresentacion\Reportes\rptProyectos.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
