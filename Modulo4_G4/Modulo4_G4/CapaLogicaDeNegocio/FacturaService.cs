@@ -24,5 +24,10 @@ namespace Modulo4_G4.CapaLogicaDeNegocio
         {
             return facturaDao.GetAll();
         }
+
+        internal List<Factura> ObtenerPorFiltro(Dictionary<string, object> parametros)
+        {
+            return facturaDao.GetByFilters(parametros);
+        }
     }
 }

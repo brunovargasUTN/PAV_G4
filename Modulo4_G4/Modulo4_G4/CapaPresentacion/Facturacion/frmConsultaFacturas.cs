@@ -18,19 +18,22 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         private List<Factura> facturas;
         private FacturaService facturaService;
         private Factura facturaSeleccionada;
+        private UsuarioService usuarioService;
         public frmConsultaFacturas()
         {
             InitializeComponent();
             InitializeDataGridView();
             productoService = new ProductoService();
             facturaService = new FacturaService();
+            usuarioService = new UsuarioService();
         }
 
         private void frmConsultaFacturas_Load(object sender, EventArgs e)
         {
             CargarCombos(cboProductos, productoService.ObtenerTodos(), "NombreProducto", "IdProducto");
+            CargarCombos(cboVendedores, usuarioService.ObtenerTodos(), "NombreUsuario", "IdUsuario");
             btnMostrarFactura.Enabled = false;
-
+            LimpiarControles();
         }
         private void CargarCombos(ComboBox cbo, object dataSource, string display, string value)
         {
@@ -86,6 +89,8 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
         dgvFacturas.AutoResizeRows(
             DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+
+            dgvFacturas.AllowUserToAddRows = false;
     }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -99,11 +104,87 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             {
                 facturas = (List<Factura>)facturaService.ObtenerTodos();
                 RecargarDataGridView(facturas);
+                return;
             }
+            //Validamos los filtros que se hayan seleccionado
+            if (!ValidarFiltros()) { return; }
+
+            //Cargamos la coleccion de parametros para el filtro
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+
+            if (!string.IsNullOrEmpty(mtbCuit.Text))
+            {
+                parametros.Add("cuit", mtbCuit.Text.ToString());
+            }
+            if (!string.IsNullOrEmpty(cboProductos.Text.ToString()))
+            {
+                parametros.Add("idProducto", cboProductos.SelectedValue.ToString());
+            }
+            if (!string.IsNullOrEmpty(cboVendedores.Text.ToString()))
+            {
+                parametros.Add("idUsuario", cboVendedores.SelectedValue.ToString());
+            }
+            //Cargamos las fechas entre
+            //Desde deberia comenzar desde las 00:00:00 (Por defecto el dtp lo trae asi)
+            //Hasta deberia ser hasta las 23:59:59 para que abarque todas las horas del ultimo dia 
+            if (dtpDesde.Checked)
+            {
+                parametros.Add("fechaDesde", dtpDesde.Value.Date.ToString());
+            }
+            if (dtpHasta.Checked)
+            {
+                var hasta = dtpHasta.Value;
+                parametros.Add("fechaHasta", new DateTime(hasta.Year, hasta.Month, hasta.Day, 23, 59, 59));
+            }
+
+            if (parametros.Count > 0)
+            {
+                facturas = (List<Factura>)facturaService.ObtenerPorFiltro(parametros);
+                RecargarDataGridView(facturas);
+                return;
+            }
+            else 
+            {
+                MessageBox.Show("Debe Ingresar al menos un parametro de filtro o marcar la casilla Todos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
 
         }
 
+        private bool ValidarFiltros()
+        {
+            //Validamos el ingreso de un cuit valido
+            if (!string.IsNullOrEmpty(mtbCuit.Text)  && !mtbCuit.MaskCompleted)
+            {
+                MessageBox.Show("Debe Ingresar un CUIT valido","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                return false;
+            }
+            //Validamos las fechas
+            if((dtpDesde.Checked && dtpHasta.Checked) && (dtpDesde.Value.Date > dtpHasta.Value.Date))
+            {
+                MessageBox.Show("La fecha Desde no puede ser mayor que la fecha Hasta", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false;
+            }
+            if(dtpDesde.Checked && dtpDesde.Value.Date > DateTime.Today)
+            {
+                MessageBox.Show("La fecha Desde no puede ser mayor que la fecha de hoy: " + DateTime.Today.ToShortDateString(), "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false;
+            }
+            if (dtpHasta.Checked && dtpHasta.Value.Date > DateTime.Today)
+            {
+                MessageBox.Show("La fecha Hasta no puede ser mayor que la fecha de hoy: " + DateTime.Today.ToShortDateString(), "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false;
+            }
+
+            return true;
+        }
+
         private void RecargarDataGridView(IList<Factura> lista) {
+            if(lista.Count == 0)
+            {
+                MessageBox.Show("La consulta no arrojó resultados. ", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
             dgvFacturas.DataSource = null;
             dgvFacturas.DataSource = lista;
             foreach (DataGridViewRow fila in dgvFacturas.Rows)
@@ -123,6 +204,8 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
                 cboProductos.Enabled = false;
                 dtpDesde.Enabled = false;
                 dtpHasta.Enabled = false;
+                cboVendedores.Enabled = false;
+                LimpiarControles();
             }
             else
             {
@@ -130,13 +213,29 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
                 cboProductos.Enabled = true;
                 dtpDesde.Enabled = true;
                 dtpHasta.Enabled = true;
+                cboVendedores.Enabled = true;
             }
+        }
+
+        private void LimpiarControles()
+        {
+            mtbCuit.Clear();
+            cboProductos.SelectedIndex = -1;
+            cboVendedores.SelectedIndex = -1;
+            dtpHasta.Value = DateTime.Today;
+            dtpDesde.Value = DateTime.Today;
+            dtpDesde.Checked = false;
+            dtpHasta.Checked = false;   
         }
 
         private void dgvFacturas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnMostrarFactura.Enabled = true;
-            facturaSeleccionada = (Factura)dgvFacturas.CurrentRow.DataBoundItem;
+            
+            if(dgvFacturas.CurrentRow != null) {
+                btnMostrarFactura.Enabled = true;
+                facturaSeleccionada = (Factura)dgvFacturas.CurrentRow.DataBoundItem;
+            }
+            
         }
 
         private void btnMostrarFactura_Click(object sender, EventArgs e)
@@ -144,6 +243,32 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             frmFactura frm = new frmFactura();
             frm.inicializarFormulario(frmFactura.FormMode.consulta, facturaSeleccionada);
             frm.ShowDialog();
+        }
+
+        private void dtpDesde_ValueChanged(object sender, EventArgs e)
+        {
+            if(dtpDesde.Value.Date > DateTime.Today)
+            {
+                MessageBox.Show("La fecha Desde no puede ser mayor que la fecha Actual", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                
+            }
+            if(dtpHasta.Checked && dtpDesde.Value.Date > dtpHasta.Value.Date)
+            {
+                MessageBox.Show("La fecha Desde no puede ser mayor que la fecha Hasta", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+        }
+
+        private void dtpHasta_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpHasta.Value.Date > DateTime.Today)
+            {
+                MessageBox.Show("La fecha Hasta no puede ser mayor que la fecha Actual", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            if (dtpDesde.Checked && dtpHasta.Value.Date < dtpDesde.Value.Date)
+            {
+                MessageBox.Show("La fecha Hasta no puede ser menor que la fecha Desde", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

@@ -486,6 +486,7 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
+                            <BackgroundColor>LightSkyBlue</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -524,7 +525,7 @@
             <Top>14.8717cm</Top>
             <Left>2.5cm</Left>
             <Height>2.84683cm</Height>
-            <Width>16.16813cm</Width>
+            <Width>16.16812cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -882,14 +883,16 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=Parameters!sitioWebEmpresa.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>verdana</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>sitioWebEmpresa</rd:DefaultName>
-            <Top>4.96426cm</Top>
+            <Top>4.97465cm</Top>
             <Left>2.5cm</Left>
             <Height>0.6cm</Height>
             <Width>4.99767cm</Width>
@@ -1098,7 +1101,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Envie a</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>verdana</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -1165,7 +1170,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=Parameters!razonSocialCliente.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>verdana</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />

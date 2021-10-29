@@ -317,7 +317,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.dgvProyectos.RowTemplate.Height = 29;
             this.dgvProyectos.Size = new System.Drawing.Size(822, 93);
             this.dgvProyectos.TabIndex = 4;
-            this.dgvProyectos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProyectos_CellContentClick);
+            this.dgvProyectos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProyectos_CellClick);
             // 
             // rbProductoFinal
             // 

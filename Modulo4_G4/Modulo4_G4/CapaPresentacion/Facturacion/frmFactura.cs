@@ -315,11 +315,9 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             item.Precio = precio;
 
             detalleFactura.Add(item);
+            btnQuitar.Enabled = false;
             refrescarTotal();
-            
-
             limpiarItems();
-            
             
         }
 
@@ -334,11 +332,14 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             dgvProyectos.Enabled = false;
             rbProyecto.Enabled = false;
             cboProductos.Focus();
-
+            
         }
-        private void dgvProyectos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvProyectos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnAgregar.Enabled = true;
+            if (dgvProyectos.CurrentRow != null)
+            {
+                btnAgregar.Enabled = true;
+            }
         }
 
         private void refrescarTotal()
@@ -362,14 +363,18 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
 
         private void dgvDetalleFactura_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnQuitar.Enabled = true;
+            if(dgvDetalleFactura.CurrentRow != null)
+            {
+                btnQuitar.Enabled = true;
+            }
+            
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             if (!ValidarFactura()) { return; }
             facturaSeleccionada = new Factura();
-            facturaSeleccionada.Fecha = DateTime.Parse(lblFecha.Text.ToString());
+            facturaSeleccionada.Fecha = DateTime.Now;
             facturaSeleccionada.Cliente = clienteSeleccionado;
             facturaSeleccionada.UsuarioCreador = usuarioResponsable;
             facturaSeleccionada.DetalleFacturas = detalleFactura;
@@ -393,7 +398,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
 
         private bool ValidarFactura()
         {
-            if(clienteSeleccionado.Cuit == null) {
+            if(clienteSeleccionado == null) {
                 MessageBox.Show("Debe seleccionar al menos un cliente", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false; }
             if(detalleFactura.Count == 0) 
@@ -457,7 +462,8 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
                 table.Rows.Add();
                 for (int j = 0; j < dgvDetalleFactura.Columns.Count; j++)
                 {
-                    table.Rows[i][j] = dgvDetalleFactura[j, i].Value;
+                    //table.Rows[i][j] = dgvDetalleFactura[j, i].Value; // Funciona Igual que la de abajo, es otra forma valida
+                    table.Rows[i][j] = dgvDetalleFactura.Rows[i].Cells[j].Value;
                 }
             }
 
@@ -467,5 +473,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             frmReporte.ShowDialog();
 
         }
+
+
     }
 }

@@ -113,10 +113,57 @@ namespace Modulo4_G4.CapaAccesoDatos
             
         }
 
+        internal List<Factura> GetByFilters(Dictionary<string, object> parametros)
+        {
+            var strSql = string.Concat("    SELECT DISTINCT F.id_factura, F.nro_factura, F.id_cliente, F.fecha, F.id_usuario_creador   ",
+                                        "   FROM Facturas F JOIN Clientes C ON F.id_cliente = C.id_cliente  ",
+                                        "        JOIN FacturasDetalle FD ON F.id_factura = FD.id_factura    ",
+                                        "   WHERE 1 = 1    "
+                                        );
+            if (parametros.ContainsKey("cuit"))
+            {
+                strSql += " AND C.cuit = @cuit  ";
+            }
+            if (parametros.ContainsKey("idProducto"))
+            {
+                strSql += " AND @idProducto IN (SELECT id_producto   FROM FacturasDetalle    WHERE id_factura = FD.id_factura )  ";
+            }
+            if (parametros.ContainsKey("idUsuario"))
+            {
+                strSql += " AND F.id_usuario_creador = @idUsuario  ";
+            }
+            if(parametros.ContainsKey("fechaDesde") && parametros.ContainsKey("fechaHasta"))
+            {
+                strSql += " AND F.fecha BETWEEN @fechaDesde AND @fechaHasta  ";
+            }
+            else if (parametros.ContainsKey("fechaDesde"))
+            {
+                strSql += " AND F.fecha > @fechaDesde   ";
+            }
+            else if (parametros.ContainsKey("fechaHasta"))
+            {
+                strSql += " AND F.fecha < @fechaHasta   ";
+            }
+            strSql += " ORDER BY F.fecha DESC   ";
+
+            List<Factura> facturas = new List<Factura>();
+
+            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql, parametros);
+
+            if (resultadoConsulta.Rows.Count > 0)
+            {
+                foreach (DataRow row in resultadoConsulta.Rows)
+                {
+                    facturas.Add(ObjectMapping(row));
+                }
+            }
+            return facturas;
+
+        }
 
         public IList<Factura> GetAll() {
             var strSql = string.Concat("    SELECT id_factura, nro_factura, id_cliente, fecha, id_usuario_creador   ",
-                                        "   FROM Facturas");
+                                        "   FROM Facturas   ORDER BY fecha DESC");
             List<Factura> facturas = new List<Factura>();
 
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);

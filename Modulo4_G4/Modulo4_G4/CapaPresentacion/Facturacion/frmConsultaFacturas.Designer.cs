@@ -31,6 +31,8 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaFacturas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboVendedores = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.dgvFacturas = new System.Windows.Forms.DataGridView();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.chkTodos = new System.Windows.Forms.CheckBox();
@@ -50,6 +52,8 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cboVendedores);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.dgvFacturas);
             this.groupBox1.Controls.Add(this.btnConsultar);
             this.groupBox1.Controls.Add(this.chkTodos);
@@ -67,6 +71,23 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
+            // 
+            // cboVendedores
+            // 
+            this.cboVendedores.FormattingEnabled = true;
+            this.cboVendedores.Location = new System.Drawing.Point(97, 110);
+            this.cboVendedores.Name = "cboVendedores";
+            this.cboVendedores.Size = new System.Drawing.Size(151, 28);
+            this.cboVendedores.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 114);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 20);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Vendedor";
             // 
             // dgvFacturas
             // 
@@ -124,6 +145,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(250, 27);
             this.dtpHasta.TabIndex = 5;
+            this.dtpHasta.ValueChanged += new System.EventHandler(this.dtpHasta_ValueChanged);
             // 
             // dtpDesde
             // 
@@ -131,6 +153,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(250, 27);
             this.dtpDesde.TabIndex = 4;
+            this.dtpDesde.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
             // 
             // cboProductos
             // 
@@ -152,7 +175,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // mtbCuit
             // 
             this.mtbCuit.Location = new System.Drawing.Point(97, 20);
-            this.mtbCuit.Mask = "00/00000000/00";
+            this.mtbCuit.Mask = "00-00000000-0";
             this.mtbCuit.Name = "mtbCuit";
             this.mtbCuit.Size = new System.Drawing.Size(103, 27);
             this.mtbCuit.TabIndex = 1;
@@ -224,5 +247,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         private System.Windows.Forms.DataGridView dgvFacturas;
         private System.Windows.Forms.Button btnMostrarFactura;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ComboBox cboVendedores;
+        private System.Windows.Forms.Label label5;
     }
 }
