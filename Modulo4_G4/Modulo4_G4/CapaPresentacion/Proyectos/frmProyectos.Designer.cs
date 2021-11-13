@@ -212,6 +212,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.pnlFiltros);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(719, 537);
             this.MinimumSize = new System.Drawing.Size(719, 537);
             this.Name = "frmProyectos";

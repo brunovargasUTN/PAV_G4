@@ -34,7 +34,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.chkMostrarTodos = new System.Windows.Forms.CheckBox();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.lblCuit = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.lblFiltros = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             this.pnlFiltros.Controls.Add(this.dgvClientes);
             this.pnlFiltros.Controls.Add(this.btnConsultar);
             this.pnlFiltros.Controls.Add(this.chkMostrarTodos);
-            this.pnlFiltros.Controls.Add(this.txtID);
+            this.pnlFiltros.Controls.Add(this.txtRazonSocial);
             this.pnlFiltros.Controls.Add(this.lblCuit);
             this.pnlFiltros.Controls.Add(this.lblId);
             this.pnlFiltros.Controls.Add(this.lblFiltros);
@@ -63,7 +63,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             // 
             // mtbCuit
             // 
-            this.mtbCuit.Location = new System.Drawing.Point(107, 56);
+            this.mtbCuit.Location = new System.Drawing.Point(116, 55);
             this.mtbCuit.Mask = "00-00000000-0";
             this.mtbCuit.Name = "mtbCuit";
             this.mtbCuit.Size = new System.Drawing.Size(111, 27);
@@ -102,12 +102,12 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             this.chkMostrarTodos.UseVisualStyleBackColor = true;
             this.chkMostrarTodos.CheckedChanged += new System.EventHandler(this.chkMostrarTodos_CheckedChanged);
             // 
-            // txtID
+            // txtRazonSocial
             // 
-            this.txtID.Location = new System.Drawing.Point(107, 22);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(194, 27);
-            this.txtID.TabIndex = 5;
+            this.txtRazonSocial.Location = new System.Drawing.Point(116, 22);
+            this.txtRazonSocial.Name = "txtRazonSocial";
+            this.txtRazonSocial.Size = new System.Drawing.Size(194, 27);
+            this.txtRazonSocial.TabIndex = 5;
             // 
             // lblCuit
             // 
@@ -123,9 +123,9 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             this.lblId.AutoSize = true;
             this.lblId.Location = new System.Drawing.Point(16, 25);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(74, 20);
+            this.lblId.Size = new System.Drawing.Size(94, 20);
             this.lblId.TabIndex = 3;
-            this.lblId.Text = "ID Cliente";
+            this.lblId.Text = "Razon Social";
             // 
             // lblFiltros
             // 
@@ -186,6 +186,9 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.pnlFiltros);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(838, 683);
+            this.MinimumSize = new System.Drawing.Size(838, 683);
             this.Name = "frmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Clientes";
@@ -203,7 +206,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
         private System.Windows.Forms.Label lblFiltros;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblCuit;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtRazonSocial;
         private System.Windows.Forms.CheckBox chkMostrarTodos;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.DataGridView dgvClientes;

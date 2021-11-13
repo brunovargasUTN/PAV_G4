@@ -60,7 +60,6 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
                 case FormMode.nuevo:
                     {
                         this.Text = "Nuevo Cliente";
-                        lblAceptar.Text = "Agregar";
                         btnAgregarBarrio.Enabled = true;
                         btnAgregarContacto.Enabled = true;
                         mtbFecha.Text = DateTime.Today.ToShortDateString();
@@ -69,7 +68,6 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
                 case FormMode.modificar:
                     {
                         this.Text = "Actualizar Cliente";
-                        lblAceptar.Text = "Actualizar";
                         btnAgregarBarrio.Enabled = true;
                         btnAgregarContacto.Enabled = true;
                         // Recuperar usuario seleccionado en la grilla
@@ -87,7 +85,6 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
                 case FormMode.eliminar:
                     {
                         this.Text = "Eliminar Usuario";
-                        lblAceptar.Text = "Eliminar";
                         MostrarDatos();
                         mtbCuit.Enabled = false;
                         txtRazon.Enabled = false;

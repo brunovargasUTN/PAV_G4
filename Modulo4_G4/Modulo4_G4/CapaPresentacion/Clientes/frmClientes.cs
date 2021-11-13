@@ -30,7 +30,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
         private void InitializeDataGridView()
         {
             //Cree un DataGridView no vinculado declarando un recuento de columnas.
-            dgvClientes.ColumnCount = 8;
+            dgvClientes.ColumnCount = 7;
             dgvClientes.ColumnHeadersVisible = true;
             dgvClientes.ReadOnly = true;
 
@@ -45,29 +45,28 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             dgvClientes.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
 
             // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
-            dgvClientes.Columns[0].Name = "ID Cliente";
-            dgvClientes.Columns[0].DataPropertyName = "IdCliente";
 
-            dgvClientes.Columns[1].Name = "CUIT";
-            dgvClientes.Columns[1].DataPropertyName = "Cuit";
+            dgvClientes.Columns[0].Name = "CUIT";
+            dgvClientes.Columns[0].DataPropertyName = "Cuit";
 
-            dgvClientes.Columns[2].Name = "Razon Social";
-            dgvClientes.Columns[2].DataPropertyName = "RazonSocial";
+            dgvClientes.Columns[1].Name = "Razon Social";
+            dgvClientes.Columns[1].DataPropertyName = "RazonSocial";
 
-            dgvClientes.Columns[3].Name = "Calle";
-            dgvClientes.Columns[3].DataPropertyName = "Calle";
+            dgvClientes.Columns[2].Name = "Calle";
+            dgvClientes.Columns[2].DataPropertyName = "Calle";
+            dgvClientes.Columns[3].Width = 60;
 
-            dgvClientes.Columns[4].Name = "N° Domicilio";
-            dgvClientes.Columns[4].DataPropertyName = "NroCalle";
+            dgvClientes.Columns[3].Name = "N°";
+            dgvClientes.Columns[3].DataPropertyName = "NroCalle";
 
-            dgvClientes.Columns[5].Name = "Fecha Alta";
-            dgvClientes.Columns[5].DataPropertyName = "fechaAlta";
+            dgvClientes.Columns[4].Name = "Fecha Alta";
+            dgvClientes.Columns[4].DataPropertyName = "fechaAlta";
 
-            dgvClientes.Columns[6].Name = "Barrio";
-            dgvClientes.Columns[6].DataPropertyName = "Barrio";
+            dgvClientes.Columns[5].Name = "Barrio";
+            dgvClientes.Columns[5].DataPropertyName = "Barrio";
 
-            dgvClientes.Columns[7].Name = "Contacto";
-            dgvClientes.Columns[7].DataPropertyName = "Contacto";
+            dgvClientes.Columns[6].Name = "Contacto";
+            dgvClientes.Columns[6].DataPropertyName = "Contacto";
 
             // Cambia el tamaño de la altura de los encabezados de columna.
             dgvClientes.AutoResizeColumnHeadersHeight();
@@ -89,7 +88,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
 
             }
 
-            if (String.IsNullOrEmpty(txtID.Text) && String.IsNullOrEmpty(mtbCuit.Text))
+            if (String.IsNullOrEmpty(txtRazonSocial.Text) && String.IsNullOrEmpty(mtbCuit.Text))
             {
                 MessageBox.Show("Debe ingresar al menos un parametro de filtro");
                 return;
@@ -97,9 +96,9 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
 
             Dictionary<string, object> parametros = new Dictionary<string, object>();
             
-            if (!String.IsNullOrEmpty(txtID.Text))
+            if (!String.IsNullOrEmpty(txtRazonSocial.Text))
             {
-                parametros.Add("IdCliente", txtID.Text);
+                parametros.Add("RazonSocial", txtRazonSocial.Text);
             }
             
             if (!String.IsNullOrEmpty(mtbCuit.Text))
@@ -166,12 +165,12 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
         {
             if (chkMostrarTodos.Checked)
             {
-                txtID.Enabled = false;
+                txtRazonSocial.Enabled = false;
                 mtbCuit.Enabled = false;
             }
             else
             {
-                txtID.Enabled = true;
+                txtRazonSocial.Enabled = true;
                 mtbCuit.Enabled = true;
             }
         }

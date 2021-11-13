@@ -44,13 +44,11 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
                 case FormMode.nuevo:
                     {
                         this.Text = "Nuevo Proyecto";
-                        lblAceptar.Text = "Agregar";
                         break;
                     }
                 case FormMode.modificar:
                     {
                         this.Text = "Actualizar Proyecto";
-                        lblAceptar.Text = "Actualizar";
                         MostrarDatos();
                         break;
                     }
@@ -58,7 +56,6 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
                 case FormMode.eliminar:
                     {
                         this.Text = "Eliminar Proyecto";
-                        lblAceptar.Text = "Eliminar";
                         MostrarDatos();
                         DeshabilitarDatos();
                         break;

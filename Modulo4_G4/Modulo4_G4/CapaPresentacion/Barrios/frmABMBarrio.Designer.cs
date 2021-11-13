@@ -53,21 +53,21 @@ namespace Modulo4_G4.CapaPresentacion.Barrios
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(130, 86);
+            this.btnConfirmar.Image = global::Modulo4_G4.Properties.Resources.aceptar_icon;
+            this.btnConfirmar.Location = new System.Drawing.Point(216, 68);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(94, 29);
+            this.btnConfirmar.Size = new System.Drawing.Size(54, 58);
             this.btnConfirmar.TabIndex = 2;
-            this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(258, 86);
+            this.btnCancelar.Image = global::Modulo4_G4.Properties.Resources.cancelar_icon;
+            this.btnCancelar.Location = new System.Drawing.Point(298, 68);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(94, 29);
+            this.btnCancelar.Size = new System.Drawing.Size(54, 58);
             this.btnCancelar.TabIndex = 3;
-            this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -80,6 +80,9 @@ namespace Modulo4_G4.CapaPresentacion.Barrios
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtNombre);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(395, 185);
+            this.MinimumSize = new System.Drawing.Size(395, 185);
             this.Name = "frmABMBarrio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Modificar Barrio";

@@ -38,13 +38,11 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
                 case FormMode.nuevo:
                     {
                         this.Text = "Nuevo Contacto";
-                        lblAceptar.Text = "Agregar";
                         break;
                     }
                 case FormMode.modificar:
                     {
                         this.Text = "Actualizar Contacto";
-                        lblAceptar.Text = "Actualizar";
                         MostrarDatos();
                         txtNombre.Enabled = true;
                         txtApellido.Enabled = true;
@@ -55,8 +53,7 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
                 case FormMode.eliminar:
                     {
                         MostrarDatos();
-                        this.Text = "Eliminar Contacto";
-                        lblAceptar.Text = "Eliminar";                    
+                        this.Text = "Eliminar Contacto";                   
                         txtNombre.Enabled = false;
                         txtApellido.Enabled = false;
                         txtEmail.Enabled = false;
@@ -97,13 +94,21 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
             if (string.IsNullOrEmpty(txtNombre.Text))
             {
                 enviarAlerta("Debe introducir un Nombre de Contacto");
-                txtNombre.Focus();
                 return false;
             }
             if (string.IsNullOrEmpty(txtApellido.Text))
             {
                 enviarAlerta("Debe introducir un Apellido");
-                txtApellido.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtEmail.Text))
+            {
+                enviarAlerta("Debe introducir un Email");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtTelefono.Text))
+            {
+                enviarAlerta("Debe introducir un Telefono");
                 return false;
             }
 

@@ -41,8 +41,6 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.cboResponsable = new System.Windows.Forms.ComboBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.lblAceptar = new System.Windows.Forms.Label();
-            this.lblCancelar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -149,31 +147,11 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // lblAceptar
-            // 
-            this.lblAceptar.AutoSize = true;
-            this.lblAceptar.Location = new System.Drawing.Point(151, 353);
-            this.lblAceptar.Name = "lblAceptar";
-            this.lblAceptar.Size = new System.Drawing.Size(61, 20);
-            this.lblAceptar.TabIndex = 12;
-            this.lblAceptar.Text = "Aceptar";
-            // 
-            // lblCancelar
-            // 
-            this.lblCancelar.AutoSize = true;
-            this.lblCancelar.Location = new System.Drawing.Point(300, 353);
-            this.lblCancelar.Name = "lblCancelar";
-            this.lblCancelar.Size = new System.Drawing.Size(66, 20);
-            this.lblCancelar.TabIndex = 13;
-            this.lblCancelar.Text = "Cancelar";
-            // 
             // frmABMProyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 405);
-            this.Controls.Add(this.lblCancelar);
-            this.Controls.Add(this.lblAceptar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.cboResponsable);
@@ -186,6 +164,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(534, 452);
             this.MinimumSize = new System.Drawing.Size(534, 452);
             this.Name = "frmABMProyecto";
@@ -211,7 +190,5 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
         private System.Windows.Forms.ComboBox cboResponsable;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label lblAceptar;
-        private System.Windows.Forms.Label lblCancelar;
     }
 }

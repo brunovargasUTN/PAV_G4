@@ -39,8 +39,6 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.lblAceptar = new System.Windows.Forms.Label();
-            this.lblCancelar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -127,31 +125,11 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // lblAceptar
-            // 
-            this.lblAceptar.AutoSize = true;
-            this.lblAceptar.Location = new System.Drawing.Point(119, 352);
-            this.lblAceptar.Name = "lblAceptar";
-            this.lblAceptar.Size = new System.Drawing.Size(61, 20);
-            this.lblAceptar.TabIndex = 10;
-            this.lblAceptar.Text = "Aceptar";
-            // 
-            // lblCancelar
-            // 
-            this.lblCancelar.AutoSize = true;
-            this.lblCancelar.Location = new System.Drawing.Point(224, 352);
-            this.lblCancelar.Name = "lblCancelar";
-            this.lblCancelar.Size = new System.Drawing.Size(66, 20);
-            this.lblCancelar.TabIndex = 11;
-            this.lblCancelar.Text = "Cancelar";
-            // 
             // frmABMContacto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 402);
-            this.Controls.Add(this.lblCancelar);
-            this.Controls.Add(this.lblAceptar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtTelefono);
@@ -162,6 +140,7 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
+            this.MinimizeBox = false;
             this.Name = "frmABMContacto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmABMContacto";
@@ -183,7 +162,5 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label lblAceptar;
-        private System.Windows.Forms.Label lblCancelar;
     }
 }

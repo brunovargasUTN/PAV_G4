@@ -130,6 +130,9 @@ namespace Modulo4_G4.CapaPresentacion.Barrios
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grbRegistrar);
             this.Controls.Add(this.btnSalir);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(438, 343);
+            this.MinimumSize = new System.Drawing.Size(438, 343);
             this.Name = "frmBarrios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Barrios";

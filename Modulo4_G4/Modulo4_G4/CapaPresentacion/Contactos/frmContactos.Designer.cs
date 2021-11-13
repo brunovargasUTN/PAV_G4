@@ -186,6 +186,7 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "frmContactos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmContactos";

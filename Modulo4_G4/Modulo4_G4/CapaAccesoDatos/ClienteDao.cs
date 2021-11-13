@@ -74,7 +74,7 @@ namespace Modulo4_G4.CapaAccesoDatos
             if (parametros.ContainsKey("Cuit"))
                 strSql += " AND (c.cuit=@Cuit) ";
             if (parametros.ContainsKey("RazonSocial"))
-                strSql += " AND (c.razon_social=@RazonSocial) ";
+                strSql += " AND (c.razon_social LIKE '%' + @RazonSocial + '%' ) ";
             if (parametros.ContainsKey("Calle"))
                 strSql += " AND (c.calle=@Calle) ";
             if (parametros.ContainsKey("NroCalle"))

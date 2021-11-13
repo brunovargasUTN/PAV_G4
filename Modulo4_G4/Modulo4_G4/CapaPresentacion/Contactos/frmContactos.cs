@@ -46,15 +46,16 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
             dgvContactos.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
 
             // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
-            dgvContactos.Columns[0].Name = "Nombre";
-            dgvContactos.Columns[0].DataPropertyName = "NombreContacto";
 
-            dgvContactos.Columns[1].Name = "Apellido";
-            dgvContactos.Columns[1].DataPropertyName = "Apellido";
+            dgvContactos.Columns[0].Name = "Apellido";
+            dgvContactos.Columns[0].DataPropertyName = "Apellido";
+
+            dgvContactos.Columns[1].Name = "Nombre";
+            dgvContactos.Columns[1].DataPropertyName = "NombreContacto";
 
             dgvContactos.Columns[2].Name = "Email";
             dgvContactos.Columns[2].DataPropertyName = "EmailContacto";
-            dgvContactos.Columns[2].Width = 150;
+            dgvContactos.Columns[2].Width = 200;
 
             dgvContactos.Columns[3].Name = "Telefono";
             dgvContactos.Columns[3].DataPropertyName = "Telefono";
@@ -76,10 +77,10 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
             if (!chkTodos.Checked)
             {
                 if (!string.IsNullOrEmpty(txtNombre.Text))
-                    parametros.Add("nombre", txtNombre.Text);
+                    parametros.Add("Nombre", txtNombre.Text);
 
                 if (!string.IsNullOrEmpty(txtApellido.Text))
-                    parametros.Add("apellido", txtApellido.Text);
+                    parametros.Add("Apellido", txtApellido.Text);
 
                 if (parametros.Count > 0)
                     dgvContactos.DataSource = oContactoService.ObtenerPorFiltro(parametros);

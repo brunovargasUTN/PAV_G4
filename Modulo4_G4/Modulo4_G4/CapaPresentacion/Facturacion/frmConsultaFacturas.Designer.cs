@@ -240,6 +240,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnMostrarFactura);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(816, 668);
             this.MinimumSize = new System.Drawing.Size(816, 668);
             this.Name = "frmConsultaFacturas";

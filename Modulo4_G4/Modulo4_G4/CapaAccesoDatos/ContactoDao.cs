@@ -81,28 +81,27 @@ namespace Modulo4_G4.CapaAccesoDatos
         public IList<Contacto> GetByFilters(Dictionary<string, object> parametros)
         {
             List<Contacto> listadoContactos = new List<Contacto>();
-            var strSql = string.Concat("SELECT id_contacto, nombre, apellido, email, telefono ",
-                                       "FROM Contactos WHERE borrado = 0");
-            //if (parametros.ContainsKey("IdContacto"))
-            //{
-            //    strSql += " AND id_contacto = @IdContacto";
-            //}
-            if (parametros.ContainsKey("nombre"))
+            var strSql = string.Concat("    SELECT id_contacto, nombre, apellido, email, telefono ",
+                                       "    FROM Contactos WHERE borrado = 0 ");
+
+            if (parametros.ContainsKey("Nombre"))
             {
-                strSql += " AND (nombre = @nombre)";
+                strSql += " AND (nombre LIKE '%' + @nombre + '%') ";
             }
-            if (parametros.ContainsKey("apellido"))
+            if (parametros.ContainsKey("Apellido"))
             {
-                strSql += " AND (apellido = @apellido)";
+                strSql += " AND (apellido LIKE '%' + @apellido + '%') ";
             }
-            //if (parametros.ContainsKey("Email"))
-            //{
-            //    strSql += " AND email = @Email";
-            //}
-            //if (parametros.ContainsKey("Telefono"))
-            //{
-            //    strSql += " AND telefono = @Telefono";
-            //}
+            if (parametros.ContainsKey("Email"))
+            {
+                strSql += " AND email = @Email ";
+            }
+            if (parametros.ContainsKey("Telefono"))
+            {
+                strSql += " AND telefono = @Telefono ";
+            }
+
+            strSql += " ORDER BY apellido, nombre ";
 
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql, parametros);
 

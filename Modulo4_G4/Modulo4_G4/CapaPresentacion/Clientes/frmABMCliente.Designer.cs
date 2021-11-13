@@ -46,8 +46,6 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             this.mtbFecha = new System.Windows.Forms.MaskedTextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.lblAceptar = new System.Windows.Forms.Label();
-            this.lblCancelar = new System.Windows.Forms.Label();
             this.mtbCuit = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
@@ -188,6 +186,8 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             // 
             this.btnAceptar.Image = global::Modulo4_G4.Properties.Resources.aceptar_icon;
             this.btnAceptar.Location = new System.Drawing.Point(129, 351);
+            this.btnAceptar.MaximumSize = new System.Drawing.Size(54, 58);
+            this.btnAceptar.MinimumSize = new System.Drawing.Size(54, 58);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(54, 58);
             this.btnAceptar.TabIndex = 9;
@@ -204,24 +204,6 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // lblAceptar
-            // 
-            this.lblAceptar.AutoSize = true;
-            this.lblAceptar.Location = new System.Drawing.Point(122, 421);
-            this.lblAceptar.Name = "lblAceptar";
-            this.lblAceptar.Size = new System.Drawing.Size(61, 20);
-            this.lblAceptar.TabIndex = 22;
-            this.lblAceptar.Text = "Aceptar";
-            // 
-            // lblCancelar
-            // 
-            this.lblCancelar.AutoSize = true;
-            this.lblCancelar.Location = new System.Drawing.Point(300, 421);
-            this.lblCancelar.Name = "lblCancelar";
-            this.lblCancelar.Size = new System.Drawing.Size(66, 20);
-            this.lblCancelar.TabIndex = 23;
-            this.lblCancelar.Text = "Cancelar";
-            // 
             // mtbCuit
             // 
             this.mtbCuit.Location = new System.Drawing.Point(129, 29);
@@ -237,8 +219,6 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(483, 463);
             this.Controls.Add(this.mtbCuit);
-            this.Controls.Add(this.lblCancelar);
-            this.Controls.Add(this.lblAceptar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.mtbFecha);
@@ -256,6 +236,8 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             this.Controls.Add(this.txtNro);
             this.Controls.Add(this.txtCalle);
             this.Controls.Add(this.txtRazon);
+            this.MaximumSize = new System.Drawing.Size(501, 510);
+            this.MinimumSize = new System.Drawing.Size(501, 510);
             this.Name = "frmABMCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmABMCliente";
@@ -283,8 +265,6 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
         private System.Windows.Forms.MaskedTextBox mtbFecha;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label lblAceptar;
-        private System.Windows.Forms.Label lblCancelar;
         private System.Windows.Forms.MaskedTextBox mtbCuit;
     }
 }
