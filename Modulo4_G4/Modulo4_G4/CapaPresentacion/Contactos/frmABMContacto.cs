@@ -67,10 +67,13 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
 
         }
 
-        public void InicializarFormulario(FormMode op, Contacto contactoSelected)
+        public void InicializarFormulario(FormMode op, Contacto contactoSelected = null)
         {
             formMode = op;
-            oContactoSelected = contactoSelected;
+            if (contactoSelected != null)
+            {
+                oContactoSelected = contactoSelected;
+            }
         }
 
         private void MostrarDatos()

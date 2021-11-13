@@ -34,6 +34,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             CargarCombos(cboVendedores, usuarioService.ObtenerTodos(), "NombreUsuario", "IdUsuario");
             btnMostrarFactura.Enabled = false;
             LimpiarControles();
+            txtNroFactura.Focus();
         }
         private void CargarCombos(ComboBox cbo, object dataSource, string display, string value)
         {
@@ -112,6 +113,11 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             //Cargamos la coleccion de parametros para el filtro
             Dictionary<string, object> parametros = new Dictionary<string, object>();
 
+            if (!string.IsNullOrEmpty(txtNroFactura.Text.ToString()))
+            {
+                parametros.Add("nroFactura", txtNroFactura.Text.ToString());
+            }
+
             if (!string.IsNullOrEmpty(mtbCuit.Text))
             {
                 parametros.Add("cuit", mtbCuit.Text.ToString());
@@ -154,6 +160,14 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
 
         private bool ValidarFiltros()
         {
+            //Validamos un Numero de Factura valido
+            int nro = 0;
+            if (!string.IsNullOrEmpty(txtNroFactura.Text) && !Int32.TryParse(txtNroFactura.Text, out nro))
+            {
+                MessageBox.Show("Debe Ingresar un Numero de Factura valido", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false;
+            }
+
             //Validamos el ingreso de un cuit valido
             if (!string.IsNullOrEmpty(mtbCuit.Text)  && !mtbCuit.MaskCompleted)
             {
@@ -199,7 +213,8 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         private void chkTodos_CheckedChanged(object sender, EventArgs e)
         {
             if (chkTodos.Checked)
-            {               
+            {
+                txtNroFactura.Enabled = false;
                 mtbCuit.Enabled = false;
                 cboProductos.Enabled = false;
                 dtpDesde.Enabled = false;
@@ -209,6 +224,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             }
             else
             {
+                txtNroFactura.Enabled = true;
                 mtbCuit.Enabled = true;
                 cboProductos.Enabled = true;
                 dtpDesde.Enabled = true;
@@ -220,6 +236,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         private void LimpiarControles()
         {
             mtbCuit.Clear();
+            txtNroFactura.Clear();
             cboProductos.SelectedIndex = -1;
             cboVendedores.SelectedIndex = -1;
             dtpHasta.Value = DateTime.Today;

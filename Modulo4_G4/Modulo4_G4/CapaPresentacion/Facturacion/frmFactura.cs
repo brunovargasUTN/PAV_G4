@@ -250,6 +250,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
 
             dgvDetalleFactura.Columns[2].Name = "Precio";
             dgvDetalleFactura.Columns[2].DataPropertyName = "Precio";
+            dgvDetalleFactura.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopRight;
 
 
             // Cambia el tamaño de la altura de los encabezados de columna.
@@ -303,8 +304,8 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             if (rbProyecto.Checked)
             {
                 item.Proyecto = (Proyecto)dgvProyectos.CurrentRow.DataBoundItem;
-                
             }
+
             //Verifico el precio
             decimal precio = 0;
             if (!Decimal.TryParse(txtPrecio.Text, out precio))
@@ -314,11 +315,52 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             }
             item.Precio = precio;
 
-            detalleFactura.Add(item);
+            if (ValidarItem(item))
+            {
+                detalleFactura.Add(item);
+            }
             btnQuitar.Enabled = false;
             refrescarTotal();
             limpiarItems();
             
+        }
+
+        private bool ValidarItem(DetalleFactura item)
+        {
+            //Primero valido que exista un detalle con el mismo producto que quiero ingresar
+            bool contieneProducto = false;
+
+            foreach(DetalleFactura productos in detalleFactura)
+            {
+                if (productos.Producto.IdProducto == item.Producto.IdProducto)
+                    contieneProducto = true;
+            }
+
+            //Luego valido que no intente cargar dos veces el mismo producto final
+            if(contieneProducto && item.Proyecto == null)
+            {
+                foreach (DetalleFactura detalle in detalleFactura)
+                {
+                    if(item.Producto.IdProducto == detalle.Producto.IdProducto && detalle.Proyecto == null)
+                    {
+                        MessageBox.Show("No puede ingreasar dos veces el mismo producto final.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return false;
+                    }
+                }
+            }
+            else if (contieneProducto) //Valido que ya que ingresa varios proyectos del mismo productos, no se repita el proyecto
+            {
+                foreach (DetalleFactura detalle in detalleFactura)
+                {
+                    if (detalle.Proyecto != null && item.Proyecto.IdProyecto == detalle.Proyecto.IdProyecto)
+                    {
+                        MessageBox.Show("No puede ingreasar dos veces el mismo proyecto.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return false;
+                    }
+                }
+            }
+            //Si llega hasta aca es porque el item no se repite
+            return true;
         }
 
         private void limpiarItems()
@@ -371,7 +413,11 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
-        {
+        {   
+            //Pedimos confirmacion para efectuar la transaccion
+            DialogResult respusta = MessageBox.Show("¿Esta seguro que desea confirmar la operacion?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if(respusta == DialogResult.No) { return; }
+
             if (!ValidarFactura()) { return; }
             facturaSeleccionada = new Factura();
             facturaSeleccionada.Fecha = DateTime.Now;
@@ -381,7 +427,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             try
             {
                 facturaService.CrearFactura(facturaSeleccionada);
-                MessageBox.Show("Transaccion exitosa", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Transaccion exitosa", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 deshabilitarControles();
                 txtFactura.Visible = true;
                 lblFactura.Visible = true;
@@ -443,7 +489,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             parametros.Add("razonSocialCliente", clienteSeleccionado.RazonSocial.ToString());
             parametros.Add("nroFactura", facturaSeleccionada.NroFactura.ToString());
             parametros.Add("tipoFactura", "A");
-            parametros.Add("fecha", facturaSeleccionada.Fecha.ToShortDateString());
+            parametros.Add("fecha", facturaSeleccionada.Fecha.ToString());
             parametros.Add("emailEmpresa", "info@bugtracker.com.ar");
             parametros.Add("telefonoEmpresa", "(+54) 0351 - 4444444");
             parametros.Add("direccionEmpresa", "Av. Direccion 123 - Centro");

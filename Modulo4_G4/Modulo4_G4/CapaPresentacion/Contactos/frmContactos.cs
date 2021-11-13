@@ -65,6 +65,8 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
             // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
             dgvContactos.AutoResizeRows(
                 DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+
+            dgvContactos.AllowUserToAddRows = false;
         }
 
         private void btnConsultar_Click(System.Object sender, System.EventArgs e)
@@ -118,12 +120,11 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
 
         private void dgvContactos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Solo se debe habilitar los controles de edicion y borrado si se selecciona un objeto valido del dgv
-            //if (dgvContactos.CurrentRow.DataBoundItem != null)
-            //{
+            if (dgvContactos.CurrentRow != null && dgvContactos.CurrentRow.DataBoundItem != null)
+            {
                 btnEditar.Enabled = true;
                 btnQuitar.Enabled = true;
-            //}
+            }
         }
 
         private void btnEditar_Click(System.Object sender, System.EventArgs e)
@@ -152,9 +153,8 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             frmABMContacto frmABM = new frmABMContacto();
-            //frmABM.InicializarFormulario(frmABMContacto.FormMode.nuevo, new Contacto());
+            frmABM.InicializarFormulario(frmABMContacto.FormMode.nuevo);
             frmABM.ShowDialog();
-            btnConsultar_Click(sender, e);
         }
     }
 }

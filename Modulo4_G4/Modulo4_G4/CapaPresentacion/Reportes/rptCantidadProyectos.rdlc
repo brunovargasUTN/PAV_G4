@@ -346,6 +346,12 @@
                   <BackgroundColor>#00ffffff</BackgroundColor>
                   <BackgroundGradientType>None</BackgroundGradientType>
                 </Style>
+                <ChartElementPosition>
+                  <Top>10.637</Top>
+                  <Left>30</Left>
+                  <Height>60</Height>
+                  <Width>50</Width>
+                </ChartElementPosition>
               </ChartArea>
               <ChartArea Name="Area1">
                 <ChartCategoryAxes>
@@ -572,28 +578,53 @@
                     </ChartAxisScaleBreak>
                   </ChartAxis>
                 </ChartValueAxes>
-                <ChartThreeDProperties>
-                  <Enabled>true</Enabled>
-                </ChartThreeDProperties>
                 <Style>
                   <BackgroundColor>#00ffffff</BackgroundColor>
                   <BackgroundGradientType>None</BackgroundGradientType>
                 </Style>
+                <ChartElementPosition>
+                  <Top>80</Top>
+                  <Left>30</Left>
+                  <Height>25</Height>
+                  <Width>70</Width>
+                </ChartElementPosition>
               </ChartArea>
             </ChartAreas>
             <ChartLegends>
               <ChartLegend Name="Default">
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
+                  <FontFamily>Verdana</FontFamily>
                   <FontSize>8pt</FontSize>
                 </Style>
                 <Position>LeftCenter</Position>
                 <DockOutsideChartArea>true</DockOutsideChartArea>
                 <ChartElementPosition>
-                  <Top>13.751</Top>
+                  <Top>5</Top>
                   <Height>73.973</Height>
                   <Width>30</Width>
                 </ChartElementPosition>
+                <ChartLegendTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </ChartLegendTitle>
+                <AutoFitTextDisabled>true</AutoFitTextDisabled>
+                <HeaderSeparatorColor>Black</HeaderSeparatorColor>
+                <ColumnSeparatorColor>Black</ColumnSeparatorColor>
+                <MaxAutoSize>0</MaxAutoSize>
+              </ChartLegend>
+              <ChartLegend Name="Legend1">
+                <Style>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <Position>BottomCenter</Position>
+                <DockToChartArea>Default</DockToChartArea>
+                <DockOutsideChartArea>true</DockOutsideChartArea>
                 <ChartLegendTitle>
                   <Caption />
                   <Style>
@@ -609,14 +640,14 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>TOP 10 de Productos con mayor cantidad de proyectos</Caption>
+                <Caption />
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontFamily>verdana</FontFamily>
                   <FontWeight>Normal</FontWeight>
                   <TextAlign>Left</TextAlign>
                   <VerticalAlign>Top</VerticalAlign>
-                  <Color>CornflowerBlue</Color>
+                  <Color>White</Color>
                 </Style>
                 <Position>TopLeft</Position>
               </ChartTitle>
@@ -639,9 +670,9 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DataSet1</DataSetName>
-            <Top>0.79447cm</Top>
-            <Left>1.53528cm</Left>
-            <Height>10.048cm</Height>
+            <Top>5.49317cm</Top>
+            <Left>1.5cm</Left>
+            <Height>12.03767cm</Height>
             <Width>17.43555cm</Width>
             <Style>
               <Border>
@@ -788,7 +819,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=RowNumber(nothing)</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>verdana</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -816,7 +849,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!producto.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>verdana</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -848,7 +883,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!cantidad.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>verdana</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -857,6 +894,109 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>cantidad</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox7">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox9">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Total</Value>
+                                  <Style>
+                                    <FontFamily>verdana</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox9</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox11">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!cantidad.Value)</Value>
+                                  <Style>
+                                    <FontFamily>verdana</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox11</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -889,12 +1029,15 @@
                 <TablixMember>
                   <Group Name="Detalles" />
                 </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>13cm</Top>
-            <Left>6.5cm</Left>
-            <Height>1.2cm</Height>
+            <Top>2.3955cm</Top>
+            <Left>6.6905cm</Left>
+            <Height>1.8cm</Height>
             <Width>8.00001cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -910,7 +1053,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Resumen:</Value>
+                    <Value>TOP 10 de Productos con mayor cantidad de proyectos</Value>
                     <Style>
                       <FontFamily>verdana</FontFamily>
                       <FontSize>12pt</FontSize>
@@ -922,10 +1065,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox10</rd:DefaultName>
-            <Top>12cm</Top>
+            <Top>0.67583cm</Top>
             <Left>1.53528cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
+            <Width>12.06733cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>

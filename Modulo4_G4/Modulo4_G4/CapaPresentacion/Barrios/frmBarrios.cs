@@ -100,37 +100,40 @@ namespace Modulo4_G4.CapaPresentacion.Barrios
             if (String.IsNullOrEmpty(txtNombre.Text))
             {
                 MessageBox.Show("Debe introducir un Nombre", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtNombre.BackColor = Color.Red;
                 txtNombre.Focus();
                 return false;
             }
-
-            else
+            if (oBarrioService.ConsultarBarrioPorNombre(txtNombre.Text) != null)
             {
-                var oBarrio = new Barrio();
-                oBarrio.NombreBarrio = txtNombre.Text;
-                var ls_barrios = new List<Barrio>();
-                ls_barrios = (List<Barrio>)oBarrioService.ObtenerTodos();
-                foreach (Barrio i in ls_barrios)
-                {
-                    if (i.NombreBarrio == oBarrio.NombreBarrio)
-                    {
-                        MessageBox.Show("Ya existe un Barrio con el nombre ingresado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        txtNombre.Text = null;
-                        txtNombre.BackColor = Color.Red;
-                        txtNombre.Focus();
-                        btnEditar.Enabled = false;
-                        btnQuitar.Enabled = false;
-                        btnNuevo.Enabled = true;
-                        return false;
-                    }
-
-                    else
-                    {
-                        return true;
-                    }
-                }
+                MessageBox.Show("El nombre del Barrio ingresado ya existe!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
             }
+            //else
+            //{
+            //    var oBarrio = new Barrio();
+            //    oBarrio.NombreBarrio = txtNombre.Text;
+            //    var ls_barrios = new List<Barrio>();
+            //    ls_barrios = (List<Barrio>)oBarrioService.ObtenerTodos();
+            //    foreach (Barrio i in ls_barrios)
+            //    {
+            //        if (i.NombreBarrio == oBarrio.NombreBarrio)
+            //        {
+            //            MessageBox.Show("Ya existe un Barrio con el nombre ingresado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //            txtNombre.Text = null;
+            //            txtNombre.BackColor = Color.Red;
+            //            txtNombre.Focus();
+            //            btnEditar.Enabled = false;
+            //            btnQuitar.Enabled = false;
+            //            btnNuevo.Enabled = true;
+            //            return false;
+            //        }
+
+            //        else
+            //        {
+            //            return true;
+            //        }
+            //    }
+            //}
             return true;
         }
 

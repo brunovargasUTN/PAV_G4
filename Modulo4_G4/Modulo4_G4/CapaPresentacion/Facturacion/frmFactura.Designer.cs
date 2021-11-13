@@ -286,6 +286,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(125, 27);
             this.txtPrecio.TabIndex = 7;
+            this.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label9
             // 
@@ -345,6 +346,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // 
             // cboProductos
             // 
+            this.cboProductos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProductos.Enabled = false;
             this.cboProductos.FormattingEnabled = true;
             this.cboProductos.Location = new System.Drawing.Point(81, 31);
@@ -394,6 +396,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(125, 32);
             this.txtTotal.TabIndex = 3;
+            this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label10
             // 

@@ -131,7 +131,7 @@ namespace Modulo4_G4.CapaAccesoDatos
                                             " FROM Usuarios INNER JOIN ",
                                             " Proyectos ON Usuarios.id_usuario = Proyectos.id_responsable INNER JOIN ",
                                             " Productos ON Proyectos.id_producto = Productos.id_producto ",
-                                            " WHERE(Proyectos.borrado = 0)");
+                                            " WHERE(Proyectos.borrado = 0)  ORDER BY Productos.nombre, Proyectos.descripcion, Proyectos.version  ");
 
             return DataManager.GetInstance().ConsultaSQL(strSql);
         }

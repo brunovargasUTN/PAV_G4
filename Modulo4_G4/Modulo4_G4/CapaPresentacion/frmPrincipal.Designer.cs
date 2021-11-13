@@ -134,14 +134,14 @@ namespace Modulo4_G4
             // registrarFacturaToolStripMenuItem
             // 
             this.registrarFacturaToolStripMenuItem.Name = "registrarFacturaToolStripMenuItem";
-            this.registrarFacturaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.registrarFacturaToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.registrarFacturaToolStripMenuItem.Text = "Registrar Factura";
             this.registrarFacturaToolStripMenuItem.Click += new System.EventHandler(this.registrarFacturaToolStripMenuItem_Click);
             // 
             // consultarHistoricoToolStripMenuItem
             // 
             this.consultarHistoricoToolStripMenuItem.Name = "consultarHistoricoToolStripMenuItem";
-            this.consultarHistoricoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.consultarHistoricoToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.consultarHistoricoToolStripMenuItem.Text = "Consultar Historico";
             this.consultarHistoricoToolStripMenuItem.Click += new System.EventHandler(this.consultarHistoricoToolStripMenuItem_Click);
             // 
@@ -195,8 +195,9 @@ namespace Modulo4_G4
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
+            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -224,6 +225,7 @@ namespace Modulo4_G4
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Modulo 4 - Facturacion - Grupo 4";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);

@@ -28,7 +28,7 @@ namespace Modulo4_G4.CapaAccesoDatos
             var strSql = String.Concat(" SELECT b.id_barrio, ",
                                        "        b.nombre ",
                                        " FROM Barrios b ",
-                                       " WHERE b.borrado = 0 AND b.id_barrio = " + idBarrio.ToString());
+                                       " WHERE b.id_barrio = " + idBarrio.ToString());
             var resultado = DataManager.GetInstance().ConsultaSQL(strSql);
             if (resultado.Rows.Count > 0)
             {
@@ -37,13 +37,23 @@ namespace Modulo4_G4.CapaAccesoDatos
             return null;
         }
 
-        public Barrio GetBarrioByNombre(string Nombre)
+        public Barrio GetBarrioByNombre(string nombre)
         {
             var strSql = String.Concat(" SELECT b.id_barrio, ",
                                        "       b.nombre ",
                                        " FROM Barrios b ",
-                                       " WHERE b.borrado = 0 AND b.nombre LIKE '%' + @Nombre + '%' " );
-            return ObjectMapping(DataManager.GetInstance().ConsultaSQL(strSql).Rows[0]);
+                                       " WHERE b.borrado = 0 AND b.nombre LIKE @Nombre " );
+
+            Dictionary<string, object> param = new Dictionary<string, object>();
+            param.Add("Nombre", nombre);
+
+            var resultado = DataManager.GetInstance().ConsultaSQL(strSql, param);
+
+            if (resultado.Rows.Count > 0)
+            {
+                return ObjectMapping(resultado.Rows[0]);
+            }
+            return null;
         }
 
         private Barrio ObjectMapping(DataRow row)

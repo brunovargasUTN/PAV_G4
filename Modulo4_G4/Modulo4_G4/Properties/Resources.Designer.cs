@@ -133,6 +133,16 @@ namespace Modulo4_G4.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_utn_frc {
+            get {
+                object obj = ResourceManager.GetObject("logo-utn-frc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap numero_factura {
             get {
                 object obj = ResourceManager.GetObject("numero-factura", resourceCulture);
@@ -146,6 +156,16 @@ namespace Modulo4_G4.Properties {
         internal static System.Drawing.Bitmap search_icon {
             get {
                 object obj = ResourceManager.GetObject("search-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Small_add_icon_icons_com_74429 {
+            get {
+                object obj = ResourceManager.GetObject("Small_add_icon-icons.com_74429", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

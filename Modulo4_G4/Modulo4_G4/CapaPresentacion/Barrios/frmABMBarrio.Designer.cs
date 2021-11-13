@@ -81,6 +81,7 @@ namespace Modulo4_G4.CapaPresentacion.Barrios
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtNombre);
             this.Name = "frmABMBarrio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Modificar Barrio";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -137,7 +137,7 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
             // btnNuevo
             // 
             this.btnNuevo.Image = global::Modulo4_G4.Properties.Resources.add_icon_icons_com_74429;
-            this.btnNuevo.Location = new System.Drawing.Point(35, 384);
+            this.btnNuevo.Location = new System.Drawing.Point(17, 384);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(64, 56);
             this.btnNuevo.TabIndex = 1;
@@ -148,9 +148,9 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
             // 
             this.btnEditar.Enabled = false;
             this.btnEditar.Image = global::Modulo4_G4.Properties.Resources.edit_icon;
-            this.btnEditar.Location = new System.Drawing.Point(121, 384);
+            this.btnEditar.Location = new System.Drawing.Point(116, 384);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(68, 56);
+            this.btnEditar.Size = new System.Drawing.Size(64, 56);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -159,9 +159,9 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
             // 
             this.btnQuitar.Enabled = false;
             this.btnQuitar.Image = global::Modulo4_G4.Properties.Resources.delete_icon;
-            this.btnQuitar.Location = new System.Drawing.Point(204, 384);
+            this.btnQuitar.Location = new System.Drawing.Point(218, 384);
             this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(71, 56);
+            this.btnQuitar.Size = new System.Drawing.Size(64, 56);
             this.btnQuitar.TabIndex = 3;
             this.btnQuitar.UseVisualStyleBackColor = true;
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
@@ -169,7 +169,7 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
             // btnSalir
             // 
             this.btnSalir.Image = global::Modulo4_G4.Properties.Resources.exit_icon;
-            this.btnSalir.Location = new System.Drawing.Point(543, 384);
+            this.btnSalir.Location = new System.Drawing.Point(568, 384);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(74, 56);
             this.btnSalir.TabIndex = 4;
@@ -187,6 +187,7 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.panel1);
             this.Name = "frmContactos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmContactos";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

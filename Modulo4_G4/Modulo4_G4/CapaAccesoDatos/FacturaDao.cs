@@ -120,6 +120,10 @@ namespace Modulo4_G4.CapaAccesoDatos
                                         "        JOIN FacturasDetalle FD ON F.id_factura = FD.id_factura    ",
                                         "   WHERE 1 = 1    "
                                         );
+            if (parametros.ContainsKey("nroFactura"))
+            {
+                strSql += " AND F.nro_factura = @nroFactura  ";
+            }
             if (parametros.ContainsKey("cuit"))
             {
                 strSql += " AND C.cuit = @cuit  ";

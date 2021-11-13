@@ -23,7 +23,7 @@ namespace Modulo4_G4.CapaAccesoDatos
         {
             List<Contacto> listadoContactos = new List<Contacto>();
 
-            var strSql = "SELECT id_contacto, nombre, apellido, email, telefono FROM Contactos WHERE borrado = 0";
+            var strSql = "SELECT id_contacto, nombre, apellido, email, telefono FROM Contactos WHERE borrado = 0 ORDER BY apellido, nombre ";
 
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
 

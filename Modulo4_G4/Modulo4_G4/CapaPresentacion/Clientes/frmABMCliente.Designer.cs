@@ -56,21 +56,21 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             this.txtRazon.Location = new System.Drawing.Point(129, 71);
             this.txtRazon.Name = "txtRazon";
             this.txtRazon.Size = new System.Drawing.Size(249, 27);
-            this.txtRazon.TabIndex = 2;
+            this.txtRazon.TabIndex = 1;
             // 
             // txtCalle
             // 
             this.txtCalle.Location = new System.Drawing.Point(129, 114);
             this.txtCalle.Name = "txtCalle";
-            this.txtCalle.Size = new System.Drawing.Size(249, 27);
-            this.txtCalle.TabIndex = 3;
+            this.txtCalle.Size = new System.Drawing.Size(95, 27);
+            this.txtCalle.TabIndex = 2;
             // 
             // txtNro
             // 
             this.txtNro.Location = new System.Drawing.Point(129, 156);
             this.txtNro.Name = "txtNro";
             this.txtNro.Size = new System.Drawing.Size(249, 27);
-            this.txtNro.TabIndex = 4;
+            this.txtNro.TabIndex = 3;
             // 
             // lblCuit
             // 
@@ -138,46 +138,50 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             // btnAgregarBarrio
             // 
             this.btnAgregarBarrio.Enabled = false;
-            this.btnAgregarBarrio.Location = new System.Drawing.Point(393, 244);
+            this.btnAgregarBarrio.Image = global::Modulo4_G4.Properties.Resources.Small_add_icon_icons_com_74429;
+            this.btnAgregarBarrio.Location = new System.Drawing.Point(350, 244);
             this.btnAgregarBarrio.Name = "btnAgregarBarrio";
-            this.btnAgregarBarrio.Size = new System.Drawing.Size(73, 28);
-            this.btnAgregarBarrio.TabIndex = 15;
-            this.btnAgregarBarrio.Text = "Agregar";
+            this.btnAgregarBarrio.Size = new System.Drawing.Size(28, 28);
+            this.btnAgregarBarrio.TabIndex = 6;
             this.btnAgregarBarrio.UseVisualStyleBackColor = true;
+            this.btnAgregarBarrio.Click += new System.EventHandler(this.btnAgregarBarrio_Click);
             // 
             // btnAgregarContacto
             // 
             this.btnAgregarContacto.Enabled = false;
-            this.btnAgregarContacto.Location = new System.Drawing.Point(393, 293);
+            this.btnAgregarContacto.Image = global::Modulo4_G4.Properties.Resources.Small_add_icon_icons_com_74429;
+            this.btnAgregarContacto.Location = new System.Drawing.Point(350, 292);
             this.btnAgregarContacto.Name = "btnAgregarContacto";
-            this.btnAgregarContacto.Size = new System.Drawing.Size(73, 28);
-            this.btnAgregarContacto.TabIndex = 16;
-            this.btnAgregarContacto.Text = "Agregar";
+            this.btnAgregarContacto.Size = new System.Drawing.Size(28, 28);
+            this.btnAgregarContacto.TabIndex = 8;
             this.btnAgregarContacto.UseVisualStyleBackColor = true;
+            this.btnAgregarContacto.Click += new System.EventHandler(this.btnAgregarContacto_Click);
             // 
             // cboBarrio
             // 
+            this.cboBarrio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBarrio.FormattingEnabled = true;
             this.cboBarrio.Location = new System.Drawing.Point(129, 245);
             this.cboBarrio.Name = "cboBarrio";
-            this.cboBarrio.Size = new System.Drawing.Size(249, 28);
-            this.cboBarrio.TabIndex = 17;
+            this.cboBarrio.Size = new System.Drawing.Size(215, 28);
+            this.cboBarrio.TabIndex = 5;
             // 
             // cboContacto
             // 
+            this.cboContacto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboContacto.FormattingEnabled = true;
             this.cboContacto.Location = new System.Drawing.Point(129, 293);
             this.cboContacto.Name = "cboContacto";
-            this.cboContacto.Size = new System.Drawing.Size(249, 28);
-            this.cboContacto.TabIndex = 18;
+            this.cboContacto.Size = new System.Drawing.Size(215, 28);
+            this.cboContacto.TabIndex = 7;
             // 
             // mtbFecha
             // 
             this.mtbFecha.Location = new System.Drawing.Point(129, 199);
             this.mtbFecha.Mask = "00/00/0000";
             this.mtbFecha.Name = "mtbFecha";
-            this.mtbFecha.Size = new System.Drawing.Size(249, 27);
-            this.mtbFecha.TabIndex = 19;
+            this.mtbFecha.Size = new System.Drawing.Size(95, 27);
+            this.mtbFecha.TabIndex = 4;
             this.mtbFecha.ValidatingType = typeof(System.DateTime);
             // 
             // btnAceptar
@@ -186,7 +190,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             this.btnAceptar.Location = new System.Drawing.Point(129, 351);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(54, 58);
-            this.btnAceptar.TabIndex = 20;
+            this.btnAceptar.TabIndex = 9;
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
@@ -196,7 +200,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             this.btnCancelar.Location = new System.Drawing.Point(300, 351);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(54, 58);
-            this.btnCancelar.TabIndex = 21;
+            this.btnCancelar.TabIndex = 10;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -223,8 +227,8 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             this.mtbCuit.Location = new System.Drawing.Point(129, 29);
             this.mtbCuit.Mask = "00-00000000-0";
             this.mtbCuit.Name = "mtbCuit";
-            this.mtbCuit.Size = new System.Drawing.Size(249, 27);
-            this.mtbCuit.TabIndex = 24;
+            this.mtbCuit.Size = new System.Drawing.Size(118, 27);
+            this.mtbCuit.TabIndex = 0;
             this.mtbCuit.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // frmABMCliente
@@ -253,6 +257,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             this.Controls.Add(this.txtCalle);
             this.Controls.Add(this.txtRazon);
             this.Name = "frmABMCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmABMCliente";
             this.Load += new System.EventHandler(this.frmABMCliente_Load);
             this.ResumeLayout(false);

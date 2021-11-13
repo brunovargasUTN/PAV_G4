@@ -339,7 +339,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>precio</rd:DefaultName>
@@ -478,7 +480,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox35</rd:DefaultName>
@@ -528,7 +532,9 @@
             <Width>16.16812cm</Width>
             <Style>
               <Border>
+                <Color>White</Color>
                 <Style>None</Style>
+                <Width>0.25pt</Width>
               </Border>
             </Style>
           </Tablix>
@@ -553,7 +559,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox4</rd:DefaultName>
             <Top>3.41148cm</Top>
-            <Left>15.59663cm</Left>
+            <Left>2.5cm</Left>
             <Height>1.016cm</Height>
             <Width>3.0715cm</Width>
             <ZIndex>1</ZIndex>
@@ -589,8 +595,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox6</rd:DefaultName>
-            <Top>0.35643cm</Top>
-            <Left>2.5cm</Left>
+            <Top>0.33526cm</Top>
+            <Left>9cm</Left>
             <Height>0.43999in</Height>
             <Width>3cm</Width>
             <ZIndex>2</ZIndex>
@@ -609,7 +615,7 @@
             <Value>bug_danger</Value>
             <Sizing>FitProportional</Sizing>
             <Top>0.33526cm</Top>
-            <Left>15.59663cm</Left>
+            <Left>2.5cm</Left>
             <Height>3.07622cm</Height>
             <Width>3.0715cm</Width>
             <ZIndex>3</ZIndex>
@@ -636,10 +642,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Top>6.49215cm</Top>
+            <Top>8.15698cm</Top>
             <Left>2.5cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.99767cm</Width>
+            <Width>5.44217cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -668,10 +674,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>razonSocialEmpresa</rd:DefaultName>
-            <Top>3.41148cm</Top>
-            <Left>2.5cm</Left>
+            <Top>5.07631cm</Top>
+            <Left>2.49534cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.99767cm</Width>
+            <Width>5.44217cm</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -700,10 +706,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>direccionEmpresa</rd:DefaultName>
-            <Top>4.18787cm</Top>
-            <Left>2.5cm</Left>
+            <Top>5.8527cm</Top>
+            <Left>2.49534cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.99767cm</Width>
+            <Width>5.44217cm</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -732,10 +738,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>emailEmpresa</rd:DefaultName>
-            <Top>5.71576cm</Top>
-            <Left>2.5cm</Left>
+            <Top>7.38059cm</Top>
+            <Left>2.49534cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.99767cm</Width>
+            <Width>5.44217cm</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -767,7 +773,7 @@
             <Top>10.78398cm</Top>
             <Left>11.71677cm</Left>
             <Height>0.6cm</Height>
-            <Width>5cm</Width>
+            <Width>4.9761cm</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
@@ -799,7 +805,7 @@
             <Top>12.3647cm</Top>
             <Left>11.71677cm</Left>
             <Height>0.6cm</Height>
-            <Width>6.95136cm</Width>
+            <Width>6.92746cm</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
@@ -831,7 +837,7 @@
             <Top>11.58831cm</Top>
             <Left>11.71677cm</Left>
             <Height>0.6cm</Height>
-            <Width>6.95136cm</Width>
+            <Width>6.92746cm</Width>
             <ZIndex>10</ZIndex>
             <Style>
               <Border>
@@ -863,7 +869,7 @@
             <Top>13.14109cm</Top>
             <Left>11.71677cm</Left>
             <Height>0.6cm</Height>
-            <Width>5cm</Width>
+            <Width>4.9761cm</Width>
             <ZIndex>11</ZIndex>
             <Style>
               <Border>
@@ -892,10 +898,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>sitioWebEmpresa</rd:DefaultName>
-            <Top>4.97465cm</Top>
-            <Left>2.5cm</Left>
+            <Top>6.63948cm</Top>
+            <Left>2.49534cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.99767cm</Width>
+            <Width>5.44217cm</Width>
             <ZIndex>12</ZIndex>
             <Style>
               <Border>
@@ -926,7 +932,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox25</rd:DefaultName>
-            <Top>5.11159cm</Top>
+            <Top>3.05109cm</Top>
             <Left>14.16639cm</Left>
             <Height>0.6cm</Height>
             <Width>4.50174cm</Width>
@@ -954,7 +960,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=FormatDateTime(Parameters!fecha.Value,DateFormat.ShortDate)</Value>
+                    <Value>=Parameters!fecha.Value</Value>
                     <Style>
                       <FontFamily>verdana</FontFamily>
                       <FontWeight>Bold</FontWeight>
@@ -967,7 +973,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>fecha</rd:DefaultName>
-            <Top>5.88798cm</Top>
+            <Top>3.82748cm</Top>
             <Left>14.99825cm</Left>
             <Height>0.6cm</Height>
             <Width>3.0715cm</Width>
@@ -1001,7 +1007,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox27</rd:DefaultName>
-            <Top>7.3947cm</Top>
+            <Top>0.35643cm</Top>
             <Left>14.16639cm</Left>
             <Height>0.62117cm</Height>
             <Width>4.50174cm</Width>
@@ -1031,6 +1037,8 @@
                   <TextRun>
                     <Value>=Parameters!nroFactura.Value</Value>
                     <Style>
+                      <FontFamily>verdana</FontFamily>
+                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -1041,15 +1049,16 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>nroFactura</rd:DefaultName>
-            <Top>8.19226cm</Top>
-            <Left>14.99825cm</Left>
-            <Height>0.6cm</Height>
-            <Width>3.0715cm</Width>
+            <Top>1.15399cm</Top>
+            <Left>14.16639cm</Left>
+            <Height>0.81167cm</Height>
+            <Width>4.47784cm</Width>
             <ZIndex>16</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <BackgroundColor>CornflowerBlue</BackgroundColor>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1075,8 +1084,8 @@
             <rd:DefaultName>Textbox29</rd:DefaultName>
             <Top>10.00759cm</Top>
             <Left>2.50233cm</Left>
-            <Height>0.617cm</Height>
-            <Width>5cm</Width>
+            <Height>0.6cm</Height>
+            <Width>5.43518cm</Width>
             <ZIndex>17</ZIndex>
             <Style>
               <Border>
@@ -1113,7 +1122,7 @@
             <Top>10.00759cm</Top>
             <Left>11.71677cm</Left>
             <Height>0.6cm</Height>
-            <Width>5cm</Width>
+            <Width>4.9761cm</Width>
             <ZIndex>18</ZIndex>
             <Style>
               <Border>
@@ -1150,7 +1159,7 @@
             <Top>11.60531cm</Top>
             <Left>2.50466cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.99767cm</Width>
+            <Width>5.43285cm</Width>
             <ZIndex>19</ZIndex>
             <Style>
               <Border>
@@ -1182,7 +1191,7 @@
             <Top>10.82892cm</Top>
             <Left>2.5cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.99767cm</Width>
+            <Width>5.43285cm</Width>
             <ZIndex>20</ZIndex>
             <Style>
               <Border>
@@ -1205,6 +1214,7 @@
                     <Style>
                       <FontFamily>verdana</FontFamily>
                       <FontSize>20pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                       <Color>="White"</Color>
                     </Style>
                   </TextRun>
@@ -1216,7 +1226,7 @@
             </Paragraphs>
             <rd:DefaultName>tipoFactura</rd:DefaultName>
             <Top>1.65039cm</Top>
-            <Left>3.5cm</Left>
+            <Left>10cm</Left>
             <Height>1.11757cm</Height>
             <Width>1cm</Width>
             <ZIndex>21</ZIndex>
@@ -1235,9 +1245,9 @@
         <Height>27.6cm</Height>
         <Style>
           <Border>
-            <Color>LightBlue</Color>
+            <Color>White</Color>
             <Style>Solid</Style>
-            <Width>1.5pt</Width>
+            <Width>0.25pt</Width>
           </Border>
         </Style>
       </Body>

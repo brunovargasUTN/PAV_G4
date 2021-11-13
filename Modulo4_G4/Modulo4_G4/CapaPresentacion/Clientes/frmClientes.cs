@@ -74,6 +74,9 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
 
             // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
             dgvClientes.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+
+            //eliminamos fila en blanco por defecto
+            dgvClientes.AllowUserToAddRows = false;
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -86,7 +89,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
 
             }
 
-            if (String.IsNullOrEmpty(txtID.Text) && String.IsNullOrEmpty(txtCuit.Text) && String.IsNullOrEmpty(mtbFechaAlta.Text))
+            if (String.IsNullOrEmpty(txtID.Text) && String.IsNullOrEmpty(mtbCuit.Text))
             {
                 MessageBox.Show("Debe ingresar al menos un parametro de filtro");
                 return;
@@ -99,19 +102,16 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
                 parametros.Add("IdCliente", txtID.Text);
             }
             
-            if (!String.IsNullOrEmpty(txtCuit.Text))
-            {
-                parametros.Add("Cuit", txtCuit.Text);
+            if (!String.IsNullOrEmpty(mtbCuit.Text))
+            {   
+                if(mtbCuit.MaskCompleted)
+                parametros.Add("Cuit", mtbCuit.Text);
+                else
+                {
+                    MessageBox.Show("Debe ingresar un Cuit valido");
+                    return;
+                }
             }
-
-            if (!String.IsNullOrEmpty(mtbFechaAlta.Text))
-            {
-                parametros.Add("FechaAlta", mtbFechaAlta.Text);
-            }
-
-            //IList<Bug> listadoBugs = bugService.ConsultarBugsConFiltros(parametros);
-
-            //dgvBugs.DataSource = listadoBugs;
 
             IList<Cliente> listadoClientes = oClienteService.ConsultarClientesConFiltros(parametros);
             dgvClientes.DataSource = listadoClientes;
@@ -167,20 +167,18 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             if (chkMostrarTodos.Checked)
             {
                 txtID.Enabled = false;
-                txtCuit.Enabled = false;
-                mtbFechaAlta.Enabled = false;
+                mtbCuit.Enabled = false;
             }
             else
             {
                 txtID.Enabled = true;
-                txtCuit.Enabled = true;
-                mtbFechaAlta.Enabled = true;
+                mtbCuit.Enabled = true;
             }
         }
 
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvClientes.CurrentRow.DataBoundItem != null)
+            if (dgvClientes.CurrentRow !=null && dgvClientes.CurrentRow.DataBoundItem != null)
             {
                 btnEditar.Enabled = true;
                 btnQuitar.Enabled = true;

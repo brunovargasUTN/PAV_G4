@@ -110,6 +110,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             // 
             // cboResponsable
             // 
+            this.cboResponsable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboResponsable.FormattingEnabled = true;
             this.cboResponsable.Location = new System.Drawing.Point(102, 79);
             this.cboResponsable.Name = "cboResponsable";
@@ -118,6 +119,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             // 
             // cboProducto
             // 
+            this.cboProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProducto.FormattingEnabled = true;
             this.cboProducto.Location = new System.Drawing.Point(401, 32);
             this.cboProducto.Name = "cboProducto";

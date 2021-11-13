@@ -29,7 +29,8 @@ namespace Modulo4_G4.CapaAccesoDatos
                                           "       email, ",
                                           "       estado ",
                                           " FROM Usuarios ",
-                                          " WHERE borrado = 0 ");
+                                          " WHERE borrado = 0 ", 
+                                          " ORDER BY usuario ");
 
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
 

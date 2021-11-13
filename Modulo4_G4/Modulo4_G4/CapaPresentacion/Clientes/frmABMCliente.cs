@@ -1,4 +1,6 @@
 ﻿using Modulo4_G4.CapaLogicaDeNegocio;
+using Modulo4_G4.CapaPresentacion.Barrios;
+using Modulo4_G4.CapaPresentacion.Contactos;
 using Modulo4_G4.Entidades;
 using System;
 using System.Collections.Generic;
@@ -50,7 +52,8 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
         private void frmABMCliente_Load(System.Object sender, System.EventArgs e)
         {
             LlenarCombo(cboBarrio, oBarrioService.ObtenerTodos(), "NombreBarrio", "IdBarrio");
-            LlenarCombo(cboContacto, oContactoService.ObtenerTodos(), "NombreContacto", "IdContacto");
+            LlenarCombo(cboContacto, oContactoService.ObtenerTodos(), "NombreCompleto", "IdContacto");
+
 
             switch (formMode)
             {
@@ -60,6 +63,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
                         lblAceptar.Text = "Agregar";
                         btnAgregarBarrio.Enabled = true;
                         btnAgregarContacto.Enabled = true;
+                        mtbFecha.Text = DateTime.Today.ToShortDateString();
                         break;
                     }
                 case FormMode.modificar:
@@ -97,6 +101,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             }
 
         }
+
         private void MostrarDatos()
         {
             if (oClienteSelected != null)
@@ -113,27 +118,48 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
 
         private bool ValidarCampos()
         {
-            if (String.IsNullOrEmpty(mtbCuit.Text))
+            if (String.IsNullOrEmpty(mtbCuit.Text) || !mtbCuit.MaskCompleted)
             {
-                MessageBox.Show("Debe introducir un CUIT", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mtbCuit.BackColor = Color.Red;
-                mtbCuit.Focus();
+                MessageBox.Show("Debe introducir un CUIT valido", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
 
-            else
-                mtbCuit.BackColor = Color.White;
-
-            if (String.IsNullOrEmpty(mtbFecha.Text))
+            if (string.IsNullOrEmpty(txtRazon.Text))
             {
-                MessageBox.Show("Debe introducir una fecha de alta", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mtbFecha.BackColor = Color.Red;
-                mtbFecha.Focus();
+                MessageBox.Show("Debe introducir un nombre de Razon Social", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
 
-            else
-                mtbFecha.BackColor = Color.White;
+            if (string.IsNullOrEmpty(txtCalle.Text))
+            {
+                MessageBox.Show("Debe introducir un nombre de Calle", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txtNro.Text))
+            {
+                MessageBox.Show("Debe introducir un numero de domicilio", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+
+            if (String.IsNullOrEmpty(mtbFecha.Text) || !mtbFecha.MaskCompleted)
+            {
+                MessageBox.Show("Debe introducir una fecha de alta valida", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(cboBarrio.Text.ToString()))
+            {
+                MessageBox.Show("Debe seleccionar un Barrio", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(cboContacto.Text.ToString()))
+            {
+                MessageBox.Show("Debe seleccionar un Contacto", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+
 
             return true;
         }
@@ -169,7 +195,6 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
                                 MessageBox.Show("Se produjo un error al intentar insertar el Cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
-                        this.Close();
                         break;
                     }
 
@@ -227,6 +252,22 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             {
                 this.Close();
             }
+        }
+
+        private void btnAgregarBarrio_Click(object sender, EventArgs e)
+        {
+            frmBarrios barrios = new frmBarrios();
+            barrios.ShowDialog();
+            LlenarCombo(cboBarrio, oBarrioService.ObtenerTodos(), "NombreBarrio", "IdBarrio");
+
+        }
+
+        private void btnAgregarContacto_Click(object sender, EventArgs e)
+        {
+            frmABMContacto aBMContacto = new frmABMContacto();
+            aBMContacto.InicializarFormulario(frmABMContacto.FormMode.nuevo);
+            aBMContacto.ShowDialog();
+            LlenarCombo(cboContacto, oContactoService.ObtenerTodos(), "NombreContacto", "IdContacto");
         }
     }
 }

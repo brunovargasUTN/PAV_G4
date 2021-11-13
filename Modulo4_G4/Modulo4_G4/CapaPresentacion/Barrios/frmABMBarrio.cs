@@ -38,12 +38,12 @@ namespace Modulo4_G4.CapaPresentacion.Barrios
                     nuevo.NombreBarrio = txtNombre.Text;
                     if (oBarrioService.NuevoBarrio(nuevo))
                     {
-                        MessageBox.Show("Cliente insertado exitosamente !!!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Barrio insertado exitosamente !!!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Se produjo un error al intentar insertar el Cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Se produjo un error al intentar insertar el Barrio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         this.Close();
                     }
 

@@ -8,6 +8,10 @@ namespace Modulo4_G4.Entidades
     {
         public int IdContacto { get; set; }
         public string NombreContacto { get; set; }
+
+        public string NombreCompleto { get {
+                return Apellido + ", " + NombreContacto;
+            } }
         public string Apellido { get; set; }
         public string EmailContacto { get; set; }
         public string Telefono { get; set; }

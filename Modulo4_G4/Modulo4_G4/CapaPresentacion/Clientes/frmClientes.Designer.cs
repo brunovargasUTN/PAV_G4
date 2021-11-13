@@ -30,15 +30,13 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
         private void InitializeComponent()
         {
             this.pnlFiltros = new System.Windows.Forms.Panel();
-            this.mtbFechaAlta = new System.Windows.Forms.MaskedTextBox();
+            this.mtbCuit = new System.Windows.Forms.MaskedTextBox();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.chkMostrarTodos = new System.Windows.Forms.CheckBox();
-            this.txtCuit = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblCuit = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
             this.lblFiltros = new System.Windows.Forms.Label();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -50,36 +48,36 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             // 
             // pnlFiltros
             // 
-            this.pnlFiltros.Controls.Add(this.mtbFechaAlta);
+            this.pnlFiltros.Controls.Add(this.mtbCuit);
             this.pnlFiltros.Controls.Add(this.dgvClientes);
             this.pnlFiltros.Controls.Add(this.btnConsultar);
             this.pnlFiltros.Controls.Add(this.chkMostrarTodos);
-            this.pnlFiltros.Controls.Add(this.txtCuit);
             this.pnlFiltros.Controls.Add(this.txtID);
             this.pnlFiltros.Controls.Add(this.lblCuit);
             this.pnlFiltros.Controls.Add(this.lblId);
-            this.pnlFiltros.Controls.Add(this.lblFecha);
             this.pnlFiltros.Controls.Add(this.lblFiltros);
             this.pnlFiltros.Location = new System.Drawing.Point(4, 4);
             this.pnlFiltros.Name = "pnlFiltros";
             this.pnlFiltros.Size = new System.Drawing.Size(813, 541);
             this.pnlFiltros.TabIndex = 0;
             // 
-            // mtbFechaAlta
+            // mtbCuit
             // 
-            this.mtbFechaAlta.Location = new System.Drawing.Point(107, 92);
-            this.mtbFechaAlta.Name = "mtbFechaAlta";
-            this.mtbFechaAlta.Size = new System.Drawing.Size(194, 27);
-            this.mtbFechaAlta.TabIndex = 19;
+            this.mtbCuit.Location = new System.Drawing.Point(107, 56);
+            this.mtbCuit.Mask = "00-00000000-0";
+            this.mtbCuit.Name = "mtbCuit";
+            this.mtbCuit.Size = new System.Drawing.Size(111, 27);
+            this.mtbCuit.TabIndex = 20;
+            this.mtbCuit.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // dgvClientes
             // 
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(8, 138);
+            this.dgvClientes.Location = new System.Drawing.Point(8, 102);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.RowTemplate.Height = 29;
-            this.dgvClientes.Size = new System.Drawing.Size(796, 400);
+            this.dgvClientes.Size = new System.Drawing.Size(796, 436);
             this.dgvClientes.TabIndex = 18;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
@@ -103,13 +101,6 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             this.chkMostrarTodos.Text = "Mostrar todos";
             this.chkMostrarTodos.UseVisualStyleBackColor = true;
             this.chkMostrarTodos.CheckedChanged += new System.EventHandler(this.chkMostrarTodos_CheckedChanged);
-            // 
-            // txtCuit
-            // 
-            this.txtCuit.Location = new System.Drawing.Point(107, 56);
-            this.txtCuit.Name = "txtCuit";
-            this.txtCuit.Size = new System.Drawing.Size(194, 27);
-            this.txtCuit.TabIndex = 6;
             // 
             // txtID
             // 
@@ -136,15 +127,6 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             this.lblId.TabIndex = 3;
             this.lblId.Text = "ID Cliente";
             // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(16, 92);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(78, 20);
-            this.lblFecha.TabIndex = 2;
-            this.lblFecha.Text = "Fecha Alta";
-            // 
             // lblFiltros
             // 
             this.lblFiltros.AutoSize = true;
@@ -157,7 +139,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             // btnNuevo
             // 
             this.btnNuevo.Image = global::Modulo4_G4.Properties.Resources.add_icon_icons_com_74429;
-            this.btnNuevo.Location = new System.Drawing.Point(20, 560);
+            this.btnNuevo.Location = new System.Drawing.Point(12, 560);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(59, 56);
             this.btnNuevo.TabIndex = 1;
@@ -177,7 +159,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             // btnQuitar
             // 
             this.btnQuitar.Image = global::Modulo4_G4.Properties.Resources.delete_icon;
-            this.btnQuitar.Location = new System.Drawing.Point(205, 560);
+            this.btnQuitar.Location = new System.Drawing.Point(216, 560);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(59, 56);
             this.btnQuitar.TabIndex = 3;
@@ -187,7 +169,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             // btnSalir
             // 
             this.btnSalir.Image = global::Modulo4_G4.Properties.Resources.exit_icon;
-            this.btnSalir.Location = new System.Drawing.Point(740, 560);
+            this.btnSalir.Location = new System.Drawing.Point(749, 560);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(59, 56);
             this.btnSalir.TabIndex = 4;
@@ -205,6 +187,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.pnlFiltros);
             this.Name = "frmClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frmClientes_Load);
             this.pnlFiltros.ResumeLayout(false);
@@ -218,10 +201,8 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
 
         private System.Windows.Forms.Panel pnlFiltros;
         private System.Windows.Forms.Label lblFiltros;
-        private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblCuit;
-        private System.Windows.Forms.TextBox txtCuit;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.CheckBox chkMostrarTodos;
         private System.Windows.Forms.Button btnConsultar;
@@ -230,6 +211,6 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnQuitar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.MaskedTextBox mtbFechaAlta;
+        private System.Windows.Forms.MaskedTextBox mtbCuit;
     }
 }

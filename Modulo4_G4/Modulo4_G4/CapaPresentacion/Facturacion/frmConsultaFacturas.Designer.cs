@@ -31,6 +31,8 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaFacturas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNroFactura = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.cboVendedores = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvFacturas = new System.Windows.Forms.DataGridView();
@@ -52,6 +54,8 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtNroFactura);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cboVendedores);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.dgvFacturas);
@@ -72,18 +76,35 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
             // 
+            // txtNroFactura
+            // 
+            this.txtNroFactura.Location = new System.Drawing.Point(97, 20);
+            this.txtNroFactura.Name = "txtNroFactura";
+            this.txtNroFactura.Size = new System.Drawing.Size(103, 27);
+            this.txtNroFactura.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 23);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 20);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Nro. Factura";
+            // 
             // cboVendedores
             // 
+            this.cboVendedores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboVendedores.FormattingEnabled = true;
-            this.cboVendedores.Location = new System.Drawing.Point(97, 110);
+            this.cboVendedores.Location = new System.Drawing.Point(400, 20);
             this.cboVendedores.Name = "cboVendedores";
             this.cboVendedores.Size = new System.Drawing.Size(151, 28);
-            this.cboVendedores.TabIndex = 12;
+            this.cboVendedores.TabIndex = 3;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 114);
+            this.label5.Location = new System.Drawing.Point(321, 23);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 20);
             this.label5.TabIndex = 3;
@@ -92,20 +113,20 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // dgvFacturas
             // 
             this.dgvFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFacturas.Location = new System.Drawing.Point(6, 168);
+            this.dgvFacturas.Location = new System.Drawing.Point(6, 203);
             this.dgvFacturas.Name = "dgvFacturas";
             this.dgvFacturas.RowHeadersWidth = 51;
             this.dgvFacturas.RowTemplate.Height = 29;
-            this.dgvFacturas.Size = new System.Drawing.Size(764, 356);
-            this.dgvFacturas.TabIndex = 11;
+            this.dgvFacturas.Size = new System.Drawing.Size(764, 321);
+            this.dgvFacturas.TabIndex = 8;
             this.dgvFacturas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFacturas_CellClick);
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(559, 111);
+            this.btnConsultar.Location = new System.Drawing.Point(555, 158);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(94, 29);
-            this.btnConsultar.TabIndex = 10;
+            this.btnConsultar.TabIndex = 7;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
@@ -113,10 +134,10 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // chkTodos
             // 
             this.chkTodos.AutoSize = true;
-            this.chkTodos.Location = new System.Drawing.Point(403, 114);
+            this.chkTodos.Location = new System.Drawing.Point(400, 161);
             this.chkTodos.Name = "chkTodos";
             this.chkTodos.Size = new System.Drawing.Size(71, 24);
-            this.chkTodos.TabIndex = 9;
+            this.chkTodos.TabIndex = 6;
             this.chkTodos.Text = "Todos";
             this.chkTodos.UseVisualStyleBackColor = true;
             this.chkTodos.CheckedChanged += new System.EventHandler(this.chkTodos_CheckedChanged);
@@ -124,7 +145,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(347, 67);
+            this.label4.Location = new System.Drawing.Point(343, 111);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 20);
             this.label4.TabIndex = 7;
@@ -133,7 +154,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(347, 23);
+            this.label3.Location = new System.Drawing.Point(342, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 6;
@@ -141,7 +162,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // 
             // dtpHasta
             // 
-            this.dtpHasta.Location = new System.Drawing.Point(403, 64);
+            this.dtpHasta.Location = new System.Drawing.Point(399, 108);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(250, 27);
             this.dtpHasta.TabIndex = 5;
@@ -149,7 +170,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // 
             // dtpDesde
             // 
-            this.dtpDesde.Location = new System.Drawing.Point(403, 20);
+            this.dtpDesde.Location = new System.Drawing.Point(399, 64);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(250, 27);
             this.dtpDesde.TabIndex = 4;
@@ -157,16 +178,17 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // 
             // cboProductos
             // 
+            this.cboProductos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProductos.FormattingEnabled = true;
-            this.cboProductos.Location = new System.Drawing.Point(97, 64);
+            this.cboProductos.Location = new System.Drawing.Point(97, 112);
             this.cboProductos.Name = "cboProductos";
             this.cboProductos.Size = new System.Drawing.Size(151, 28);
-            this.cboProductos.TabIndex = 3;
+            this.cboProductos.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 64);
+            this.label2.Location = new System.Drawing.Point(6, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 2;
@@ -174,7 +196,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // 
             // mtbCuit
             // 
-            this.mtbCuit.Location = new System.Drawing.Point(97, 20);
+            this.mtbCuit.Location = new System.Drawing.Point(97, 64);
             this.mtbCuit.Mask = "00-00000000-0";
             this.mtbCuit.Name = "mtbCuit";
             this.mtbCuit.Size = new System.Drawing.Size(103, 27);
@@ -184,7 +206,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 23);
+            this.label1.Location = new System.Drawing.Point(6, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 20);
             this.label1.TabIndex = 0;
@@ -196,7 +218,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.btnMostrarFactura.Location = new System.Drawing.Point(589, 553);
             this.btnMostrarFactura.Name = "btnMostrarFactura";
             this.btnMostrarFactura.Size = new System.Drawing.Size(76, 56);
-            this.btnMostrarFactura.TabIndex = 1;
+            this.btnMostrarFactura.TabIndex = 9;
             this.btnMostrarFactura.UseVisualStyleBackColor = true;
             this.btnMostrarFactura.Click += new System.EventHandler(this.btnMostrarFactura_Click);
             // 
@@ -206,7 +228,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             this.btnSalir.Location = new System.Drawing.Point(706, 553);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(76, 56);
-            this.btnSalir.TabIndex = 2;
+            this.btnSalir.TabIndex = 10;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -249,5 +271,7 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ComboBox cboVendedores;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtNroFactura;
     }
 }

@@ -81,6 +81,8 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
             dgvProyectos.AutoResizeRows(
                 DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+
+            dgvProyectos.AllowUserToAddRows = false;
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -154,7 +156,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
         {   
             // Solo se debe habilitar los controles de edicion y borrado si se selecciona un objeto valido del dgv
 
-            if (dgvProyectos.CurrentRow.DataBoundItem != null)
+            if (dgvProyectos.CurrentRow != null && dgvProyectos.CurrentRow.DataBoundItem != null)
             {
                 btnEditar.Enabled = true;
                 btnQuitar.Enabled = true;

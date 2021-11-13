@@ -1,4 +1,5 @@
 ﻿using Modulo4_G4.CapaLogicaDeNegocio;
+using Modulo4_G4.CapaPresentacion;
 using Modulo4_G4.CapaPresentacion.Barrios;
 using Modulo4_G4.CapaPresentacion.Clientes;
 using Modulo4_G4.CapaPresentacion.Contactos;
@@ -100,6 +101,12 @@ namespace Modulo4_G4
         {
             frmConsultaFacturas frmConsulta = new frmConsultaFacturas();
             frmConsulta.ShowDialog();
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAcercaDe acercaDe = new frmAcercaDe();
+            acercaDe.ShowDialog();
         }
     }
 }

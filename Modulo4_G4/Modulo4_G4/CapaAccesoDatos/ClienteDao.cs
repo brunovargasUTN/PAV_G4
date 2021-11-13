@@ -14,7 +14,7 @@ namespace Modulo4_G4.CapaAccesoDatos
 
             var strSql = " SELECT c.id_cliente, c.cuit, c.razon_social, c.calle, c.numero, c.fecha_alta, c.id_barrio, c.id_contacto " +
                          " FROM Clientes c JOIN Barrios b ON c.id_barrio = b.id_barrio JOIN Contactos cn ON c.id_contacto = cn.id_contacto " +
-                         " WHERE c.borrado = 0 ";
+                         " WHERE c.borrado = 0 ORDER BY c.razon_social ";
             
             var resultConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
             foreach (DataRow row in resultConsulta.Rows)
@@ -28,7 +28,8 @@ namespace Modulo4_G4.CapaAccesoDatos
         {
             var strSql = String.Concat(" SELECT c.id_cliente, c.cuit, c.razon_social, c.calle, c.numero, c.fecha_alta, c.id_barrio, c.id_contacto ",
                                        " FROM Clientes c",
-                                       " WHERE c.borrado = 0 AND c.id_cliente = " + idCliente.ToString());
+                                       " WHERE c.id_cliente = " + idCliente.ToString());
+            //c.borrado = 0 AND 
             return ObjectMapping(DataManager.GetInstance().ConsultaSQL(strSql).Rows[0]);
         }
 

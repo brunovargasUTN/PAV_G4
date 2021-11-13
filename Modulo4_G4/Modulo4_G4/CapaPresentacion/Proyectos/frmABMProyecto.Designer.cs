@@ -57,11 +57,11 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 42);
+            this.label2.Location = new System.Drawing.Point(54, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 20);
+            this.label2.Size = new System.Drawing.Size(87, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Descripcion (*)";
+            this.label2.Text = "Descripcion";
             // 
             // label3
             // 
@@ -113,6 +113,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             // 
             // cboProducto
             // 
+            this.cboProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProducto.FormattingEnabled = true;
             this.cboProducto.Location = new System.Drawing.Point(158, 78);
             this.cboProducto.Name = "cboProducto";
@@ -121,6 +122,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             // 
             // cboResponsable
             // 
+            this.cboResponsable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboResponsable.FormattingEnabled = true;
             this.cboResponsable.Location = new System.Drawing.Point(158, 220);
             this.cboResponsable.Name = "cboResponsable";

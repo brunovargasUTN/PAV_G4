@@ -163,6 +163,7 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
             this.Name = "frmABMContacto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmABMContacto";
             this.Load += new System.EventHandler(this.frmABMContacto_Load);
             this.ResumeLayout(false);

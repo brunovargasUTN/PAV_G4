@@ -12,7 +12,7 @@ namespace Modulo4_G4.CapaAccesoDatos
         {
             List<Producto> listadoProducto = new List<Producto>();
 
-            var strSql = "SELECT id_producto, nombre from Productos";
+            var strSql = "SELECT id_producto, nombre FROM Productos ORDER BY nombre ";
 
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
 
