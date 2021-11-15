@@ -126,9 +126,6 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             frmABMCliente frm = new frmABMCliente();
             frm.InicializarFormulario(frmABMCliente.FormMode.nuevo, new Cliente());
             frm.ShowDialog();
-
-            //Forzamos el evento Click para actualizar la grilla.
-            //btnConsultar_Click(sender, e);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

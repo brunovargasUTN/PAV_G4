@@ -264,7 +264,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
             frmABMContacto aBMContacto = new frmABMContacto();
             aBMContacto.InicializarFormulario(frmABMContacto.FormMode.nuevo);
             aBMContacto.ShowDialog();
-            LlenarCombo(cboContacto, oContactoService.ObtenerTodos(), "NombreContacto", "IdContacto");
+            LlenarCombo(cboContacto, oContactoService.ObtenerTodos(), "NombreCompleto", "IdContacto");
         }
     }
 }

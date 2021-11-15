@@ -72,31 +72,42 @@ namespace Modulo4_G4.CapaPresentacion.Contactos
 
         private void btnConsultar_Click(System.Object sender, System.EventArgs e)
         {
+            if (chkTodos.Checked)
+            {
+                IList<Contacto> lista = oContactoService.ObtenerTodos();
+                dgvContactos.DataSource = lista;
+                return;
+            }
+
+            if (String.IsNullOrEmpty(txtNombre.Text) && String.IsNullOrEmpty(txtApellido.Text))
+            {
+                MessageBox.Show("Debe ingresar al menos un parametro de filtro");
+                return;
+            }
+
             Dictionary<string, object> parametros = new Dictionary<string, object>();
 
-            if (!chkTodos.Checked)
+            if (!String.IsNullOrEmpty(txtApellido.Text))
             {
-                if (!string.IsNullOrEmpty(txtNombre.Text))
-                    parametros.Add("Nombre", txtNombre.Text);
+                parametros.Add("Apellido", txtApellido.Text.ToString());
+            }
 
-                if (!string.IsNullOrEmpty(txtApellido.Text))
-                    parametros.Add("Apellido", txtApellido.Text);
+            if (!String.IsNullOrEmpty(txtNombre.Text))
+            {
+                parametros.Add("Nombre", txtNombre.Text.ToString());
+            }
 
-                if (parametros.Count > 0)
-                    dgvContactos.DataSource = oContactoService.ObtenerPorFiltro(parametros);
-                else
-                    MessageBox.Show("Debe ingresar al menos un criterio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            IList<Contacto> resultado = oContactoService.ObtenerPorFiltro(parametros);
 
+            if (resultado.Count > 0)
+            {
+                dgvContactos.DataSource = resultado;
             }
             else
             {
-                dgvContactos.DataSource = oContactoService.ObtenerTodos();
+                MessageBox.Show("No se encontraron elementos que coincidan con el parametro de busquueda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            //if (String.IsNullOrEmpty(txtNombre.Text) && String.IsNullOrEmpty(txtApellido.Text))
-            //{
-            //    MessageBox.Show("Debe ingresar al menos un parametro de filtro");
-            //    return;
-                
+
         }
 
         private void chkTodos_CheckedChanged(object sender, EventArgs e)
