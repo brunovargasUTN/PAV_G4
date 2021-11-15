@@ -29,12 +29,73 @@ namespace Modulo4_G4.CapaPresentacion.Barrios
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(130, 32);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(222, 27);
+            this.txtNombre.TabIndex = 0;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(12, 35);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(108, 20);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "Nuevo nombre";
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.Image = global::Modulo4_G4.Properties.Resources.aceptar_icon;
+            this.btnConfirmar.Location = new System.Drawing.Point(216, 68);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(54, 58);
+            this.btnConfirmar.TabIndex = 2;
+            this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = global::Modulo4_G4.Properties.Resources.cancelar_icon;
+            this.btnCancelar.Location = new System.Drawing.Point(298, 68);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(54, 58);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // frmABMBarrio
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmABMBarrio";
+            this.ClientSize = new System.Drawing.Size(377, 138);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnConfirmar);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.txtNombre);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(395, 185);
+            this.MinimumSize = new System.Drawing.Size(395, 185);
+            this.Name = "frmABMBarrio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Modificar Barrio";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

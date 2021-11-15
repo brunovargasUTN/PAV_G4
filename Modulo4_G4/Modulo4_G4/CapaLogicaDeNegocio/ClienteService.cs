@@ -18,6 +18,7 @@ namespace Modulo4_G4.CapaLogicaDeNegocio
             return oClienteDao.GetAll();
         }
 
+
         public Cliente ConsultarClientePorId(int id)
         {
             return oClienteDao.GetClienteById(id);
@@ -26,6 +27,21 @@ namespace Modulo4_G4.CapaLogicaDeNegocio
         public IList<Cliente> ConsultarClientesConFiltros(Dictionary<string, object> parametros)
         {
             return oClienteDao.GetClienteByFilters(parametros);
+        }
+
+        public bool NuevoCliente(Cliente cliente)
+        {
+            return oClienteDao.Create(cliente);
+        }
+
+        public bool ActualizarCliente(Cliente cliente)
+        {
+            return oClienteDao.Update(cliente);
+        }
+
+        public bool EliminarCliente(Cliente cliente)
+        {
+            return oClienteDao.Delete(cliente);
         }
     }
 }

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=.\SQLEXPRESS;Initial Catalog=TPI_G4_Modulo_4;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="desktop-75qdvok\sqlexpress.TPI_G4_Modulo_4.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TableProyectosTableAdapter" GeneratorDataComponentClassName="TableProyectosTableAdapter" Name="TableProyectos" UserDataComponentName="TableProyectosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="desktop-75qdvok\sqlexpress.TPI_G4_Modulo_4.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Usuarios.usuario, Proyectos.descripcion, Proyectos.version, Proyectos.alcance, Productos.nombre
+FROM     Usuarios INNER JOIN
+                  Proyectos ON Usuarios.id_usuario = Proyectos.id_responsable INNER JOIN
+                  Productos ON Proyectos.id_producto = Productos.id_producto
+WHERE  (Proyectos.borrado = 0)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="usuario" DataSetColumn="usuario" />
+              <Mapping SourceColumn="descripcion" DataSetColumn="descripcion" />
+              <Mapping SourceColumn="version" DataSetColumn="version" />
+              <Mapping SourceColumn="alcance" DataSetColumn="alcance" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TableProyectos" msprop:Generator_TableClassName="TableProyectosDataTable" msprop:Generator_TableVarName="tableTableProyectos" msprop:Generator_RowChangedName="TableProyectosRowChanged" msprop:Generator_TablePropName="TableProyectos" msprop:Generator_RowDeletingName="TableProyectosRowDeleting" msprop:Generator_RowChangingName="TableProyectosRowChanging" msprop:Generator_RowEvHandlerName="TableProyectosRowChangeEventHandler" msprop:Generator_RowDeletedName="TableProyectosRowDeleted" msprop:Generator_RowClassName="TableProyectosRow" msprop:Generator_UserTableName="TableProyectos" msprop:Generator_RowEvArgName="TableProyectosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="usuario" msprop:Generator_ColumnVarNameInTable="columnusuario" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_UserColumnName="usuario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="version" msprop:Generator_ColumnVarNameInTable="columnversion" msprop:Generator_ColumnPropNameInRow="version" msprop:Generator_ColumnPropNameInTable="versionColumn" msprop:Generator_UserColumnName="version" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="alcance" msprop:Generator_ColumnVarNameInTable="columnalcance" msprop:Generator_ColumnPropNameInRow="alcance" msprop:Generator_ColumnPropNameInTable="alcanceColumn" msprop:Generator_UserColumnName="alcance" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T_Proyectos_Productos" msprop:Generator_TableClassName="T_Proyectos_ProductosDataTable" msprop:Generator_TableVarName="tableT_Proyectos_Productos" msprop:Generator_RowChangedName="T_Proyectos_ProductosRowChanged" msprop:Generator_TablePropName="T_Proyectos_Productos" msprop:Generator_RowDeletingName="T_Proyectos_ProductosRowDeleting" msprop:Generator_RowChangingName="T_Proyectos_ProductosRowChanging" msprop:Generator_RowEvHandlerName="T_Proyectos_ProductosRowChangeEventHandler" msprop:Generator_RowDeletedName="T_Proyectos_ProductosRowDeleted" msprop:Generator_RowClassName="T_Proyectos_ProductosRow" msprop:Generator_UserTableName="T_Proyectos_Productos" msprop:Generator_RowEvArgName="T_Proyectos_ProductosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="producto" msprop:Generator_ColumnVarNameInTable="columnproducto" msprop:Generator_ColumnPropNameInRow="producto" msprop:Generator_ColumnPropNameInTable="productoColumn" msprop:Generator_UserColumnName="producto" type="xs:string" minOccurs="0" />
+              <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T_DetalleFactura" msprop:Generator_TableClassName="T_DetalleFacturaDataTable" msprop:Generator_TableVarName="tableT_DetalleFactura" msprop:Generator_TablePropName="T_DetalleFactura" msprop:Generator_RowDeletingName="T_DetalleFacturaRowDeleting" msprop:Generator_RowChangingName="T_DetalleFacturaRowChanging" msprop:Generator_RowEvHandlerName="T_DetalleFacturaRowChangeEventHandler" msprop:Generator_RowDeletedName="T_DetalleFacturaRowDeleted" msprop:Generator_UserTableName="T_DetalleFactura" msprop:Generator_RowChangedName="T_DetalleFacturaRowChanged" msprop:Generator_RowEvArgName="T_DetalleFacturaRowChangeEvent" msprop:Generator_RowClassName="T_DetalleFacturaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="proyecto" msprop:Generator_ColumnVarNameInTable="columnproyecto" msprop:Generator_ColumnPropNameInRow="proyecto" msprop:Generator_ColumnPropNameInTable="proyectoColumn" msprop:Generator_UserColumnName="proyecto" type="xs:string" minOccurs="0" />
+              <xs:element name="producto" msprop:Generator_ColumnVarNameInTable="columnproducto" msprop:Generator_ColumnPropNameInRow="producto" msprop:Generator_ColumnPropNameInTable="productoColumn" msprop:Generator_UserColumnName="producto" type="xs:string" minOccurs="0" />
+              <xs:element name="precio" msprop:Generator_ColumnVarNameInTable="columnprecio" msprop:Generator_ColumnPropNameInRow="precio" msprop:Generator_ColumnPropNameInTable="precioColumn" msprop:Generator_UserColumnName="precio" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

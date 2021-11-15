@@ -1,4 +1,3 @@
-C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.AssemblyReference.cache
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Barrios.frmABMBarrio.resources
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Barrios.frmBarrios.resources
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Clientes.frmABMCliente.resources
@@ -14,39 +13,6 @@ C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Mo
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.AssemblyInfoInputs.cache
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.AssemblyInfo.cs
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.CoreCompileInputs.cache
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.exe
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.deps.json
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.runtimeconfig.json
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.runtimeconfig.dev.json
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.dll
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.pdb
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.AssemblyReference.cache
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Barrios.frmABMBarrio.resources
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Barrios.frmBarrios.resources
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Clientes.frmABMCliente.resources
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Clientes.frmClientes.resources
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Contactos.frmABMContacto.resources
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Contactos.frmContactos.resources
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.frmPrincipal.resources
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Login.frmLogin.resources
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Proyectos.frmABMProyecto.resources
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Proyectos.frmProyectos.resources
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.GenerateResource.cache
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.GeneratedMSBuildEditorConfig.editorconfig
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.AssemblyInfoInputs.cache
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.AssemblyInfo.cs
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.CoreCompileInputs.cache
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.CopyComplete
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.dll
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.pdb
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.genruntimeconfig.cache
-F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.Properties.Resources.resources
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.exe
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.deps.json
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.runtimeconfig.json
@@ -64,3 +30,166 @@ C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Mo
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.dll
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.pdb
 C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.genruntimeconfig.cache
+C:\Users\Usuario\UTN\PROGRAMACION DE APLICACIONES VISUALES 1\TPI\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.AssemblyReference.cache
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.exe
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\CapaPresentacion\Reportes\rptCantidadProyectos.rdlc
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\CapaPresentacion\Reportes\rptProyectos.rdlc
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.deps.json
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.runtimeconfig.json
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.runtimeconfig.dev.json
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.pdb
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\System.Private.ServiceModel.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\System.Reflection.DispatchProxy.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\System.Resources.Extensions.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\System.ServiceModel.Http.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\System.ServiceModel.Primitives.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\System.ServiceModel.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.ReportViewer.Common.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.ReportViewer.DataVisualization.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.ReportViewer.ProcessingObjectModel.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.ReportViewer.WinForms.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.ReportViewer.Common.pdb
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.ReportViewer.WinForms.pdb
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.ReportViewer.DataVisualization.pdb
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.ReportViewer.ProcessingObjectModel.pdb
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\SR\Microsoft.ReportViewer.Common.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\SR\Microsoft.ReportViewer.DataVisualization.resources.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.AssemblyReference.cache
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Barrios.frmABMBarrio.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Barrios.frmBarrios.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Clientes.frmABMCliente.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Clientes.frmClientes.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Contactos.frmABMContacto.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Contactos.frmContactos.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Facturacion.frmFactura.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.frmPrincipal.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Login.frmLogin.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Proyectos.frmABMProyecto.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Proyectos.frmProyectos.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Reportes.frmReporteProyectos.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.Properties.Resources.resources
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.GenerateResource.cache
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.GeneratedMSBuildEditorConfig.editorconfig
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.AssemblyInfoInputs.cache
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.AssemblyInfo.cs
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.CoreCompileInputs.cache
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.CopyComplete
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.dll
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.pdb
+F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.genruntimeconfig.cache
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.exe
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\CapaPresentacion\Reportes\rptCantidadProyectos.rdlc
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\CapaPresentacion\Reportes\rptProyectos.rdlc
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.deps.json
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.runtimeconfig.json
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.runtimeconfig.dev.json
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Modulo4_G4.pdb
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\System.Private.ServiceModel.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\System.Reflection.DispatchProxy.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\System.Resources.Extensions.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\System.ServiceModel.Http.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\System.ServiceModel.Primitives.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\System.ServiceModel.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.ReportViewer.Common.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.ReportViewer.DataVisualization.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.ReportViewer.WinForms.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.ReportViewer.Common.pdb
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.ReportViewer.WinForms.pdb
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.ReportViewer.DataVisualization.pdb
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\Microsoft.ReportViewer.ProcessingObjectModel.pdb
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\SR\Microsoft.ReportViewer.Common.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\bin\Debug\netcoreapp3.1\SR\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.AssemblyReference.cache
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Barrios.frmABMBarrio.resources
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Barrios.frmBarrios.resources
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Clientes.frmABMCliente.resources
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Clientes.frmClientes.resources
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Contactos.frmABMContacto.resources
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Contactos.frmContactos.resources
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Facturacion.frmFactura.resources
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.frmPrincipal.resources
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Login.frmLogin.resources
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Proyectos.frmABMProyecto.resources
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Proyectos.frmProyectos.resources
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.CapaPresentacion.Reportes.frmReporteProyectos.resources
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.Properties.Resources.resources
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.GenerateResource.cache
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.GeneratedMSBuildEditorConfig.editorconfig
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.AssemblyInfoInputs.cache
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.AssemblyInfo.cs
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.CoreCompileInputs.cache
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.csproj.CopyComplete
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.dll
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.pdb
+D:\Prueba\202110122145\Modulo4_G4\Modulo4_G4\obj\Debug\netcoreapp3.1\Modulo4_G4.genruntimeconfig.cache

@@ -27,9 +27,10 @@ namespace Modulo4_G4.CapaAccesoDatos
                                           "       usuario,",
                                           "       password,",
                                           "       email, ",
-                                          "       estado",
-                                          " FROM Usuarios",
-                                          " WHERE borrado = 0");
+                                          "       estado ",
+                                          " FROM Usuarios ",
+                                          " WHERE borrado = 0 ", 
+                                          " ORDER BY usuario ");
 
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
 
@@ -48,9 +49,9 @@ namespace Modulo4_G4.CapaAccesoDatos
                                           "       usuario,",
                                           "       password,",
                                           "       email, ",
-                                          "       estado",
-                                          "FROM Usuarios",
-                                          "WHERE usuario = @usuario");
+                                          "       estado ",
+                                          " FROM Usuarios ",
+                                          " WHERE usuario = @usuario");
 
             var parametros = new Dictionary<string, object>();
             parametros.Add("usuario", nombreUsuario);
@@ -66,6 +67,18 @@ namespace Modulo4_G4.CapaAccesoDatos
             return null;
         }
 
+        public Usuario GetById(int idUsuario)
+        {
+            var strSql = String.Concat("SELECT id_usuario, usuario, email, password, id_perfil ",
+                                        " FROM Usuarios WHERE id_usuario = " + idUsuario.ToString());
+            var resultado = DataManager.GetInstance().ConsultaSQL(strSql);
+            if (resultado.Rows.Count > 0)
+            {
+                return ObjectMapping(resultado.Rows[0]);
+            }
+            return null;
+        }
+
         public IList<Usuario> GetByFilters(Dictionary<string, object> parametros)
         {
             List<Usuario> lst = new List<Usuario>();
@@ -74,10 +87,15 @@ namespace Modulo4_G4.CapaAccesoDatos
                                           "       usuario,",
                                           "       password,",
                                           "       email, ",
-                                          "       estado",
-                                          "FROM Usuarios",
-                                          "WHERE borrado = 0");
+                                          "       estado ",
+                                          " FROM Usuarios",
+                                          " WHERE borrado = 0 ");
 
+            if (parametros.ContainsKey("idUsuario"))
+            {
+                strSql += " AND (id_usuario = @idUsuario) ";
+            }
+            
             if (parametros.ContainsKey("idPerfil"))
                 strSql += "AND (id_perfil = @idPerfil) ";
 

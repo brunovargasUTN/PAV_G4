@@ -12,6 +12,11 @@ namespace Modulo4_G4.Entidades
         public string Password { get; set; }
         public string EmailUsuario { get; set; }
         public string Estado { get; set; }
+
+        public override string ToString()
+        {
+            return NombreUsuario;
+        }
     }
 }
 

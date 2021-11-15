@@ -38,11 +38,9 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.txtAlcance = new System.Windows.Forms.TextBox();
             this.txtVersion = new System.Windows.Forms.TextBox();
             this.cboProducto = new System.Windows.Forms.ComboBox();
-            this.txtResponsable = new System.Windows.Forms.ComboBox();
+            this.cboResponsable = new System.Windows.Forms.ComboBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -57,11 +55,11 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 42);
+            this.label2.Location = new System.Drawing.Point(54, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 20);
+            this.label2.Size = new System.Drawing.Size(87, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Descripcion (*)";
+            this.label2.Text = "Descripcion";
             // 
             // label3
             // 
@@ -113,19 +111,21 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             // 
             // cboProducto
             // 
+            this.cboProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProducto.FormattingEnabled = true;
             this.cboProducto.Location = new System.Drawing.Point(158, 78);
             this.cboProducto.Name = "cboProducto";
             this.cboProducto.Size = new System.Drawing.Size(249, 28);
             this.cboProducto.TabIndex = 8;
             // 
-            // txtResponsable
+            // cboResponsable
             // 
-            this.txtResponsable.FormattingEnabled = true;
-            this.txtResponsable.Location = new System.Drawing.Point(158, 220);
-            this.txtResponsable.Name = "txtResponsable";
-            this.txtResponsable.Size = new System.Drawing.Size(249, 28);
-            this.txtResponsable.TabIndex = 9;
+            this.cboResponsable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboResponsable.FormattingEnabled = true;
+            this.cboResponsable.Location = new System.Drawing.Point(158, 220);
+            this.cboResponsable.Name = "cboResponsable";
+            this.cboResponsable.Size = new System.Drawing.Size(249, 28);
+            this.cboResponsable.TabIndex = 9;
             // 
             // btnAceptar
             // 
@@ -135,6 +135,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.btnAceptar.Size = new System.Drawing.Size(54, 58);
             this.btnAceptar.TabIndex = 10;
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -144,35 +145,16 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.btnCancelar.Size = new System.Drawing.Size(54, 58);
             this.btnCancelar.TabIndex = 11;
             this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(151, 353);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 20);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Aceptar";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(300, 353);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 20);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmABMProyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 405);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.txtResponsable);
+            this.Controls.Add(this.cboResponsable);
             this.Controls.Add(this.cboProducto);
             this.Controls.Add(this.txtVersion);
             this.Controls.Add(this.txtAlcance);
@@ -182,6 +164,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(534, 452);
             this.MinimumSize = new System.Drawing.Size(534, 452);
             this.Name = "frmABMProyecto";
@@ -204,10 +187,8 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
         private System.Windows.Forms.TextBox txtAlcance;
         private System.Windows.Forms.TextBox txtVersion;
         private System.Windows.Forms.ComboBox cboProducto;
-        private System.Windows.Forms.ComboBox txtResponsable;
+        private System.Windows.Forms.ComboBox cboResponsable;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
     }
 }

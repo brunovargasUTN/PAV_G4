@@ -33,7 +33,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.dgvProyectos = new System.Windows.Forms.DataGridView();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.chkTodos = new System.Windows.Forms.CheckBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.cboResponsable = new System.Windows.Forms.ComboBox();
             this.cboProducto = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.pnlFiltros.Controls.Add(this.dgvProyectos);
             this.pnlFiltros.Controls.Add(this.btnConsultar);
             this.pnlFiltros.Controls.Add(this.chkTodos);
-            this.pnlFiltros.Controls.Add(this.txtNombre);
+            this.pnlFiltros.Controls.Add(this.txtDescripcion);
             this.pnlFiltros.Controls.Add(this.cboResponsable);
             this.pnlFiltros.Controls.Add(this.cboProducto);
             this.pnlFiltros.Controls.Add(this.label6);
@@ -67,9 +67,13 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             // 
             // dgvProyectos
             // 
+            this.dgvProyectos.AllowUserToAddRows = false;
+            this.dgvProyectos.AllowUserToResizeColumns = false;
+            this.dgvProyectos.AllowUserToResizeRows = false;
             this.dgvProyectos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProyectos.Location = new System.Drawing.Point(3, 122);
             this.dgvProyectos.Name = "dgvProyectos";
+            this.dgvProyectos.ReadOnly = true;
             this.dgvProyectos.RowHeadersWidth = 51;
             this.dgvProyectos.RowTemplate.Height = 29;
             this.dgvProyectos.Size = new System.Drawing.Size(680, 279);
@@ -97,15 +101,16 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.chkTodos.UseVisualStyleBackColor = true;
             this.chkTodos.CheckedChanged += new System.EventHandler(this.chkTodos_CheckedChanged);
             // 
-            // txtNombre
+            // txtDescripcion
             // 
-            this.txtNombre.Location = new System.Drawing.Point(102, 32);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(175, 27);
-            this.txtNombre.TabIndex = 8;
+            this.txtDescripcion.Location = new System.Drawing.Point(102, 32);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(175, 27);
+            this.txtDescripcion.TabIndex = 8;
             // 
             // cboResponsable
             // 
+            this.cboResponsable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboResponsable.FormattingEnabled = true;
             this.cboResponsable.Location = new System.Drawing.Point(102, 79);
             this.cboResponsable.Name = "cboResponsable";
@@ -114,6 +119,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             // 
             // cboProducto
             // 
+            this.cboProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProducto.FormattingEnabled = true;
             this.cboProducto.Location = new System.Drawing.Point(401, 32);
             this.cboProducto.Name = "cboProducto";
@@ -143,9 +149,9 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 20);
+            this.label2.Size = new System.Drawing.Size(87, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre";
+            this.label2.Text = "Descripcion";
             // 
             // label1
             // 
@@ -174,6 +180,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.btnQuitar.Size = new System.Drawing.Size(55, 57);
             this.btnQuitar.TabIndex = 2;
             this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
             // btnEditar
             // 
@@ -183,6 +190,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.btnEditar.Size = new System.Drawing.Size(53, 57);
             this.btnEditar.TabIndex = 3;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
@@ -192,6 +200,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.btnNuevo.Size = new System.Drawing.Size(59, 56);
             this.btnNuevo.TabIndex = 4;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // frmProyectos
             // 
@@ -203,6 +212,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
             this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.pnlFiltros);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(719, 537);
             this.MinimumSize = new System.Drawing.Size(719, 537);
             this.Name = "frmProyectos";
@@ -222,7 +232,7 @@ namespace Modulo4_G4.CapaPresentacion.Proyectos
         private System.Windows.Forms.DataGridView dgvProyectos;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.CheckBox chkTodos;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.ComboBox cboResponsable;
         private System.Windows.Forms.ComboBox cboProducto;
         private System.Windows.Forms.Label label6;
