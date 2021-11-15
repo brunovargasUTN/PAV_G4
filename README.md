@@ -10,7 +10,7 @@ Grupo N° 4 - Integrantes:
 
 * 79811 Vargas Bruno
 
-Modulo N°4 - Facturación de Proyectos y Productos
+### Modulo N°4 - Facturación de Proyectos y Productos
 
 ------
 
@@ -44,11 +44,11 @@ Como se puede observar, en la parte inferior, muestra el nombre de usuario logue
 
 ### Descripción del menú de opciones
 
-Archivo -> Salir: Esta opción permite cerrar el sistema. Al presionarla, el sistema solicita confirmación para salir.
+* Archivo -> Salir: Esta opción permite cerrar el sistema. Al presionarla, el sistema solicita confirmación para salir.
 
 ![image-20211114234612477](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211114234612477.png)
 
-Facturación:
+* Facturación:
 
 ![image-20211115005241614](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211115005241614.png)
 
@@ -106,11 +106,31 @@ Facturación:
 
   
 
-  ------
+  Facturación -> Consultar Histórico
 
+  Esta opcion abre un formulario de consulta de Facturas.
   
+  ![image-20211115162201564](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211115162201564.png)
+  
+  Al igual que otras ventanas de consulta, cuenta con una sección de Filtros, donde permite parametrizar la búsqueda y de esta forma agilizar la búsqueda de la factura requerida. O bien, podemos marcar la opción 'Todos' y el sistema traerá todas las facturas existentes. En cualquiera de los casos, las facturas se mostrarán en la grilla, ordenadas desde la mas nueva a la mas antigua.
+  
+  ![image-20211115162838071](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211115162838071.png)
+  
+  Como podemos observar, en la grilla cada fila se corresponde con una factura, de la cual obtenemos datos generales.
+  
+  Si requerimos información detallada o imprimir la factura, podemos seleccionarla en la grilla y seguidamente se habilitará el botón 'Ver Detalles'. Este botón abrirá un formulario de Facturación con datos de la factura registrada en modo de Solo Lectura.
+  
+  ![image-20211115163558445](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211115163558445.png)
 
-Soporte: Este menú contiene el acceso a cada ABM de las entidades de soporte.
+Este formulario nos permite ver el detalle de lo facturado y se solo se encuentra habilitado el botón de Imprimir y el de Salir.
+
+En caso de seleccionar imprimir se obtendrá la salida de información correspondiente a la factura, de igual manera que al momento de efectuar el proceso de facturación.
+
+------
+
+Soporte
+
+ Este menú contiene el acceso a cada ABM de las entidades de soporte.
 
 ![image-20211114234802239](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211114234802239.png)
 
@@ -174,9 +194,66 @@ A continuación se muestran las opciones de Contactos y Proyectos pero no entrar
 
             ![image-20211115004951523](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211115004951523.png)
 
-            
-
-    ------
-
     
+    
+    
+    * Soporte - Barrios
+    
+      Esta ventana permite la gestión de los Barrios. Debido a la sencillez de la entidad en este dominio, barrios cuenta con un solo campo de información, el cual es su Nombre. Por tal motivo el diseño se minimiza pero la lógica de la interfaz se sigue respetando.
+    
+    ![image-20211115164235401](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211115164235401.png)
+    
+    En este caso, todos los barrios cargados se encuentran en la lista desplegable. Si deseamos Editar o Quitar uno, basta con seleccionarlo en la lista para que se habiliten los botones de 'Editar' y 'Quitar'.
+    
+    ![image-20211115164726075](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211115164726075.png)
+    
+    * Barrios - Editar
+    
+       el sistema abrirá una nueva ventana en la cual podremos editar el nombre del Barrio. Tanto para el Alta como para la modificación, el sistema no permitirá el ingreso de nombres duplicados.
+    
+    ![image-20211115165322942](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211115165322942.png)
+    
+    * Barrios - Quitar
+    
+       el sistema solicitara la confirmación del operador.
+    
+    ![image-20211115165501817](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211115165501817.png)
+    
+    * Barrios - Nuevo
+    
+    Al hacer Click sobre el campo de texto en la sección 'Registrar Nuevo', se habilitara el botón Agregar. El sistema requerirá que este campo contenga algún valor. Un vez agregado, se actualizará la lista desplegable con el nuevo Barrio.
+    
+    ![image-20211115172526807](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211115172526807.png)
+    
+    
+    
+    ------
+    
+    ### Reportes
+    
+    Todas las salidas de información se encuentran en formato de Hoja A4, con un encabezado, fecha de creación y un pie de pagina donde figura el numero de pagina respecto del total de las mismas.
+    
+    El sistema cuenta con dos reportes:
+    
+    * Listado de Proyectos: Listado detallado de todos los proyectos vigentes ordenados por Producto al que pertenecen y versión.
+    
+    ![image-20211115172247966](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211115172247966.png)
+
+
+
+![image-20211115173216452](F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\imgs\image-20211115173216452.png)
+
+
+
+* Top 10 distribución de Proyectos: Este reporte muestra los diez productos con mayor cantidad de proyectos. Muestra una tabla organizada por puesto, donde el puesto numero 1 corresponde al Producto con mas Proyectos, decendiendo hasta el puesto 10.
+
+  A su vez muestra un grafico porcentual de la cantidad de Proyectos que tenga cada Producto sobre el total de proyectos aportados por los diez Productos del top.
+
+![image-20211115173316698](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211115173316698.png)
+
+
+
+![image-20211115173406052](F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\imgs\image-20211115173406052.png)
+
+
 

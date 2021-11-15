@@ -84,7 +84,7 @@ namespace Modulo4_G4.CapaPresentacion.Clientes
 
                 case FormMode.eliminar:
                     {
-                        this.Text = "Eliminar Usuario";
+                        this.Text = "Eliminar Cliente";
                         MostrarDatos();
                         mtbCuit.Enabled = false;
                         txtRazon.Enabled = false;

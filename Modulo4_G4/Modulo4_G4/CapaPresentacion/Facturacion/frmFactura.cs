@@ -124,7 +124,14 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
         }
 
         private void btnNuevaFactura_Click(object sender, EventArgs e)
-        {   
+        {
+            if (clienteSeleccionado!=null || detalleFactura.Count > 0 )
+            {
+                DialogResult resultado = MessageBox.Show("Usted esta a punto de comenzar una nueva Factura. ¿Seguro que desea continuar?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (resultado == DialogResult.No) 
+                    return;
+            }
+            
             mtbCuit.Enabled = true;
             btnConfirmar.Enabled = true;
             btnBuscarCliente.Enabled = true;
@@ -132,6 +139,8 @@ namespace Modulo4_G4.CapaPresentacion.Facturacion
             txtPrecio.Enabled = true;
             btnImprimir.Enabled = false;
             limpiarCampos();
+            limpiarItems();
+            clienteSeleccionado = null;
             cboProductos.Enabled = true;
             mtbCuit.Focus();
             dgvDetalleFactura.Enabled = true;
