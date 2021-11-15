@@ -241,7 +241,7 @@ A continuación se muestran las opciones de Contactos y Proyectos pero no entrar
 
 
 
-![image-20211115173216452](F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\imgs\image-20211115173216452.png)
+![image-20211115173216452](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211115173216452.png)
 
 
 
@@ -253,7 +253,7 @@ A continuación se muestran las opciones de Contactos y Proyectos pero no entrar
 
 
 
-![image-20211115173406052](F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\imgs\image-20211115173406052.png)
+![image-20211115173406052](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211115173406052.png)
 
 
 
