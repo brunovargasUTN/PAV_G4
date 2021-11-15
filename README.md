@@ -20,7 +20,7 @@ La empresa BugTracker S.R.L solicita el desarrollo de un sistema de software de 
 
 ### Modelo de Datos Normalizado
 
-![image-20211114231136420](F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\imgs\image-20211114231136420.png)
+![image-20211114231136420](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211114231136420.png)
 
 ------
 
@@ -30,11 +30,11 @@ La empresa BugTracker S.R.L solicita el desarrollo de un sistema de software de 
 
 Login: Al ejecutar el sistema, lo primero que nos aparece es una ventana de Login, en donde nos requerirá un nombre de usuario y una contraseña para el acceso autorizado al sistema.
 
-![image-20211114232011953](F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\imgs\image-20211114232011953.png)
+![image-20211114232011953](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211114232011953.png)
 
 El sistema validará que luego de presionar el botón Ingresar, los datos ingresados se correspondan con los de alguno del los usuarios almacenados en la base de datos. Si la validación resulta exitosa, nos permitirá el acceso al sistema y tendremos disponible el menú de opciones de la aplicación.
 
-![image-20211114232500322](F:\Ivan\PAV1\repoGit\TPI PAV G4\PAV1_G4_2021\imgs\image-20211114232500322.png)
+![image-20211114232500322](https://raw.githubusercontent.com/ivangomez854/cloudimg/master/img/image-20211114232500322.png)
 
 Como se puede observar, en la parte inferior, muestra el nombre de usuario logueado, el cual, mas adelante, también quedara registrado automáticamente como el vendedor o responsable de haber efectuado un proceso de facturación.
 
